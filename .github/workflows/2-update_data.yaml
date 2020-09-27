@@ -17,11 +17,9 @@ jobs:
           install.packages("remotes")
           remotes::install_local(".")
         shell: Rscript {0}
-      - name: Execute Script to update data
+      - name: Execute Script
         run: |
-          mananciais <- mananciais:::obter_ano(ano = 2020, ano_atual = TRUE) %>%  mananciais:::limpar_dados(df = ., usar_baixados = FALSE) %>% rbind(mananciais::mananciais_consolidado)
-          usethis::use_data(mananciais, overwrite = T)
-          readr::write_csv2(mananciais, "docs/data/mananciais.csv")
+          print("testando se o código executa")
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
