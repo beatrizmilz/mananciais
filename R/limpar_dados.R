@@ -1,13 +1,13 @@
 #' Limpar dados.
 #'
-#' Pode ser usada com o pipe ( %>% ) (veja exemplo abaixo).
+#' Pode ser usada com o pipe ( `%>%` ) (veja exemplo abaixo).
 #' A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o tipo de algumas variáveis.
 #'
 #' @param df Tibble a ser limpa. OPCIONAL. Caso for limpar dados que já foram baixados localmente, este argumento não é necessário.
 #' @param ano Numérico. OPCIONAL. Utilizado caso queira limpar dados baixados anteriormente.
-#' @param usar_baixados Lógico. Caso seja TRUE, utilizará os dados baixados anteriormente.
+#' @param usar_baixados Lógico.  Caso `usar_baixados = TRUE`, utilizará os dados baixados anteriormente.
 #' @param diretorio_download Texto. OPCIONAL. Local onde os arquivos brutos estão salvos, caso `usar_baixados = TRUE`. Ex: `"data-raw/"`
-#' @param salvar_local Lógico. Caso seja TRUE, irá salvar o resultado localmente, como um arquivo `.rds`.
+#' @param salvar_local Lógico.  Caso `salvar_local = TRUE`, irá salvar o resultado localmente, como um arquivo `.rds`.
 #' @param diretorio_salvar Texto. OPCIONAL. Local onde salvar os arquivos limpos, caso `salvar_local = TRUE`. Ex: `"data-raw/data-clean/"`
 #'
 #' @return Retorna um tibble com os dados limpos.

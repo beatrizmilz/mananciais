@@ -7,15 +7,21 @@
 obter_dia(dia)
 }
 \arguments{
-\item{dia}{Uma string com data, no formato ano-mês-dia. Ex: "2020-09-27"}
+\item{dia}{Uma string com data, no formato ano-mês-dia. Ex: \code{"2020-09-27"}}
 }
 \value{
 Retorna uma tibble com dados dos mananciais para o dia informado
 }
 \description{
+Dados disponíveis a partir do dia 01 de janeiro de 2000.
 A tibble que retorna é a versão original obtida na API, ou seja, não foi limpa.
+A fonte dos dados é atualizada todos os dias, às 09h00 (Horário de Brasília).
+Portanto, caso utilize essa função com a data atual e antes deste horário,
+a tibble retornada não terá nenhuma linha.
+O mesmo acontecerá se utilizar uma data futura, ou data anterior ao início dos dados disponíveis.
 }
 \examples{
+mananciais:::obter_dia("2020-09-26")
 mananciais:::obter_dia("2020-09-26")
 
 }

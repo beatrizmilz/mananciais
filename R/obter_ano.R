@@ -1,11 +1,11 @@
 #' Obtém dados de um ano.
 #'
 #' A tibble que retorna é a versão original obtida na API, ou seja, não foi limpa.
-#'#' Essa função demora alguns minutos para executar.
+#' Essa função demora alguns minutos para executar.
 #'
 #' @param ano  Numérico. Qual é o ano que deve ser feito o download. Ex: 2019.
-#' @param ano_atual  Lógico. Se quiser obter dados de anos anteriores, deve ser FALSE. Se quiser obter dados do ano atual, deve ser TRUE. Por padrão, é FALSE.
-#' @param download_local Lógico. Se for TRUE, uma cópia dos dados baixados será salvo localmente.
+#' @param ano_atual  Lógico. Se quiser obter dados de anos anteriores, usar `ano_atual = FALSE`. Se quiser obter dados do ano atual, deve ser `ano_atual = TRUE`.
+#' @param download_local Lógico. Caso `download_local = TRUE`, uma cópia dos dados baixados será salvo localmente.
 #' @param diretorio_download Diretório onde o arquivo final deve ser salvo. Ex: `"data-raw/"`
 #'
 #'
