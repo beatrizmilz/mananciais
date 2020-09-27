@@ -17,6 +17,8 @@ unir_anos(
 
 \item{usar_baixados}{Lógico. Caso \code{usar_baixados = TRUE}, utilizará os dados baixados anteriormente.}
 
+\item{salvar_local}{Lógico. Caso \code{salvar_local = TRUE}, irá salvar o resultado no diretório informado no argumento \code{diretorio_salvar}}
+
 \item{diretorio_salvar}{Texto. OPCIONAL. Local onde salvar os arquivos limpos, caso \code{salvar_local = TRUE}. Ex: \code{"data/"}}
 
 \item{diretorio_dados.}{Caso \code{usar_baixados = TRUE}, utilizará os dados baixados anteriormente. Informar em qual diretório os arquivos estão salvos.  Ex: \code{"data-raw/data-clean/"}}

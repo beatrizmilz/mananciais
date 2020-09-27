@@ -6,6 +6,7 @@
 #' @param usar_baixados Lógico. Caso `usar_baixados = TRUE`, utilizará os dados baixados anteriormente.
 #' @param diretorio_salvar Texto. OPCIONAL. Local onde salvar os arquivos limpos, caso `salvar_local = TRUE`. Ex: `"data/"`
 #' @param diretorio_dados. Caso `usar_baixados = TRUE`, utilizará os dados baixados anteriormente. Informar em qual diretório os arquivos estão salvos.  Ex: `"data-raw/data-clean/"`
+#' @param salvar_local Lógico. Caso `salvar_local = TRUE`, irá salvar o resultado no diretório informado no argumento `diretorio_salvar`
 #'
 #' @return Retorna um tibble com os dados unidos.
 #'
