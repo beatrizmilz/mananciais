@@ -32,10 +32,10 @@ seguir. Lembrete: o arquivo foi salvo em formato “separado por ponto e
 vírgula”, e com encoding “UFT-8”.
 
   - `mananciais` - 2000 à 2019 - [Baixar versão
-    `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/data/mananciais.csv)
+    `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais.csv)
 
   - `mananciais_atualizado` - 2000 à 2020 (parcial) - [Baixar versão
-    `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/data/mananciais_atualizado.csv)
+    `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais_atualizado.csv)
 
 ## Instalação
 
