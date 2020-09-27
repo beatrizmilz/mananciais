@@ -25,6 +25,7 @@ Imports:
     tibble,
     purrr,
     jsonlite,
-    httr
+    httr,
+    readr
 Depends: 
     R (>= 2.10)
