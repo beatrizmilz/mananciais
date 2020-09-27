@@ -2,6 +2,5 @@
 
 export("%>%")
 export(limpar_dados)
-export(raspar_site)
 export(unir_dados)
 importFrom(magrittr,"%>%")
