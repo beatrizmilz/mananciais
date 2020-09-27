@@ -27,7 +27,7 @@ Os dados foram obtidos no [Portal dos Mananciais](http://mananciais.sabesp.com.b
 
 
 
-Existem dois arquivos disponíveis, em que a diferença é o período dos dados. Caso você não utilize `R` e queira ter acesso aos dados em formato `.csv`, os mesmos podem ser acessados através dos links a seguir. Lembrete: o arquivo foi salvo em formato "separado por ponto e vírgula", e com encoding "UFT-8".
+Existem dois arquivos disponíveis, em que a diferença é o período dos dados. Caso você não utilize `R` e queira ter acesso aos dados em formato `.csv`, os mesmos podem ser acessados através dos links a seguir. Lembrete: o arquivo foi salvo em formato "separado por ponto e vírgula", e com encoding "UTF-8".
 
 ```{r include=FALSE}
 library(magrittr)

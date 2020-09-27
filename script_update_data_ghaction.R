@@ -18,9 +18,3 @@ usethis::use_data(mananciais, overwrite = T)
 
 # criar CSV
 readr::write_csv2(mananciais, "docs/data/mananciais.csv")
-
-# knit readme
-rmarkdown::render("README.Rmd")
-
-# knit index pkgdown
-#pkgdown::build_home()
