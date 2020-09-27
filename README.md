@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# mananciais
+# Mananciais
 
 <!-- badges: start -->
 
@@ -9,20 +9,34 @@
 status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)
 <!-- badges: end -->
 
-The goal of mananciais is to …
+O objetivo deste pacote é disponibilizar a base de dados sobre volume
+armazenado em mananciais de abastecimento público na Região
+Metropolitana de São Paulo (SP - Brasil).
 
-## Installation
+Os dados foram obtidos no [Portal dos
+Mananciais](http://mananciais.sabesp.com.br/Situacao) da
+[SABESP](http://site.sabesp.com.br/site/Default.aspx).
 
-And the development version from [GitHub](https://github.com/) with:
+Existem dois arquivos disponíveis, em que a diferença é o período dos
+dados:
+
+  - `mananciais` - 2000 à 2019
+
+  - `mananciais_completo` - 2000 à 2020 (parcial)
+
+## Instalação
+
+A versão em desenvolvimento deste pacote pode ser instalada através do
+[GitHub](https://github.com/) utilizando:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("beatrizmilz/mananciais")
 ```
 
-## Example
+## Exemplo
 
-This is a basic example which shows you how to solve a common problem:
+Abaixo segue um exemplo das bases disponíveis:
 
 ``` r
 library(mananciais)
@@ -56,8 +70,11 @@ str(mananciais_atualizado)
 #>  $ prec_hist            : num  263 246 229 225 251 ...
 ```
 
+# Exemplo de tabela
+
 ``` r
-library(tidyverse)
+library(dplyr)
+library(knitr)
 
 mananciais_atualizado %>% 
   arrange(desc(data)) %>% 
@@ -74,3 +91,18 @@ mananciais_atualizado %>%
 | 2020-09-26 | 4           | Rio Grande   |                    78.2 |            78.16921 |                   0.0 |                   0.0 |            87.69203 |       0.2 |         25.4 |       95.0 |
 | 2020-09-26 | 5           | Rio Claro    |                    64.0 |            64.01324 |                 \-0.5 |                 \-0.5 |             8.74863 |       0.2 |         89.8 |      141.6 |
 | 2020-09-26 | 17          | São Lourenço |                    64.9 |            64.88974 |                   0.0 |                   0.0 |            57.63590 |       0.0 |         19.0 |      115.9 |
+
+# Exemplo de gráfico
+
+``` r
+library(ggplot2)
+mananciais_atualizado %>%
+  ggplot() +
+  geom_line(aes(x = data, y = volume_porcentagem)) +
+  scale_y_continuous(breaks = c(-25, 0, 25, 50, 75, 100)) +
+facet_wrap( ~ nome, ncol = 2) +
+  theme_bw() +
+  labs(x = "Ano", y = "Volume armazenado (%)")
+```
+
+<img src="man/figures/README-ggplot-1.png" width="100%" />

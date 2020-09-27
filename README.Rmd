@@ -13,25 +13,35 @@ knitr::opts_chunk$set(
 )
 ```
 
-# mananciais
+# Mananciais
 
 <!-- badges: start -->
 [![R build status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)
 <!-- badges: end -->
 
-The goal of mananciais is to ...
+O objetivo deste pacote é disponibilizar a base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil).
 
-## Installation
+Os dados foram obtidos no [Portal dos Mananciais](http://mananciais.sabesp.com.br/Situacao) da [SABESP](http://site.sabesp.com.br/site/Default.aspx).
 
-And the development version from [GitHub](https://github.com/) with:
+
+
+Existem dois arquivos disponíveis, em que a diferença é o período dos dados:
+
+- `mananciais` - 2000 à 2019
+
+- `mananciais_completo` - 2000 à 2020 (parcial)
+
+## Instalação
+
+A versão em desenvolvimento deste pacote pode ser instalada através do  [GitHub](https://github.com/) utilizando:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("beatrizmilz/mananciais")
 ```
-## Example
+## Exemplo
 
-This is a basic example which shows you how to solve a common problem:
+Abaixo segue um exemplo das bases disponíveis:
 
 ```{r example}
 library(mananciais)
@@ -41,10 +51,11 @@ str(mananciais)
 str(mananciais_atualizado)
 ```
 
-
+# Exemplo de tabela
 
 ```{r eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
-library(tidyverse)
+library(dplyr)
+library(knitr)
 
 mananciais_atualizado %>% 
   arrange(desc(data)) %>% 
@@ -53,5 +64,16 @@ mananciais_atualizado %>%
 ```
 
 
+# Exemplo de gráfico
 
+```{r ggplot, dpi = 600, fig.height=7}
+library(ggplot2)
+mananciais_atualizado %>%
+  ggplot() +
+  geom_line(aes(x = data, y = volume_porcentagem)) +
+  scale_y_continuous(breaks = c(-25, 0, 25, 50, 75, 100)) +
+facet_wrap( ~ nome, ncol = 2) +
+  theme_bw() +
+  labs(x = "Ano", y = "Volume armazenado (%)")
+```
 
