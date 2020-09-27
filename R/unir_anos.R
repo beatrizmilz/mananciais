@@ -16,7 +16,7 @@ unir_anos <-  function(anos,
                         usar_baixados =  TRUE,
                         diretorio_dados = "data-raw/data-clean/",
                         salvar_local = FALSE,
-                        diretorio_salvar = "data/"
+                        diretorio_salvar = "inst/extdata/"
                         ) {
 
 

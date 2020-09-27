@@ -5,20 +5,20 @@
 # purrr::walk(c(2000:2019), obter_ano)
 # purrr::walk((2000:2019), limpar_dados, salvar_local = TRUE)
 # mananciais_consolidado <- unir_anos(2000:2019)
-# readr::write_rds(mananciais_consolidado, "data/mananciais_consolidado.rds")
+# readr::write_rds(mananciais_consolidado, "inst/extdata/mananciais_consolidado.rds")
 
- mananciais_consolidado <- readr::read_rds("data/mananciais_consolidado.rds")
+ mananciais_consolidado <- readr::read_rds("inst/extdata/mananciais_consolidado.rds")
 
 # Dados unidos com o ano atual ----------------
 
 
  # mananciais:::obter_ano(ano = 2020, ano_atual = TRUE) %>%
  #   mananciais:::limpar_dados(df = ., usar_baixados = FALSE) %>%
- #   readr::write_rds(glue::glue("data/mananciais_2020.rds"),  compress = "xz")
+ #   readr::write_rds(glue::glue("inst/extdata/mananciais_2020.rds"),  compress = "xz")
 
 
 mananciais <-
-  readr::read_rds("data/mananciais_2020.rds") %>%
+  readr::read_rds("inst/extdata/mananciais_2020.rds") %>%
   rbind(mananciais_consolidado)
 
 
