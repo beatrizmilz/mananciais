@@ -56,11 +56,8 @@ str(mananciais_atualizado)
 ### Exemplo de tabela
 
 ```{r eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
-library(dplyr)
-library(knitr)
-
 mananciais_atualizado %>% 
-  arrange(desc(data)) %>% 
+  dplyr::arrange(desc(data)) %>% 
   head(7) %>%
   knitr::kable()
 ```
@@ -85,8 +82,8 @@ facet_wrap( ~ nome, ncol = 2) +
 
 ```{r ggplot2, dpi = 600, fig.height=7}
 mananciais_atualizado %>%
-  mutate(ano = lubridate::year(data)) %>% 
-  filter(ano == 2020) %>% 
+  dplyr::mutate(ano = lubridate::year(data)) %>% 
+  dplyr::filter(ano == 2020) %>% 
   ggplot() +
   geom_line(aes(x = data, y = volume_porcentagem)) +
   scale_y_continuous(breaks = c(-25, 0, 25, 50, 75, 100)) +

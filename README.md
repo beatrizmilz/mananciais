@@ -67,7 +67,7 @@ str(mananciais)
 #>  $ prec_hist         : num  255 238 225 218 235 ...
 
 str(mananciais_atualizado)
-#> Classes 'tbl_df', 'tbl' and 'data.frame':    46419 obs. of  8 variables:
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    46426 obs. of  8 variables:
 #>  $ data              : Date, format: "2020-01-01" "2020-01-01" ...
 #>  $ nome              : chr  "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...
 #>  $ volume_porcentagem: num  40.3 76.6 64 73.4 82.6 97.6 58.8 40.4 76.4 63.6 ...
@@ -81,24 +81,21 @@ str(mananciais_atualizado)
 ### Exemplo de tabela
 
 ``` r
-library(dplyr)
-library(knitr)
-
 mananciais_atualizado %>% 
-  arrange(desc(data)) %>% 
+  dplyr::arrange(desc(data)) %>% 
   head(7) %>%
   knitr::kable()
 ```
 
 | data       | nome         | volume\_porcentagem | volume\_variacao | volume\_operacional | prec\_dia | prec\_mensal | prec\_hist |
 | :--------- | :----------- | ------------------: | ---------------: | ------------------: | --------: | -----------: | ---------: |
-| 2020-09-26 | Cantareira   |                42.3 |            \-0.2 |           415.11535 |       0.0 |         22.2 |       83.9 |
-| 2020-09-26 | Alto Tietê   |                61.1 |            \-0.2 |           342.32382 |       0.1 |         19.0 |       80.0 |
-| 2020-09-26 | Guarapiranga |                47.0 |              0.0 |            80.47698 |       0.0 |         11.0 |       77.8 |
-| 2020-09-26 | Cotia        |                64.8 |            \-0.5 |            10.69014 |       0.0 |          6.6 |       82.5 |
-| 2020-09-26 | Rio Grande   |                78.2 |              0.0 |            87.69203 |       0.2 |         25.4 |       95.0 |
-| 2020-09-26 | Rio Claro    |                64.0 |            \-0.5 |             8.74863 |       0.2 |         89.8 |      141.6 |
-| 2020-09-26 | São Lourenço |                64.9 |              0.0 |            57.63590 |       0.0 |         19.0 |      115.9 |
+| 2020-09-27 | Cantareira   |                42.1 |            \-0.2 |           413.23628 |         0 |         22.2 |       83.9 |
+| 2020-09-27 | Alto Tietê   |                60.9 |            \-0.2 |           341.09546 |         0 |         19.1 |       80.0 |
+| 2020-09-27 | Guarapiranga |                46.9 |            \-0.1 |            80.25369 |         0 |         11.0 |       77.8 |
+| 2020-09-27 | Cotia        |                64.4 |            \-0.4 |            10.63207 |         0 |          6.6 |       82.5 |
+| 2020-09-27 | Rio Grande   |                78.0 |            \-0.2 |            87.52755 |         0 |         25.4 |       95.0 |
+| 2020-09-27 | Rio Claro    |                63.5 |            \-0.5 |             8.67788 |         0 |         89.8 |      141.6 |
+| 2020-09-27 | São Lourenço |                64.4 |            \-0.5 |            57.16546 |         0 |         19.0 |      115.9 |
 
 ### Exemplos de gráficos
 
@@ -121,8 +118,8 @@ facet_wrap( ~ nome, ncol = 2) +
 
 ``` r
 mananciais_atualizado %>%
-  mutate(ano = lubridate::year(data)) %>% 
-  filter(ano == 2020) %>% 
+  dplyr::mutate(ano = lubridate::year(data)) %>% 
+  dplyr::filter(ano == 2020) %>% 
   ggplot() +
   geom_line(aes(x = data, y = volume_porcentagem)) +
   scale_y_continuous(breaks = c(-25, 0, 25, 50, 75, 100)) +
