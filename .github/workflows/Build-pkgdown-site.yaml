@@ -2,7 +2,7 @@ on:
   push:
     branches: master
 
-name: readme + pkgdown
+name: pkgdown
 
 jobs:
   pkgdown:
@@ -34,11 +34,7 @@ jobs:
         run: |
           remotes::install_deps(dependencies = TRUE)
           install.packages("pkgdown")
-          remotes::install_local(".")
-          remotes::install_cran("rmarkdown")
         shell: Rscript {0}
-      - name: Render README
-        run: Rscript -e 'rmarkdown::render("README.Rmd")'
 
       - name: Install package
         run: R CMD INSTALL .
