@@ -1,0 +1,18 @@
+# EM DESENVOLVIMENTO! Objetivo: atualizar o scrap todos os dias.
+
+on:
+  schedule:
+    - cron: '0 10 * * *'
+
+name: update data
+
+jobs:
+  update:
+    name: update data
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: |
+          install.packages("remotes")
+          remotes::install_local(".")
