@@ -22,7 +22,6 @@ jobs:
           Rscript -e 'mananciais <- mananciais:::obter_ano(ano = 2020, download_local = FALSE) %>%  mananciais:::limpar_dados(df = ., usar_baixados = FALSE, salvar_local = FALSE) %>% rbind(mananciais::mananciais_consolidado)'
           Rscript -e 'usethis::use_data(mananciais, overwrite = T)'
           Rscript -e 'readr::write_csv2(mananciais, "docs/data/mananciais.csv")'
-'
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
