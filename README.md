@@ -35,7 +35,8 @@ vírgula”, e com encoding “UFT-8”.
     `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais.csv)
 
   - `mananciais_atualizado` - 2000 à 2020 (parcial) - [Baixar versão
-    `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais_atualizado.csv)
+    `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais_atualizado.csv),
+    pode estar desatualizado.
 
 ## Instalação
 

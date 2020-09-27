@@ -31,7 +31,7 @@ Existem dois arquivos disponíveis, em que a diferença é o período dos dados.
 
 - `mananciais` - 2000 à 2019 - [Baixar versão `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais.csv)
 
-- `mananciais_atualizado` - 2000 à 2020 (parcial) - [Baixar versão `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais_atualizado.csv)
+- `mananciais_atualizado` - 2000 à 2020 (parcial) - [Baixar versão `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais_atualizado.csv), pode estar desatualizado.
 
 ## Instalação
 
