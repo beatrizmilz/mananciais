@@ -29,6 +29,7 @@ Imports:
     readr,
     usethis,
     knitr,
-    ggplot2
+    ggplot2,
+    lubridate
 Depends: 
     R (>= 2.10)
