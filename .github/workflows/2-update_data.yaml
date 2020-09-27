@@ -19,9 +19,7 @@ jobs:
         shell: Rscript {0}
       - name: Execute Script to update data
         run: |
-          mananciais_consolidado <- readr::read_rds("data/mananciais_consolidado.rds")
-          mananciais:::obter_ano(ano = 2020, ano_atual = TRUE) %>%  mananciais:::limpar_dados(df = ., usar_baixados = FALSE) %>%   readr::write_rds(glue::glue("data/mananciais_2020.rds"),  compress = "xz")
-          mananciais <- readr::read_rds("data/mananciais_2020.rds") %>% rbind(mananciais_consolidado)
+          mananciais <- mananciais:::obter_ano(ano = 2020, ano_atual = TRUE) %>%  mananciais:::limpar_dados(df = ., usar_baixados = FALSE) %>% rbind(mananciais::mananciais_consolidado)
           usethis::use_data(mananciais, overwrite = T)
           readr::write_csv2(mananciais, "docs/data/mananciais.csv")
       - name: Commit results
