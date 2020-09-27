@@ -18,7 +18,12 @@ jobs:
           remotes::install_local(".")
         shell: Rscript {0}
       - name: Execute Script to update data
-        run: Rscript -e 'script_update_data_ghaction.R'
+        run: |
+        mananciais_consolidado <- readr::read_rds("data/mananciais_consolidado.rds")
+        mananciais:::obter_ano(ano = 2020, ano_atual = TRUE) %>%  mananciais:::limpar_dados(df = ., usar_baixados = FALSE) %>%   readr::write_rds(glue::glue("data/mananciais_2020.rds"),  compress = "xz")
+        mananciais <- readr::read_rds("data/mananciais_2020.rds") %>% rbind(mananciais_consolidado)
+        usethis::use_data(mananciais, overwrite = T)
+        readr::write_csv2(mananciais, "docs/data/mananciais.csv")
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
