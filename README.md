@@ -27,7 +27,7 @@ Existem dois arquivos disponíveis, em que a diferença é o período dos
 dados. Caso você não utilize `R` e queira ter acesso aos dados em
 formato `.csv`, os mesmos podem ser acessados através dos links a
 seguir. Lembrete: o arquivo foi salvo em formato “separado por ponto e
-vírgula”, e com encoding “UFT-8”.
+vírgula”, e com encoding “UTF-8”.
 
   - `mananciais_consolidado` - 2000 à 2019 - [Baixar versão
     `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais_consolidado.csv)
@@ -54,7 +54,7 @@ Abaixo segue um exemplo das bases disponíveis:
 library(mananciais)
 
 str(mananciais)
-#> tibble [46,426 x 8] (S3: tbl_df/tbl/data.frame)
+#> tibble [46,426 × 8] (S3: tbl_df/tbl/data.frame)
 #>  $ data               : Date[1:46426], format: "2020-01-01" "2020-01-01" ...
 #>  $ sistema            : chr [1:46426] "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...
 #>  $ volume_porcentagem : num [1:46426] 40.3 76.6 64 73.4 82.6 97.6 58.8 40.4 76.4 63.6 ...
@@ -65,7 +65,7 @@ str(mananciais)
 #>  $ pluviometria_hist  : num [1:46426] 263 246 229 225 251 ...
 
 str(mananciais_consolidado)
-#> tibble [44,529 x 8] (S3: tbl_df/tbl/data.frame)
+#> tibble [44,529 × 8] (S3: tbl_df/tbl/data.frame)
 #>  $ data               : Date[1:44529], format: "2000-01-01" "2000-01-01" ...
 #>  $ sistema            : chr [1:44529] "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...
 #>  $ volume_porcentagem : num [1:44529] 47.1 50.9 36 18.8 81 73.2 47.8 51.4 36.4 18.8 ...
