@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Limpar dados. — limpar_dados • mananciais</title>
+<title>Dados sobre os Mananciais — mananciais • mananciais</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,9 @@
 
 
 
-<meta property="og:title" content="Limpar dados. — limpar_dados" />
-<meta property="og:description" content="Pode ser usada com o pipe ( %&amp;gt;% ) (veja exemplo abaixo).
-A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o tipo de algumas variáveis." />
+<meta property="og:title" content="Dados sobre os Mananciais — mananciais" />
+<meta property="og:description" content="Base de dados contendo informações sobre os Sistemas
+que abastecem a Região Metropolitana de São Paulo" />
 
 
 
@@ -109,73 +109,54 @@ A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o ti
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Limpar dados.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/beatrizmilz/mananciais/blob/master/R/limpar_dados.R'><code>R/limpar_dados.R</code></a></small>
-    <div class="hidden name"><code>limpar_dados.Rd</code></div>
+    <h1>Dados sobre os Mananciais</h1>
+    <small class="dont-index">Source: <a href='https://github.com/beatrizmilz/mananciais/blob/master/R/data.R'><code>R/data.R</code></a></small>
+    <div class="hidden name"><code>mananciais.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Pode ser usada com o pipe ( <code>%&gt;%</code> ) (veja exemplo abaixo).
-A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o tipo de algumas variáveis.</p>
+    <p>Base de dados contendo informações sobre os Sistemas
+que abastecem a Região Metropolitana de São Paulo</p>
     </div>
 
-    <pre class="usage"><span class='fu'>limpar_dados</span>(
-  <span class='kw'>ano</span>,
-  <span class='kw'>df</span>,
-  usar_baixados = <span class='fl'>TRUE</span>,
-  diretorio_download = <span class='st'>"data-raw/"</span>,
-  salvar_local = <span class='fl'>FALSE</span>,
-  diretorio_salvar = <span class='st'>"data-raw/data-clean/"</span>
-)</pre>
+    <pre class="usage"><span class='kw'>mananciais</span>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>ano</th>
-      <td><p>Numérico. OPCIONAL. Utilizado caso queira limpar dados baixados anteriormente.</p></td>
-    </tr>
-    <tr>
-      <th>df</th>
-      <td><p>Tibble a ser limpa. OPCIONAL. Caso for limpar dados que já foram baixados localmente, este argumento não é necessário.</p></td>
-    </tr>
-    <tr>
-      <th>usar_baixados</th>
-      <td><p>Lógico.  Caso <code>usar_baixados = TRUE</code>, utilizará os dados baixados anteriormente.</p></td>
-    </tr>
-    <tr>
-      <th>diretorio_download</th>
-      <td><p>Texto. OPCIONAL. Local onde os arquivos brutos estão salvos, caso <code>usar_baixados = TRUE</code>. Ex: <code>"data-raw/"</code></p></td>
-    </tr>
-    <tr>
-      <th>salvar_local</th>
-      <td><p>Lógico.  Caso <code>salvar_local = TRUE</code>, irá salvar o resultado localmente, como um arquivo <code>.rds</code>.</p></td>
-    </tr>
-    <tr>
-      <th>diretorio_salvar</th>
-      <td><p>Texto. OPCIONAL. Local onde salvar os arquivos limpos, caso <code>salvar_local = TRUE</code>. Ex: <code>"data-raw/data-clean/"</code></p></td>
-    </tr>
-    </table>
+<span class='kw'>mananciais_consolidado</span></pre>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Retorna um tibble com os dados limpos.</p>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>Uma tibble, contendo:</p><dl>
+<dt>data</dt><dd><p>Data no formato ano-mês-dia (yyyy-mm-dd)</p></dd>
+<dt>sistema</dt><dd><p>Nome do sistema de abastecimento público</p></dd>
+<dt>volume_porcentagem</dt><dd><p>Volume operacional do sistema em porcentagem (%)</p></dd>
+<dt>volume_variacao</dt><dd><p>Variação em porcentagem (%) do volume operacional do sistema</p></dd>
+<dt>volume_operacional</dt><dd><p>Volume operacional do sistema em hm³</p></dd>
+<dt>pluviometria_dia</dt><dd><p>Pluviometria do dia (mm)</p></dd>
+<dt>pluviometria_mensal</dt><dd><p>Pluviometria acumulada do mês (mm)</p></dd>
+<dt>pluviometria_hist</dt><dd><p>Pluviometria média histórica mensal (mm)</p></dd>
+
+
+</dl>
+
+<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 44529 rows and 8 columns.</p>
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>SABESP - <a href='http://mananciais.sabesp.com.br/Situacao'>http://mananciais.sabesp.com.br/Situacao</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'> <span class='kw'>mananciais</span>:::<span class='fu'><a href='obter_dia.html'>obter_dia</a></span>(<span class='st'>"2020-09-26"</span>) <span class='op'>%&gt;%</span> <span class='kw'>mananciais</span>:::<span class='fu'>limpar_dados</span>(df = <span class='kw'>.</span>, usar_baixados = <span class='fl'>FALSE</span>)
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 7 x 8</span><span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='kw'>mananciais</span>)
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 6 x 8</span><span>
 #&gt;   data       sistema volume_porcenta~ volume_variacao volume_operacio~
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>           </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> 2020-09-26 Cantar~             42.3            -</span><span style='color: #BB0000;'>0.2</span><span>           415.  
-#&gt; </span><span style='color: #555555;'>2</span><span> 2020-09-26 Alto T~             61.1            -</span><span style='color: #BB0000;'>0.2</span><span>           342.  
-#&gt; </span><span style='color: #555555;'>3</span><span> 2020-09-26 Guarap~             47               0              80.5 
-#&gt; </span><span style='color: #555555;'>4</span><span> 2020-09-26 Cotia               64.8            -</span><span style='color: #BB0000;'>0.5</span><span>            10.7 
-#&gt; </span><span style='color: #555555;'>5</span><span> 2020-09-26 Rio Gr~             78.2             0              87.7 
-#&gt; </span><span style='color: #555555;'>6</span><span> 2020-09-26 Rio Cl~             64              -</span><span style='color: #BB0000;'>0.5</span><span>             8.75
-#&gt; </span><span style='color: #555555;'>7</span><span> 2020-09-26 São Lo~             64.9             0              57.6 
+#&gt; </span><span style='color: #555555;'>1</span><span> 2020-01-01 Cantar~             40.3            -</span><span style='color: #BB0000;'>0.1</span><span>            396. 
+#&gt; </span><span style='color: #555555;'>2</span><span> 2020-01-01 Alto T~             76.6            -</span><span style='color: #BB0000;'>0.2</span><span>            429. 
+#&gt; </span><span style='color: #555555;'>3</span><span> 2020-01-01 Guarap~             64              -</span><span style='color: #BB0000;'>0.5</span><span>            110. 
+#&gt; </span><span style='color: #555555;'>4</span><span> 2020-01-01 Cotia               73.4            -</span><span style='color: #BB0000;'>0.4</span><span>             12.1
+#&gt; </span><span style='color: #555555;'>5</span><span> 2020-01-01 Rio Gr~             82.6            -</span><span style='color: #BB0000;'>0.3</span><span>             92.7
+#&gt; </span><span style='color: #555555;'>6</span><span> 2020-01-01 Rio Cl~             97.6            -</span><span style='color: #BB0000;'>0.5</span><span>             13.3
 #&gt; </span><span style='color: #555555;'># ... with 3 more variables: pluviometria_dia </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, pluviometria_mensal </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   pluviometria_hist </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span></div><div class='input'>
-
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

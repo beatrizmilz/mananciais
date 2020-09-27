@@ -5,18 +5,18 @@
 \title{Limpar dados.}
 \usage{
 limpar_dados(
-  df,
   ano,
-  usar_baixados = FALSE,
+  df,
+  usar_baixados = TRUE,
   diretorio_download = "data-raw/",
   salvar_local = FALSE,
   diretorio_salvar = "data-raw/data-clean/"
 )
 }
 \arguments{
-\item{df}{Tibble a ser limpa. OPCIONAL. Caso for limpar dados que já foram baixados localmente, este argumento não é necessário.}
-
 \item{ano}{Numérico. OPCIONAL. Utilizado caso queira limpar dados baixados anteriormente.}
+
+\item{df}{Tibble a ser limpa. OPCIONAL. Caso for limpar dados que já foram baixados localmente, este argumento não é necessário.}
 
 \item{usar_baixados}{Lógico.  Caso \code{usar_baixados = TRUE}, utilizará os dados baixados anteriormente.}
 
@@ -34,7 +34,7 @@ Pode ser usada com o pipe ( \verb{\%>\%} ) (veja exemplo abaixo).
 A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o tipo de algumas variáveis.
 }
 \examples{
- mananciais:::obter_dia("2020-09-26") \%>\% mananciais:::limpar_dados()
+ mananciais:::obter_dia("2020-09-26") \%>\% mananciais:::limpar_dados(df = ., usar_baixados = FALSE)
 
 
 }

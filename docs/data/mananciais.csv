@@ -1,4 +1,4 @@
-data;nome;volume_porcentagem;volume_variacao;volume_operacional;prec_dia;prec_mensal;prec_hist
+data;sistema;volume_porcentagem;volume_variacao;volume_operacional;pluviometria_dia;pluviometria_mensal;pluviometria_hist
 2020-01-01;Cantareira; 40,3;-0,1; 395,99619;  0,2;  0,2;262,6
 2020-01-01;Alto Tietê; 76,6;-0,2; 429,18570;  0,0;  0,0;246,1
 2020-01-01;Guarapiranga; 64,0;-0,5; 109,63346;  0,6;  0,6;228,9

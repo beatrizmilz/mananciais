@@ -119,7 +119,8 @@
 
     <pre class="usage"><span class='fu'>unir_anos</span>(
   <span class='kw'>anos</span>,
-  usar_baixados = <span class='st'>"data-raw/data-clean/"</span>,
+  usar_baixados = <span class='fl'>TRUE</span>,
+  diretorio_dados = <span class='st'>"data-raw/data-clean/"</span>,
   salvar_local = <span class='fl'>FALSE</span>,
   diretorio_salvar = <span class='st'>"data/"</span>
 )</pre>
@@ -133,11 +134,15 @@
     </tr>
     <tr>
       <th>usar_baixados</th>
-      <td><p>Lógico. Caso <code>usar_baixados = TRUE</code>, utilizará os dados baixados anteriormente. Ex: <code>"data-raw/data-clean/"</code></p></td>
+      <td><p>Lógico. Caso <code>usar_baixados = TRUE</code>, utilizará os dados baixados anteriormente.</p></td>
     </tr>
     <tr>
       <th>diretorio_salvar</th>
       <td><p>Texto. OPCIONAL. Local onde salvar os arquivos limpos, caso <code>salvar_local = TRUE</code>. Ex: <code>"data/"</code></p></td>
+    </tr>
+    <tr>
+      <th>diretorio_dados.</th>
+      <td><p>Caso <code>usar_baixados = TRUE</code>, utilizará os dados baixados anteriormente. Informar em qual diretório os arquivos estão salvos.  Ex: <code>"data-raw/data-clean/"</code></p></td>
     </tr>
     </table>
 

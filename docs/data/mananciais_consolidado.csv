@@ -1,4 +1,4 @@
-data;nome;volume_porcentagem;volume_variacao;volume_operacional;prec_dia;prec_mensal;prec_hist
+data;sistema;volume_porcentagem;volume_variacao;volume_operacional;pluviometria_dia;pluviometria_mensal;pluviometria_hist
 2000-01-01;Cantareira; 47,1; 0,3; 365,50555; 30,9; 30,9;254,8
 2000-01-01;Alto Tietê; 50,9; 0,1; 196,02547; 26,0; 26,0;238,1
 2000-01-01;Guarapiranga; 36,0; 0,0;  64,80029; 47,2; 47,2;225,2

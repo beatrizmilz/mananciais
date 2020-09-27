@@ -83,7 +83,7 @@ mananciais %>%
   ggplot() +
   geom_line(aes(x = data, y = volume_porcentagem)) +
   scale_y_continuous(breaks = c(-25, 0, 25, 50, 75, 100)) +
-facet_wrap( ~ nome, ncol = 2) +
+  facet_wrap(~ sistema, ncol = 2) +
   theme_bw() +
   labs(x = "Ano", y = "Volume armazenado (%)")
 ```
@@ -97,7 +97,7 @@ mananciais %>%
   ggplot() +
   geom_line(aes(x = data, y = volume_porcentagem)) +
   scale_y_continuous(breaks = c(-25, 0, 25, 50, 75, 100)) +
-facet_wrap( ~ nome, ncol = 2) +
+facet_wrap( ~ sistema, ncol = 2) +
   theme_bw() +
   labs(x = "Meses", y = "Volume armazenado (%)")
 ```

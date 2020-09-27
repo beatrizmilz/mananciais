@@ -6,7 +6,8 @@
 \usage{
 unir_anos(
   anos,
-  usar_baixados = "data-raw/data-clean/",
+  usar_baixados = TRUE,
+  diretorio_dados = "data-raw/data-clean/",
   salvar_local = FALSE,
   diretorio_salvar = "data/"
 )
@@ -14,9 +15,11 @@ unir_anos(
 \arguments{
 \item{anos}{Quais anos deseja unir. Ex: \code{2000:2019}}
 
-\item{usar_baixados}{Lógico. Caso \code{usar_baixados = TRUE}, utilizará os dados baixados anteriormente. Ex: \code{"data-raw/data-clean/"}}
+\item{usar_baixados}{Lógico. Caso \code{usar_baixados = TRUE}, utilizará os dados baixados anteriormente.}
 
 \item{diretorio_salvar}{Texto. OPCIONAL. Local onde salvar os arquivos limpos, caso \code{salvar_local = TRUE}. Ex: \code{"data/"}}
+
+\item{diretorio_dados.}{Caso \code{usar_baixados = TRUE}, utilizará os dados baixados anteriormente. Informar em qual diretório os arquivos estão salvos.  Ex: \code{"data-raw/data-clean/"}}
 }
 \value{
 Retorna um tibble com os dados unidos.
