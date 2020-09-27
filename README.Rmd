@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # mananciais
 
 <!-- badges: start -->
+[![R build status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)
 <!-- badges: end -->
 
 The goal of mananciais is to ...
@@ -47,7 +48,8 @@ library(tidyverse)
 
 mananciais_atualizado %>% 
   arrange(desc(data)) %>% 
-  head() %>% knitr::kable()
+  head(7) %>%
+  knitr::kable()
 ```
 
 

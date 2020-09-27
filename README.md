@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![R build
+status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)
 <!-- badges: end -->
 
 The goal of mananciais is to …
@@ -59,7 +61,8 @@ library(tidyverse)
 
 mananciais_atualizado %>% 
   arrange(desc(data)) %>% 
-  head() %>% knitr::kable()
+  head(7) %>%
+  knitr::kable()
 ```
 
 | data       | sistema\_id | nome         | volume\_porcentagem\_ar | volume\_porcentagem | volume\_variacao\_str | volume\_variacao\_num | volume\_operacional | prec\_dia | prec\_mensal | prec\_hist |
@@ -70,3 +73,4 @@ mananciais_atualizado %>%
 | 2020-09-26 | 3           | Cotia        |                    64.8 |            64.80001 |                 \-0.5 |                 \-0.5 |            10.69014 |       0.0 |          6.6 |       82.5 |
 | 2020-09-26 | 4           | Rio Grande   |                    78.2 |            78.16921 |                   0.0 |                   0.0 |            87.69203 |       0.2 |         25.4 |       95.0 |
 | 2020-09-26 | 5           | Rio Claro    |                    64.0 |            64.01324 |                 \-0.5 |                 \-0.5 |             8.74863 |       0.2 |         89.8 |      141.6 |
+| 2020-09-26 | 17          | São Lourenço |                    64.9 |            64.88974 |                   0.0 |                   0.0 |            57.63590 |       0.0 |         19.0 |      115.9 |
