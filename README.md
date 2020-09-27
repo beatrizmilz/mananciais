@@ -7,8 +7,6 @@
 
 [![R build
 status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)
-[![Render
-README](https://github.com/beatrizmilz/mananciais/workflows/Render%20README/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
