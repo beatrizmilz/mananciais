@@ -24,23 +24,14 @@ raspar_site <-
       ))
     }
 
-    tabela_sem_filtro <-
-      purrr::map_dfr(dias, baixar_dia, .id = "dia")
+    tabela <-
+      purrr::map_dfr(dias, mananciais:::obter_dia, .id = "dia")
 
 
-    tabela_filtrada <- tabela_sem_filtro %>%
-      dplyr::mutate(
-        data = lubridate::dmy(data_original$value),
-        data_valida = dplyr::case_when(dia == data ~ TRUE,
-                                       dia != data ~ FALSE)
-      ) %>%
-      dplyr::filter(data_valida == TRUE)
-
-
-    tabela_filtrada %>%
+    tabela %>%
       # Exportar
       readr::write_rds(glue::glue("{diretorio_download}mananciais_{ano}.rds"),
                        compress = "xz")
 
-    return(tabela_filtrada)
+    return(tabela)
   }
