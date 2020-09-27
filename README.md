@@ -7,10 +7,11 @@
 
 [![R build
 status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)
-
 ![Render
 README](https://github.com/beatrizmilz/mananciais/workflows/Render%20README/badge.svg)
 <!-- badges: end -->
+
+**PACOTE EM DESENVOLVIMENTO**
 
 O objetivo deste pacote é disponibilizar a base de dados sobre volume
 armazenado em mananciais de abastecimento público na Região
