@@ -7,8 +7,10 @@
 
 [![R build
 status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)
-![Render
-README](https://github.com/beatrizmilz/mananciais/workflows/Render%20README/badge.svg)
+[![Render
+README](https://github.com/beatrizmilz/mananciais/workflows/Render%20README/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
 **PACOTE EM DESENVOLVIMENTO**
@@ -24,11 +26,16 @@ disponíveis na
 [API](http://mananciais.sabesp.com.br/api/Mananciais/ResumoSistemas/2020-01-01).
 
 Existem dois arquivos disponíveis, em que a diferença é o período dos
-dados:
+dados. Caso você não utilize `R` e queira ter acesso aos dados em
+formato `.csv`, os mesmos podem ser acessados através dos links a
+seguir. Lembrete: o arquivo foi salvo em formato “separado por ponto e
+vírgula”, e com encoding “UFT-8”.
 
-  - `mananciais` - 2000 à 2019
+  - `mananciais` - 2000 à 2019 - [Baixar versão
+    `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/data/mananciais.csv)
 
-  - `mananciais_completo` - 2000 à 2020 (parcial)
+  - `mananciais_atualizado` - 2000 à 2020 (parcial) - [Baixar versão
+    `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/data/mananciais_atualizado.csv)
 
 ## Instalação
 

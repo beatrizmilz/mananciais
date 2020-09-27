@@ -21,4 +21,10 @@ mananciais_atualizado <-
 
 
 
+
 usethis::use_data(mananciais, mananciais_atualizado, overwrite = T)
+
+
+
+readr::write_csv2(mananciais, "data/mananciais.csv")
+readr::write_csv2(mananciais_atualizado, "data/mananciais_atualizado.csv")
