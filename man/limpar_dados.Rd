@@ -2,20 +2,39 @@
 % Please edit documentation in R/limpar_dados.R
 \name{limpar_dados}
 \alias{limpar_dados}
-\title{Title}
+\title{Limpar dados.}
 \usage{
 limpar_dados(
+  df,
   ano,
+  usar_baixados = FALSE,
   diretorio_download = "data-raw/",
+  salvar_local = FALSE,
   diretorio_salvar = "data-raw/data-clean/"
 )
 }
 \arguments{
-\item{df}{}
+\item{df}{Tibble a ser limpa. OPCIONAL. Caso for limpar dados que já foram baixados localmente, este argumento não é necessário.}
+
+\item{ano}{Numérico. OPCIONAL. Utilizado caso queira limpar dados baixados anteriormente.}
+
+\item{usar_baixados}{Lógico. Caso seja TRUE, utilizará os dados baixados anteriormente.}
+
+\item{diretorio_download}{Texto. OPCIONAL. Local onde os arquivos brutos estão salvos, caso \code{usar_baixados = TRUE}. Ex: \code{"data-raw/"}}
+
+\item{salvar_local}{Lógico. Caso seja TRUE, irá salvar o resultado localmente, como um arquivo \code{.rds}.}
+
+\item{diretorio_salvar}{Texto. OPCIONAL. Local onde salvar os arquivos limpos, caso \code{salvar_local = TRUE}. Ex: \code{"data-raw/data-clean/"}}
 }
 \value{
-
+Retorna um tibble com os dados limpos.
 }
 \description{
-Title
+Pode ser usada com o pipe ( \%>\% ) (veja exemplo abaixo).
+A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o tipo de algumas variáveis.
+}
+\examples{
+ mananciais:::obter_dia("2020-09-26") \%>\% mananciais:::limpar_dados()
+
+
 }
