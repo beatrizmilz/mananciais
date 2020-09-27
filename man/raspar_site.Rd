@@ -4,7 +4,12 @@
 \alias{raspar_site}
 \title{Title}
 \usage{
-raspar_site(ano, ano_atual = FALSE)
+raspar_site(
+  ano,
+  ano_atual = FALSE,
+  diretorio_download = "data-raw/",
+  download_local = TRUE
+)
 }
 \arguments{
 \item{ano_atual}{}

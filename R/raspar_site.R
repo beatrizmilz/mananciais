@@ -10,11 +10,8 @@
 raspar_site <-
   function(ano,
            ano_atual = FALSE,
-           diretorio_download = "data-raw",
+           diretorio_download = "data-raw/",
            download_local = TRUE) {
-# ano = 2020
-# ano_atual = TRUE
-
 
     if (ano_atual == FALSE) {
       dias <-  purrr::set_names(lubridate::as_date(
@@ -42,7 +39,7 @@ raspar_site <-
 
     tabela_filtrada %>%
       # Exportar
-      readr::write_rds(glue::glue("{diretorio_download}/mananciais_{ano}.rds"),
+      readr::write_rds(glue::glue("{diretorio_download}mananciais_{ano}.rds"),
                        compress = "xz")
 
     return(tabela_filtrada)

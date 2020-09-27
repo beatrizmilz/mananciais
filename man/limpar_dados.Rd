@@ -4,7 +4,11 @@
 \alias{limpar_dados}
 \title{Title}
 \usage{
-limpar_dados(df)
+limpar_dados(
+  ano,
+  diretorio_download = "data-raw/",
+  diretorio_salvar = "data-raw/data-clean/"
+)
 }
 \arguments{
 \item{df}{}

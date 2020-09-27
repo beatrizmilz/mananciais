@@ -34,12 +34,22 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(mananciais)
-## basic example code
+
+str(mananciais)
+
+str(mananciais_atualizado)
 ```
 
-## Raspar o site por ano
 
-```{r eval=FALSE, include=TRUE}
-mananciais::raspar_site(ano = 2020, ano_atual = TRUE)
+
+```{r eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
+library(tidyverse)
+
+mananciais_atualizado %>% 
+  arrange(desc(data)) %>% 
+  head() %>% knitr::kable()
 ```
+
+
+
 

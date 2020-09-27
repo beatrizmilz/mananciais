@@ -1,5 +1,5 @@
 Package: mananciais
-Title: What the Package Does (One Line, Title Case)
+Title: Base de dados sobre mananciais de abastecimento público na Região Metropolitana de São Paulo (Brasil).
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Beatriz",
@@ -7,7 +7,10 @@ Authors@R:
            role = c("aut", "cre"),
            email = "milz.bea@gmail.com",
            comment = c(ORCID = "0000-0002-3064-4486"))
-Description: What the package does (one paragraph).
+Description: Este pacote disponibiliza uma base de dados sobre os
+    seguintes sistemas que abastecem a Região Metropolitana de São Paulo: 
+    Cantareira, Alto Tietê, Guarapiranga, Cotia, Rio Grande, Rio Claro,
+    São Loureço. Dados obtidos através da API da SABESP.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -23,3 +26,5 @@ Imports:
     purrr,
     jsonlite,
     httr
+Depends: 
+    R (>= 2.10)
