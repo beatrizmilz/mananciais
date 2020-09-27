@@ -17,11 +17,13 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R build status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)
+
+![Render README](https://github.com/beatrizmilz/mananciais/workflows/Render%20README/badge.svg)
 <!-- badges: end -->
 
 O objetivo deste pacote é disponibilizar a base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil).
 
-Os dados foram obtidos no [Portal dos Mananciais](http://mananciais.sabesp.com.br/Situacao) da [SABESP](http://site.sabesp.com.br/site/Default.aspx).
+Os dados foram obtidos no [Portal dos Mananciais](http://mananciais.sabesp.com.br/Situacao) da [SABESP](http://site.sabesp.com.br/site/Default.aspx), através dos dados disponíveis na [API](http://mananciais.sabesp.com.br/api/Mananciais/ResumoSistemas/2020-01-01).
 
 
 
@@ -39,7 +41,7 @@ A versão em desenvolvimento deste pacote pode ser instalada através do  [GitHu
 # install.packages("devtools")
 devtools::install_github("beatrizmilz/mananciais")
 ```
-## Exemplo
+## Exemplos
 
 Abaixo segue um exemplo das bases disponíveis:
 
@@ -51,7 +53,7 @@ str(mananciais)
 str(mananciais_atualizado)
 ```
 
-# Exemplo de tabela
+### Exemplo de tabela
 
 ```{r eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
 library(dplyr)
@@ -64,7 +66,9 @@ mananciais_atualizado %>%
 ```
 
 
-# Exemplo de gráfico
+### Exemplos de gráficos
+
+## Desde o início dos dados
 
 ```{r ggplot, dpi = 600, fig.height=7}
 library(ggplot2)
@@ -76,4 +80,19 @@ facet_wrap( ~ nome, ncol = 2) +
   theme_bw() +
   labs(x = "Ano", y = "Volume armazenado (%)")
 ```
+
+### Apenas ano atual
+
+```{r ggplot2, dpi = 600, fig.height=7}
+mananciais_atualizado %>%
+  mutate(ano = lubridate::year(data)) %>% 
+  filter(ano == 2020) %>% 
+  ggplot() +
+  geom_line(aes(x = data, y = volume_porcentagem)) +
+  scale_y_continuous(breaks = c(-25, 0, 25, 50, 75, 100)) +
+facet_wrap( ~ nome, ncol = 2) +
+  theme_bw() +
+  labs(x = "Meses", y = "Volume armazenado (%)")
+```
+
 
