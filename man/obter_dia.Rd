@@ -21,7 +21,7 @@ a tibble retornada não terá nenhuma linha.
 O mesmo acontecerá se utilizar uma data futura, ou data anterior ao início dos dados disponíveis.
 }
 \examples{
-mananciais:::obter_dia("2020-09-26")
-mananciais:::obter_dia("2020-09-26")
+# mananciais:::obter_dia("2020-09-26")
+# mananciais:::obter_dia("2020-09-26")
 
 }
