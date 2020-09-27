@@ -30,6 +30,7 @@ Imports:
     usethis,
     knitr,
     ggplot2,
-    lubridate
+    lubridate,
+    glue
 Depends: 
     R (>= 2.10)

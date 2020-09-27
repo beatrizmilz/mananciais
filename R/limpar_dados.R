@@ -12,7 +12,7 @@
 #'
 #' @return Retorna um tibble com os dados limpos.
 #'
-#' @examples  mananciais:::obter_dia("2020-09-26") %>% mananciais:::limpar_dados(df = ., usar_baixados = FALSE)
+#' @examples  # mananciais:::obter_dia("2020-09-26") %>% mananciais:::limpar_dados(df = ., usar_baixados = FALSE)
 #'
 #'
 limpar_dados <- function(ano, df,

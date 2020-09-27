@@ -34,7 +34,7 @@ Pode ser usada com o pipe ( \verb{\%>\%} ) (veja exemplo abaixo).
 A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o tipo de algumas variáveis.
 }
 \examples{
- mananciais:::obter_dia("2020-09-26") \%>\% mananciais:::limpar_dados(df = ., usar_baixados = FALSE)
+ # mananciais:::obter_dia("2020-09-26") \%>\% mananciais:::limpar_dados(df = ., usar_baixados = FALSE)
 
 
 }
