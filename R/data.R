@@ -12,10 +12,11 @@ mananciais <- readr::read_rds("data/mananciais.rds")
 
 
 # mananciais::raspar_site(ano = 2020, ano_atual = TRUE)
-# mananciais::limpar_dados(ano = 2020)
+# mananciais::limpar_dados(ano = 2020) %>%
+#  readr::write_rds(glue::glue("data/mananciais_2020.rds"),  compress = "xz")
 
 mananciais_atualizado <-
-  readr::read_rds("data-raw/data-clean/mananciais_2020.rds") %>%
+  readr::read_rds("data/mananciais_2020.rds") %>%
   rbind(mananciais)
 
 
