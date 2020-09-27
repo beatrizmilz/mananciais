@@ -29,9 +29,19 @@ Os dados foram obtidos no [Portal dos Mananciais](http://mananciais.sabesp.com.b
 
 Existem dois arquivos disponíveis, em que a diferença é o período dos dados. Caso você não utilize `R` e queira ter acesso aos dados em formato `.csv`, os mesmos podem ser acessados através dos links a seguir. Lembrete: o arquivo foi salvo em formato "separado por ponto e vírgula", e com encoding "UFT-8".
 
-- `mananciais` - 2000 à 2019 - [Baixar versão `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais.csv)
+```{r include=FALSE}
+library(magrittr)
+data_atualizacao <-
+  mananciais::mananciais %>%
+  dplyr::arrange(desc(data)) %>%
+  dplyr::slice(1) %>%
+  dplyr::pull(var = data) %>%
+  format("%d/%m/%Y")
+```
 
-- `mananciais_atualizado` - 2000 à 2020 (parcial) - [Baixar versão `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais_atualizado.csv), pode estar desatualizado.
+- `mananciais_consolidado` - 2000 à 2019 - [Baixar versão `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais_consolidado.csv)
+
+- `mananciais` - 2000 à 2020 (parcial) - [Baixar versão `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais.csv), atualizado em:  `r data_atualizacao`.
 
 ## Instalação
 
@@ -50,13 +60,13 @@ library(mananciais)
 
 str(mananciais)
 
-str(mananciais_atualizado)
+str(mananciais_consolidado)
 ```
 
 ### Exemplo de tabela
 
 ```{r eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
-mananciais_atualizado %>% 
+mananciais %>% 
   dplyr::arrange(desc(data)) %>% 
   head(7) %>%
   knitr::kable()
@@ -69,7 +79,7 @@ mananciais_atualizado %>%
 
 ```{r ggplot, dpi = 600, fig.height=7}
 library(ggplot2)
-mananciais_atualizado %>%
+mananciais %>%
   ggplot() +
   geom_line(aes(x = data, y = volume_porcentagem)) +
   scale_y_continuous(breaks = c(-25, 0, 25, 50, 75, 100)) +
@@ -81,7 +91,7 @@ facet_wrap( ~ nome, ncol = 2) +
 ### Apenas ano atual
 
 ```{r ggplot2, dpi = 600, fig.height=7}
-mananciais_atualizado %>%
+mananciais %>%
   dplyr::mutate(ano = lubridate::year(data)) %>% 
   dplyr::filter(ano == 2020) %>% 
   ggplot() +

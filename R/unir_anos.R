@@ -23,7 +23,7 @@ unir_anos <-  function(anos,
     purrr::reduce(rbind)
 
   if (salvar_local == TRUE) {
-    df %>% readr::write_rds(glue::glue("{diretorio_salvar}mananciais.rds"),
+    df %>% readr::write_rds(glue::glue("{diretorio_salvar}mananciais_consolidado.rds"),
                             compress = "xz")
   }
 

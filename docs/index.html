@@ -79,8 +79,8 @@
 <p>Os dados foram obtidos no <a href="http://mananciais.sabesp.com.br/Situacao">Portal dos Mananciais</a> da <a href="http://site.sabesp.com.br/site/Default.aspx">SABESP</a>, através dos dados disponíveis na <a href="http://mananciais.sabesp.com.br/api/Mananciais/ResumoSistemas/2020-01-01">API</a>.</p>
 <p>Existem dois arquivos disponíveis, em que a diferença é o período dos dados. Caso você não utilize <code>R</code> e queira ter acesso aos dados em formato <code>.csv</code>, os mesmos podem ser acessados através dos links a seguir. Lembrete: o arquivo foi salvo em formato “separado por ponto e vírgula”, e com encoding “UFT-8”.</p>
 <ul>
-<li><p><code>mananciais</code> - 2000 à 2019 - <a href="https://beatrizmilz.github.io/mananciais/data/mananciais.csv">Baixar versão <code>.csv</code></a></p></li>
-<li><p><code>mananciais_atualizado</code> - 2000 à 2020 (parcial) - <a href="https://beatrizmilz.github.io/mananciais/data/mananciais_atualizado.csv">Baixar versão <code>.csv</code></a>, pode estar desatualizado.</p></li>
+<li><p><code>mananciais_consolidado</code> - 2000 à 2019 - <a href="https://beatrizmilz.github.io/mananciais/data/mananciais_consolidado.csv">Baixar versão <code>.csv</code></a></p></li>
+<li><p><code>mananciais</code> - 2000 à 2020 (parcial) - <a href="https://beatrizmilz.github.io/mananciais/data/mananciais.csv">Baixar versão <code>.csv</code></a>, atualizado em: 27/09/2020.</p></li>
 </ul>
 <div id="instalação" class="section level2">
 <h2 class="hasAnchor">
@@ -99,32 +99,32 @@
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/beatrizmilz/mananciais">mananciais</a></span>)
 
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(<span class="kw">mananciais</span>)
-<span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    44529 obs. of  8 variables:</span>
-<span class="co">#&gt;  $ data              : Date, format: "2000-01-01" "2000-01-01" ...</span>
-<span class="co">#&gt;  $ nome              : chr  "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...</span>
-<span class="co">#&gt;  $ volume_porcentagem: num  47.1 50.9 36 18.8 81 73.2 47.8 51.4 36.4 18.8 ...</span>
-<span class="co">#&gt;  $ volume_variacao   : num  0.3 0.1 0 0.9 0.4 -0.2 0.7 0.5 0.4 0 ...</span>
-<span class="co">#&gt;  $ volume_operacional: num  365.51 196.03 64.8 2.65 91.69 ...</span>
-<span class="co">#&gt;  $ prec_dia          : num  30.9 26 47.2 0 0 5.2 29.1 47.3 9.2 33.2 ...</span>
-<span class="co">#&gt;  $ prec_mensal       : num  30.9 26 47.2 0 0 5.2 60 73.3 56.4 33.2 ...</span>
-<span class="co">#&gt;  $ prec_hist         : num  255 238 225 218 235 ...</span>
+<span class="co">#&gt; tibble [46,426 x 8] (S3: tbl_df/tbl/data.frame)</span>
+<span class="co">#&gt;  $ data              : Date[1:46426], format: "2020-01-01" "2020-01-01" ...</span>
+<span class="co">#&gt;  $ nome              : chr [1:46426] "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...</span>
+<span class="co">#&gt;  $ volume_porcentagem: num [1:46426] 40.3 76.6 64 73.4 82.6 97.6 58.8 40.4 76.4 63.6 ...</span>
+<span class="co">#&gt;  $ volume_variacao   : num [1:46426] -0.1 -0.2 -0.5 -0.4 -0.3 -0.5 -0.1 0.1 -0.2 -0.4 ...</span>
+<span class="co">#&gt;  $ volume_operacional: num [1:46426] 396 429.2 109.6 12.1 92.7 ...</span>
+<span class="co">#&gt;  $ prec_dia          : num [1:46426] 0.2 0 0.6 0 0 0 0 16.6 10.2 1.6 ...</span>
+<span class="co">#&gt;  $ prec_mensal       : num [1:46426] 0.2 0 0.6 0 0 0 0 16.8 10.2 2.2 ...</span>
+<span class="co">#&gt;  $ prec_hist         : num [1:46426] 263 246 229 225 251 ...</span>
 
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(<span class="kw">mananciais_atualizado</span>)
-<span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    46426 obs. of  8 variables:</span>
-<span class="co">#&gt;  $ data              : Date, format: "2020-01-01" "2020-01-01" ...</span>
-<span class="co">#&gt;  $ nome              : chr  "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...</span>
-<span class="co">#&gt;  $ volume_porcentagem: num  40.3 76.6 64 73.4 82.6 97.6 58.8 40.4 76.4 63.6 ...</span>
-<span class="co">#&gt;  $ volume_variacao   : num  -0.1 -0.2 -0.5 -0.4 -0.3 -0.5 -0.1 0.1 -0.2 -0.4 ...</span>
-<span class="co">#&gt;  $ volume_operacional: num  396 429.2 109.6 12.1 92.7 ...</span>
-<span class="co">#&gt;  $ prec_dia          : num  0.2 0 0.6 0 0 0 0 16.6 10.2 1.6 ...</span>
-<span class="co">#&gt;  $ prec_mensal       : num  0.2 0 0.6 0 0 0 0 16.8 10.2 2.2 ...</span>
-<span class="co">#&gt;  $ prec_hist         : num  263 246 229 225 251 ...</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(<span class="kw">mananciais_consolidado</span>)
+<span class="co">#&gt; tibble [44,529 x 8] (S3: tbl_df/tbl/data.frame)</span>
+<span class="co">#&gt;  $ data              : Date[1:44529], format: "2000-01-01" "2000-01-01" ...</span>
+<span class="co">#&gt;  $ nome              : chr [1:44529] "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...</span>
+<span class="co">#&gt;  $ volume_porcentagem: num [1:44529] 47.1 50.9 36 18.8 81 73.2 47.8 51.4 36.4 18.8 ...</span>
+<span class="co">#&gt;  $ volume_variacao   : num [1:44529] 0.3 0.1 0 0.9 0.4 -0.2 0.7 0.5 0.4 0 ...</span>
+<span class="co">#&gt;  $ volume_operacional: num [1:44529] 365.51 196.03 64.8 2.65 91.69 ...</span>
+<span class="co">#&gt;  $ prec_dia          : num [1:44529] 30.9 26 47.2 0 0 5.2 29.1 47.3 9.2 33.2 ...</span>
+<span class="co">#&gt;  $ prec_mensal       : num [1:44529] 30.9 26 47.2 0 0 5.2 60 73.3 56.4 33.2 ...</span>
+<span class="co">#&gt;  $ prec_hist         : num [1:44529] 255 238 225 218 235 ...</span>
 </pre></div>
 <div id="exemplo-de-tabela" class="section level3">
 <h3 class="hasAnchor">
 <a href="#exemplo-de-tabela" class="anchor"></a>Exemplo de tabela</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="kw">mananciais_atualizado</span> <span class="op">%&gt;%</span> 
+<span class="kw">mananciais</span> <span class="op">%&gt;%</span> 
   <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span>(<span class="fu">desc</span>(<span class="kw">data</span>)) <span class="op">%&gt;%</span> 
   <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="fl">7</span>) <span class="op">%&gt;%</span>
   <span class="kw">knitr</span>::<span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>()
@@ -234,7 +234,7 @@
 <a href="#desde-o-in%C3%ADcio-dos-dados" class="anchor"></a>Desde o início dos dados</h2>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span>)
-<span class="kw">mananciais_atualizado</span> <span class="op">%&gt;%</span>
+<span class="kw">mananciais</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>() <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(x = <span class="kw">data</span>, y = <span class="kw">volume_porcentagem</span>)) <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span>(breaks = <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="op">-</span><span class="fl">25</span>, <span class="fl">0</span>, <span class="fl">25</span>, <span class="fl">50</span>, <span class="fl">75</span>, <span class="fl">100</span>)) <span class="op">+</span>
@@ -247,7 +247,7 @@
 <h3 class="hasAnchor">
 <a href="#apenas-ano-atual" class="anchor"></a>Apenas ano atual</h3>
 <div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="kw">mananciais_atualizado</span> <span class="op">%&gt;%</span>
+<span class="kw">mananciais</span> <span class="op">%&gt;%</span>
   <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span>(ano = <span class="kw">lubridate</span>::<span class="fu"><a href="http://lubridate.tidyverse.org/reference/year.html">year</a></span>(<span class="kw">data</span>)) <span class="op">%&gt;%</span> 
   <span class="kw">dplyr</span>::<span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(<span class="kw">ano</span> <span class="op">==</span> <span class="fl">2020</span>) <span class="op">%&gt;%</span> 
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>() <span class="op">+</span>
