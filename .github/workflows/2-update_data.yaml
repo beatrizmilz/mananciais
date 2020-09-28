@@ -29,5 +29,7 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git commit README.md -m 'Script to update data' || echo "Script to update data"
-          git push origin || echo "Script to update data"
+          git add data/mananciais.rda
+          git add docs/data/mananciais.csv
+          git commit -m 'Update data' || echo "Update data"
+          git push origin || echo "Update data"
