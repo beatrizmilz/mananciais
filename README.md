@@ -30,10 +30,10 @@ seguir. Lembrete: o arquivo foi salvo em formato “separado por ponto e
 vírgula”, e com encoding “UTF-8”.
 
   - `mananciais_consolidado` - 2000 à 2019 - [Baixar versão
-    `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais_consolidado.csv)
+    `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais_consolidado.csv)
 
   - `mananciais` - 2000 à 2020 (parcial) - [Baixar versão
-    `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais.csv),
+    `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv),
     atualizado em: 28/09/2020.
 
 ## Instalação
