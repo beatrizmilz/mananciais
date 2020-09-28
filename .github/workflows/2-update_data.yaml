@@ -24,12 +24,12 @@ jobs:
         shell: Rscript {0}
       - name: Execute Script
         run: |
-          Rscript -e 'library(tidyverse); mananciais <- mananciais:::obter_ano(ano = 2020, download_local = FALSE) %>%  mananciais:::limpar_dados(df = ., usar_baixados = FALSE, salvar_local = FALSE) %>% rbind(mananciais::mananciais_consolidado) ; usethis::use_data(mananciais, overwrite = T) ; readr::write_csv2(mananciais, "docs/data/mananciais.csv")'
+          Rscript -e 'library(tidyverse); mananciais <- mananciais:::obter_ano(ano = 2020, download_local = FALSE) %>%  mananciais:::limpar_dados(df = ., usar_baixados = FALSE, salvar_local = FALSE) %>% rbind(mananciais::mananciais_consolidado) ; usethis::use_data(mananciais, overwrite = T) ; readr::write_csv2(mananciais, "inst/extdata/mananciais.csv")'
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add data/mananciais.rda
-          git add docs/data/mananciais.csv
+          git add inst/extdata/mananciais.csv
           git commit -m 'Update data' || echo "Update data"
           git push origin || echo "Update data"

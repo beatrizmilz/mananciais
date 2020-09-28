@@ -28,8 +28,8 @@ usethis::use_data(mananciais_consolidado, mananciais, overwrite = T)
 
 
 
-# readr::write_csv2(mananciais, "docs/data/mananciais.csv")
-# readr::write_csv2(mananciais_consolidado, "docs/data/mananciais_consolidado.csv")
+# readr::write_csv2(mananciais, "inst/extdata/mananciais.csv")
+# readr::write_csv2(mananciais_consolidado, "inst/extdata/mananciais_consolidado.csv")
 
 
 

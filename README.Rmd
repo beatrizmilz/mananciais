@@ -39,9 +39,9 @@ data_atualizacao <-
   format("%d/%m/%Y")
 ```
 
-- `mananciais_consolidado` - 2000 à 2019 - [Baixar versão `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais_consolidado.csv)
+- `mananciais_consolidado` - 2000 à 2019 - [Baixar versão `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais_consolidado.csv)
 
-- `mananciais` - 2000 à 2020 (parcial) - [Baixar versão `.csv`](https://beatrizmilz.github.io/mananciais/data/mananciais.csv), atualizado em:  `r data_atualizacao`.
+- `mananciais` - 2000 à 2020 (parcial) - [Baixar versão `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv), atualizado em:  `r data_atualizacao`.
 
 ## Instalação
 
