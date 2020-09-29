@@ -11,6 +11,8 @@ status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.sv
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
+**PACOTE EM DESENVOLVIMENTO**
+
 O objetivo deste pacote é disponibilizar a base de dados sobre volume
 armazenado em mananciais de abastecimento público na Região
 Metropolitana de São Paulo (SP - Brasil).
