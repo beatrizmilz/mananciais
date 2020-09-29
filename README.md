@@ -11,8 +11,6 @@ status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.sv
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-**PACOTE EM DESENVOLVIMENTO**
-
 O objetivo deste pacote é disponibilizar a base de dados sobre volume
 armazenado em mananciais de abastecimento público na Região
 Metropolitana de São Paulo (SP - Brasil).
@@ -23,18 +21,11 @@ Mananciais](http://mananciais.sabesp.com.br/Situacao) da
 disponíveis na
 [API](http://mananciais.sabesp.com.br/api/Mananciais/ResumoSistemas/2020-01-01).
 
-Existem dois arquivos disponíveis, em que a diferença é o período dos
-dados. Caso você não utilize `R` e queira ter acesso aos dados em
-formato `.csv`, os mesmos podem ser acessados através dos links a
-seguir. Lembrete: o arquivo foi salvo em formato “separado por ponto e
-vírgula”, e com encoding “UTF-8”.
-
-  - `mananciais_consolidado` - 2000 à 2019 - [Baixar versão
-    `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais_consolidado.csv)
-
-  - `mananciais` - 2000 à 2020 (parcial) - [Baixar versão
-    `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv),
-    atualizado em: 28/09/2020.
+Este pacote foi derivado de um código web scraping desenvolvido pela
+equipe da [Curso-R](https://www.curso-r.com/), em uma
+[live](https://youtu.be/jvZIxrMmOcQ), e o código original está
+disponível [neste
+link](https://github.com/curso-r/lives/blob/master/drafts/20200730_scraper_sabesp.R).
 
 ## Instalação
 
@@ -46,7 +37,21 @@ A versão em desenvolvimento deste pacote pode ser instalada através do
 devtools::install_github("beatrizmilz/mananciais")
 ```
 
-## Exemplos
+## Como usar?
+
+Existem dois arquivos disponíveis, em que a diferença é o período dos
+dados. Caso você não utilize `R` e queira ter acesso aos dados em
+formato `.csv`, os mesmos podem ser acessados através dos links a
+seguir. Lembrete: o arquivo foi salvo em formato “separado por ponto e
+vírgula”, e com encoding “UTF-8”.
+
+  - `mananciais_consolidado` - 2000 à 2019 - [Baixar versão
+    `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais_consolidado.csv)
+
+  - `mananciais` - 2000 à 2020 (parcial) - [Baixar versão
+    `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv).
+    Esse arquivo é atualizado através de um workflow no [GitHub
+    Actions](https://github.com/beatrizmilz/mananciais/actions).
 
 Abaixo segue um exemplo das bases disponíveis:
 
@@ -54,7 +59,7 @@ Abaixo segue um exemplo das bases disponíveis:
 library(mananciais)
 
 str(mananciais)
-#> tibble [46,433 × 8] (S3: tbl_df/tbl/data.frame)
+#> tibble [46,433 x 8] (S3: tbl_df/tbl/data.frame)
 #>  $ data               : Date[1:46433], format: "2020-01-01" "2020-01-01" ...
 #>  $ sistema            : chr [1:46433] "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...
 #>  $ volume_porcentagem : num [1:46433] 40.3 76.6 64 73.4 82.6 97.6 58.8 40.4 76.4 63.6 ...
@@ -65,7 +70,7 @@ str(mananciais)
 #>  $ pluviometria_hist  : num [1:46433] 263 246 229 225 251 ...
 
 str(mananciais_consolidado)
-#> tibble [44,529 × 8] (S3: tbl_df/tbl/data.frame)
+#> tibble [44,529 x 8] (S3: tbl_df/tbl/data.frame)
 #>  $ data               : Date[1:44529], format: "2000-01-01" "2000-01-01" ...
 #>  $ sistema            : chr [1:44529] "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...
 #>  $ volume_porcentagem : num [1:44529] 47.1 50.9 36 18.8 81 73.2 47.8 51.4 36.4 18.8 ...
@@ -74,6 +79,25 @@ str(mananciais_consolidado)
 #>  $ pluviometria_dia   : num [1:44529] 30.9 26 47.2 0 0 5.2 29.1 47.3 9.2 33.2 ...
 #>  $ pluviometria_mensal: num [1:44529] 30.9 26 47.2 0 0 5.2 60 73.3 56.4 33.2 ...
 #>  $ pluviometria_hist  : num [1:44529] 255 238 225 218 235 ...
+```
+
+Caso você queira utilizar a base mais atual, sem que seja necessário
+reinstalar o pacote, recomendo que utilize o seguinte código:
+
+``` r
+mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv")
+#> Using ',' as decimal and '.' as grouping mark. Use read_delim() for more control.
+#> Parsed with column specification:
+#> cols(
+#>   data = col_date(format = ""),
+#>   sistema = col_character(),
+#>   volume_porcentagem = col_double(),
+#>   volume_variacao = col_double(),
+#>   volume_operacional = col_double(),
+#>   pluviometria_dia = col_double(),
+#>   pluviometria_mensal = col_double(),
+#>   pluviometria_hist = col_double()
+#> )
 ```
 
 ### Exemplo de tabela

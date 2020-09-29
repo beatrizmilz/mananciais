@@ -19,13 +19,21 @@ knitr::opts_chunk$set(
 [![R build status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)   [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-**PACOTE EM DESENVOLVIMENTO**
-
 O objetivo deste pacote é disponibilizar a base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil).
 
 Os dados foram obtidos no [Portal dos Mananciais](http://mananciais.sabesp.com.br/Situacao) da [SABESP](http://site.sabesp.com.br/site/Default.aspx), através dos dados disponíveis na [API](http://mananciais.sabesp.com.br/api/Mananciais/ResumoSistemas/2020-01-01).
 
+Este pacote foi derivado de um código web scraping desenvolvido pela equipe da [Curso-R](https://www.curso-r.com/), em uma [live](https://youtu.be/jvZIxrMmOcQ), e o código original está disponível [neste link](https://github.com/curso-r/lives/blob/master/drafts/20200730_scraper_sabesp.R).
 
+## Instalação
+
+A versão em desenvolvimento deste pacote pode ser instalada através do  [GitHub](https://github.com/) utilizando:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("beatrizmilz/mananciais")
+```
+## Como usar?
 
 Existem dois arquivos disponíveis, em que a diferença é o período dos dados. Caso você não utilize `R` e queira ter acesso aos dados em formato `.csv`, os mesmos podem ser acessados através dos links a seguir. Lembrete: o arquivo foi salvo em formato "separado por ponto e vírgula", e com encoding "UTF-8".
 
@@ -41,17 +49,8 @@ data_atualizacao <-
 
 - `mananciais_consolidado` - 2000 à 2019 - [Baixar versão `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais_consolidado.csv)
 
-- `mananciais` - 2000 à 2020 (parcial) - [Baixar versão `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv), atualizado em:  `r data_atualizacao`.
+- `mananciais` - 2000 à 2020 (parcial) - [Baixar versão `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv). Esse arquivo é atualizado através de um workflow no [GitHub Actions](https://github.com/beatrizmilz/mananciais/actions).
 
-## Instalação
-
-A versão em desenvolvimento deste pacote pode ser instalada através do  [GitHub](https://github.com/) utilizando:
-
-``` r
-# install.packages("devtools")
-devtools::install_github("beatrizmilz/mananciais")
-```
-## Exemplos
 
 Abaixo segue um exemplo das bases disponíveis:
 
@@ -62,6 +61,13 @@ str(mananciais)
 
 str(mananciais_consolidado)
 ```
+
+Caso você queira utilizar a base mais atual, sem que seja necessário reinstalar o pacote, recomendo que utilize o seguinte código:
+
+```{r}
+mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv")
+```
+
 
 ### Exemplo de tabela
 
