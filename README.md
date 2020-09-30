@@ -59,18 +59,18 @@ Abaixo segue um exemplo das bases disponíveis:
 library(mananciais)
 
 str(mananciais)
-#> tibble [46,433 x 8] (S3: tbl_df/tbl/data.frame)
-#>  $ data               : Date[1:46433], format: "2020-01-01" "2020-01-01" ...
-#>  $ sistema            : chr [1:46433] "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...
-#>  $ volume_porcentagem : num [1:46433] 40.3 76.6 64 73.4 82.6 97.6 58.8 40.4 76.4 63.6 ...
-#>  $ volume_variacao    : num [1:46433] -0.1 -0.2 -0.5 -0.4 -0.3 -0.5 -0.1 0.1 -0.2 -0.4 ...
-#>  $ volume_operacional : num [1:46433] 396 429.2 109.6 12.1 92.7 ...
-#>  $ pluviometria_dia   : num [1:46433] 0.2 0 0.6 0 0 0 0 16.6 10.2 1.6 ...
-#>  $ pluviometria_mensal: num [1:46433] 0.2 0 0.6 0 0 0 0 16.8 10.2 2.2 ...
-#>  $ pluviometria_hist  : num [1:46433] 263 246 229 225 251 ...
+#> tibble [46,440 × 8] (S3: tbl_df/tbl/data.frame)
+#>  $ data               : Date[1:46440], format: "2020-01-01" "2020-01-01" ...
+#>  $ sistema            : chr [1:46440] "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...
+#>  $ volume_porcentagem : num [1:46440] 40.3 76.6 64 73.4 82.6 97.6 58.8 40.4 76.4 63.6 ...
+#>  $ volume_variacao    : num [1:46440] -0.1 -0.2 -0.5 -0.4 -0.3 -0.5 -0.1 0.1 -0.2 -0.4 ...
+#>  $ volume_operacional : num [1:46440] 396 429.2 109.6 12.1 92.7 ...
+#>  $ pluviometria_dia   : num [1:46440] 0.2 0 0.6 0 0 0 0 16.6 10.2 1.6 ...
+#>  $ pluviometria_mensal: num [1:46440] 0.2 0 0.6 0 0 0 0 16.8 10.2 2.2 ...
+#>  $ pluviometria_hist  : num [1:46440] 263 246 229 225 251 ...
 
 str(mananciais_consolidado)
-#> tibble [44,529 x 8] (S3: tbl_df/tbl/data.frame)
+#> tibble [44,529 × 8] (S3: tbl_df/tbl/data.frame)
 #>  $ data               : Date[1:44529], format: "2000-01-01" "2000-01-01" ...
 #>  $ sistema            : chr [1:44529] "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...
 #>  $ volume_porcentagem : num [1:44529] 47.1 50.9 36 18.8 81 73.2 47.8 51.4 36.4 18.8 ...
@@ -89,14 +89,14 @@ mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/ma
 #> Using ',' as decimal and '.' as grouping mark. Use read_delim() for more control.
 #> Parsed with column specification:
 #> cols(
-#>   data = col_date(format = ""),
-#>   sistema = col_character(),
-#>   volume_porcentagem = col_double(),
-#>   volume_variacao = col_double(),
-#>   volume_operacional = col_double(),
-#>   pluviometria_dia = col_double(),
-#>   pluviometria_mensal = col_double(),
-#>   pluviometria_hist = col_double()
+#>   data = [34mcol_date(format = "")[39m,
+#>   sistema = [31mcol_character()[39m,
+#>   volume_porcentagem = [32mcol_double()[39m,
+#>   volume_variacao = [32mcol_double()[39m,
+#>   volume_operacional = [32mcol_double()[39m,
+#>   pluviometria_dia = [32mcol_double()[39m,
+#>   pluviometria_mensal = [32mcol_double()[39m,
+#>   pluviometria_hist = [32mcol_double()[39m
 #> )
 ```
 
@@ -111,13 +111,13 @@ mananciais %>%
 
 | data       | sistema      | volume\_porcentagem | volume\_variacao | volume\_operacional | pluviometria\_dia | pluviometria\_mensal | pluviometria\_hist |
 | :--------- | :----------- | ------------------: | ---------------: | ------------------: | ----------------: | -------------------: | -----------------: |
-| 2020-09-28 | Cantareira   |                41.9 |            \-0.2 |           411.29629 |               0.0 |                 22.2 |               83.9 |
-| 2020-09-28 | Alto Tietê   |                60.7 |            \-0.2 |           339.87505 |               0.0 |                 19.1 |               80.0 |
-| 2020-09-28 | Guarapiranga |                46.6 |            \-0.3 |            79.80773 |               0.0 |                 11.0 |               77.8 |
-| 2020-09-28 | Cotia        |                64.1 |            \-0.3 |            10.57418 |               0.0 |                  6.6 |               82.5 |
-| 2020-09-28 | Rio Grande   |                78.0 |              0.0 |            87.52755 |               0.0 |                 25.4 |               95.0 |
-| 2020-09-28 | Rio Claro    |                62.9 |            \-0.6 |             8.59354 |               0.6 |                 90.4 |              141.6 |
-| 2020-09-28 | São Lourenço |                64.3 |            \-0.1 |            57.07153 |               2.6 |                 21.6 |              115.9 |
+| 2020-09-29 | Cantareira   |                41.7 |            \-0.2 |           409.21812 |               0.0 |                 22.2 |               83.9 |
+| 2020-09-29 | Alto Tietê   |                60.5 |            \-0.2 |           338.78857 |               0.0 |                 19.1 |               80.0 |
+| 2020-09-29 | Guarapiranga |                46.6 |              0.0 |            79.80773 |               3.6 |                 14.6 |               77.8 |
+| 2020-09-29 | Cotia        |                63.9 |            \-0.2 |            10.54530 |              12.8 |                 19.4 |               82.5 |
+| 2020-09-29 | Rio Grande   |                77.9 |            \-0.1 |            87.36326 |               1.2 |                 26.6 |               95.0 |
+| 2020-09-29 | Rio Claro    |                62.2 |            \-0.7 |             8.49590 |               0.4 |                 90.8 |              141.6 |
+| 2020-09-29 | São Lourenço |                64.0 |            \-0.3 |            56.88383 |               0.8 |                 22.4 |              115.9 |
 
 ### Exemplos de gráficos
 
