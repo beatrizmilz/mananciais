@@ -20,7 +20,7 @@
 mananciais <-
   readr::read_rds("inst/extdata/mananciais_2020.rds") %>%
   rbind(mananciais_consolidado) %>%
-  arrange(desc(data))
+  dplyr::arrange(desc(data))
 
 
 
