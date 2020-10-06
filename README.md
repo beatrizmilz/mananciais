@@ -59,15 +59,15 @@ Abaixo segue um exemplo das bases disponíveis:
 library(mananciais)
 
 str(mananciais)
-#> tibble [46,454 × 8] (S3: tbl_df/tbl/data.frame)
-#>  $ data               : Date[1:46454], format: "2020-01-01" "2020-01-01" ...
-#>  $ sistema            : chr [1:46454] "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...
-#>  $ volume_porcentagem : num [1:46454] 40.3 76.6 64 73.4 82.6 97.6 58.8 40.4 76.4 63.6 ...
-#>  $ volume_variacao    : num [1:46454] -0.1 -0.2 -0.5 -0.4 -0.3 -0.5 -0.1 0.1 -0.2 -0.4 ...
-#>  $ volume_operacional : num [1:46454] 396 429.2 109.6 12.1 92.7 ...
-#>  $ pluviometria_dia   : num [1:46454] 0.2 0 0.6 0 0 0 0 16.6 10.2 1.6 ...
-#>  $ pluviometria_mensal: num [1:46454] 0.2 0 0.6 0 0 0 0 16.8 10.2 2.2 ...
-#>  $ pluviometria_hist  : num [1:46454] 263 246 229 225 251 ...
+#> tibble [46,482 × 8] (S3: tbl_df/tbl/data.frame)
+#>  $ data               : Date[1:46482], format: "2020-10-05" "2020-10-05" ...
+#>  $ sistema            : chr [1:46482] "Cantareira" "Alto Tietê" "Guarapiranga" "Cotia" ...
+#>  $ volume_porcentagem : num [1:46482] 40.3 59.3 45.7 62.5 77.9 59.1 63 40.5 59.5 45.8 ...
+#>  $ volume_variacao    : num [1:46482] -0.2 -0.2 -0.1 -0.2 -0.1 -0.5 0.2 -0.2 -0.2 -0.3 ...
+#>  $ volume_operacional : num [1:46482] 395.5 332.2 78.3 10.3 87.4 ...
+#>  $ pluviometria_dia   : num [1:46482] 0 0 0 0 0.6 0 0.4 0.1 0.1 0.4 ...
+#>  $ pluviometria_mensal: num [1:46482] 0.7 1.3 5.2 3 6.6 6.2 1.4 0.7 1.3 5.2 ...
+#>  $ pluviometria_hist  : num [1:46482] 128 113 115 114 133 ...
 
 str(mananciais_consolidado)
 #> tibble [44,529 × 8] (S3: tbl_df/tbl/data.frame)
@@ -86,8 +86,9 @@ reinstalar o pacote, recomendo que utilize o seguinte código:
 
 ``` r
 mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv")
-#> Using ',' as decimal and '.' as grouping mark. Use read_delim() for more control.
-#> Parsed with column specification:
+#> [36mℹ[39m Using [34m[34m','[34m[39m as decimal and [34m[34m'.'[34m[39m as grouping mark. Use [30m[47m[30m[47m`read_delim()`[47m[30m[49m[39m for more control.
+#> 
+#> [36m──[39m [1m[1mColumn specification[1m[22m [36m────────────────────────────────────────────────────────[39m
 #> cols(
 #>   data = [34mcol_date(format = "")[39m,
 #>   sistema = [31mcol_character()[39m,
@@ -111,13 +112,13 @@ mananciais %>%
 
 | data       | sistema      | volume\_porcentagem | volume\_variacao | volume\_operacional | pluviometria\_dia | pluviometria\_mensal | pluviometria\_hist |
 | :--------- | :----------- | ------------------: | ---------------: | ------------------: | ----------------: | -------------------: | -----------------: |
-| 2020-10-01 | Cantareira   |                41.2 |            \-0.3 |           404.79045 |               0.0 |                  0.0 |              127.8 |
-| 2020-10-01 | Alto Tietê   |                60.2 |            \-0.1 |           337.03043 |               1.2 |                  1.2 |              113.4 |
-| 2020-10-01 | Guarapiranga |                46.5 |            \-0.1 |            79.58506 |               0.0 |                  0.0 |              114.9 |
-| 2020-10-01 | Cotia        |                63.4 |            \-0.2 |            10.45894 |               0.0 |                  0.0 |              113.5 |
-| 2020-10-01 | Rio Grande   |                78.0 |              0.3 |            87.52755 |               0.0 |                  0.0 |              133.2 |
-| 2020-10-01 | Rio Claro    |                61.1 |            \-0.7 |             8.34414 |               0.0 |                  0.0 |              176.1 |
-| 2020-10-01 | São Lourenço |                63.7 |            \-0.1 |            56.60266 |               0.2 |                  0.2 |              141.2 |
+| 2020-10-05 | Cantareira   |                40.3 |            \-0.2 |           395.48235 |               0.0 |                  0.7 |              127.8 |
+| 2020-10-05 | Alto Tietê   |                59.3 |            \-0.2 |           332.22965 |               0.0 |                  1.3 |              113.4 |
+| 2020-10-05 | Guarapiranga |                45.7 |            \-0.1 |            78.25342 |               0.0 |                  5.2 |              114.9 |
+| 2020-10-05 | Cotia        |                62.5 |            \-0.2 |            10.31590 |               0.0 |                  3.0 |              113.5 |
+| 2020-10-05 | Rio Grande   |                77.9 |            \-0.1 |            87.36326 |               0.6 |                  6.6 |              133.2 |
+| 2020-10-05 | Rio Claro    |                59.1 |            \-0.5 |             8.07333 |               0.0 |                  6.2 |              176.1 |
+| 2020-10-05 | São Lourenço |                63.0 |              0.2 |            55.94841 |               0.4 |                  1.4 |              141.2 |
 
 ### Exemplos de gráficos
 
