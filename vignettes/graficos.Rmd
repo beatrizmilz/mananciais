@@ -18,13 +18,14 @@ knitr::opts_chunk$set(
 
 
 Podemos fazer gráficos usando os dados do pacote `{mananciais}`.
-Utilizaremos as funções do pacote [tidyverse](https://www.tidyverse.org/).
+Utilizaremos as funções do pacote [tidyverse](https://www.tidyverse.org/). O pacote `ggplot2`, usado nos códigos abaixo, faz parte do pacote `tidyverse`.
 
 O código abaixo carrega esses dois pacotes. 
 Caso não tenha instalado, é necessário instalá-los.
-```{r setup}
+```{r setup, message=FALSE, warning=FALSE}
 library(mananciais)
-library(tidyverse)
+library(ggplot2)
+library(dplyr)
 ```
 
 
