@@ -4,3 +4,4 @@
 data-raw/*.rds
 data-raw/data-clean/*.rds
 
+inst/doc

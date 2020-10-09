@@ -34,3 +34,6 @@ Imports:
     glue
 Depends: 
     R (>= 3.5.0)
+VignetteBuilder: knitr
+Suggests: 
+    rmarkdown
