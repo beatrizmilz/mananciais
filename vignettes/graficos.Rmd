@@ -1,5 +1,5 @@
 ---
-title: "Fazendo gráficos com os dados"
+title: "Criando gráficos com os dados do pacote {mananciais}"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{graficos}
@@ -16,16 +16,21 @@ knitr::opts_chunk$set(
 )
 ```
 
+
+Podemos fazer gráficos usando os dados do pacote `{mananciais}`.
+Utilizaremos as funções do pacote [tidyverse](https://www.tidyverse.org/).
+
+O código abaixo carrega esses dois pacotes. 
+Caso não tenha instalado, é necessário instalá-los.
 ```{r setup}
 library(mananciais)
+library(tidyverse)
 ```
 
 
+Abaixo segue o código e o gráfico resultante, com todos os dados disponíveis na base de dados (todos os sistemas, e todos os anos).
 
-# Todos os anos
-
-```{r ggplot, dpi = 600}
-library(ggplot2)
+```{r ggplot, dpi = 600, fig.height=7}
 mananciais %>%
   ggplot() +
   geom_line(aes(x = data, y = volume_porcentagem)) +
@@ -36,9 +41,10 @@ mananciais %>%
 ```
 
 
-## Apenas ano 2020
+Abaixo segue o código e o gráfico resultante, com os dados referentes ao ano 2020 disponíveis na base de dados.
 
-```{r ggplot2, dpi = 600}
+
+```{r ggplot2, dpi = 600, fig.height=7}
 mananciais %>%
   dplyr::mutate(ano = lubridate::year(data)) %>%
   dplyr::filter(ano == 2020) %>%
@@ -49,3 +55,19 @@ mananciais %>%
   theme_bw() +
   labs(x = "Meses", y = "Volume armazenado (%)")
 ```
+
+
+Abaixo segue o código e o gráfico resultante, com os dados referentes ao sistema Cantareira.
+
+```{r, dpi = 600}
+mananciais %>%
+  dplyr::mutate(ano = lubridate::year(data)) %>%
+  dplyr::filter(sistema == "Cantareira") %>%
+  ggplot() +
+  geom_line(aes(x = data, y = volume_porcentagem)) +
+  scale_y_continuous(breaks = c(-25, 0, 25, 50, 75, 100)) +
+  facet_wrap(~ sistema, ncol = 2) +
+  theme_bw() +
+  labs(x = "Meses", y = "Volume armazenado (%)")
+```
+
