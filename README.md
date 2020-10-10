@@ -57,28 +57,28 @@ Abaixo segue um exemplo das bases disponíveis:
 library(mananciais)
 
 dplyr::glimpse(mananciais)
-#> Rows: 46,468
+#> Rows: 46,510
 #> Columns: 8
-#> $ data                <date> 2020-01-01, 2020-01-01, 2020-01-01, 2020-01-01...
-#> $ sistema             <chr> "Cantareira", "Alto Tietê", "Guarapiranga", "Co...
-#> $ volume_porcentagem  <dbl> 40.3, 76.6, 64.0, 73.4, 82.6, 97.6, 58.8, 40.4,...
-#> $ volume_variacao     <dbl> -0.1, -0.2, -0.5, -0.4, -0.3, -0.5, -0.1, 0.1, ...
-#> $ volume_operacional  <dbl> 395.99619, 429.18570, 109.63346, 12.10735, 92.7...
-#> $ pluviometria_dia    <dbl> 0.2, 0.0, 0.6, 0.0, 0.0, 0.0, 0.0, 16.6, 10.2, ...
-#> $ pluviometria_mensal <dbl> 0.2, 0.0, 0.6, 0.0, 0.0, 0.0, 0.0, 16.8, 10.2, ...
-#> $ pluviometria_hist   <dbl> 262.6, 246.1, 228.9, 224.7, 250.6, 296.6, 272.6...
+#> $ data                [3m[90m<date>[39m[23m 2020-10-09, 2020-10-09, 2020-10-09, 2020-10-09, …
+#> $ sistema             [3m[90m<chr>[39m[23m "Cantareira", "Alto Tietê", "Guarapiranga", "Coti…
+#> $ volume_porcentagem  [3m[90m<dbl>[39m[23m 39.4, 58.5, 45.3, 61.7, 77.3, 57.0, 63.0, 39.6, 5…
+#> $ volume_variacao     [3m[90m<dbl>[39m[23m -0.2, -0.2, 0.0, -0.1, -0.1, -0.4, -0.2, -0.2, -0…
+#> $ volume_operacional  [3m[90m<dbl>[39m[23m 386.59327, 327.97351, 77.59042, 10.17398, 86.7078…
+#> $ pluviometria_dia    [3m[90m<dbl>[39m[23m 7.3, 6.4, 3.4, 2.4, 6.0, 4.4, 1.8, 3.0, 3.9, 6.2,…
+#> $ pluviometria_mensal [3m[90m<dbl>[39m[23m 11.0, 11.6, 14.8, 11.6, 17.6, 20.6, 9.0, 3.7, 5.2…
+#> $ pluviometria_hist   [3m[90m<dbl>[39m[23m 127.8, 113.4, 114.9, 113.5, 133.2, 176.1, 141.2, …
 
 dplyr::glimpse(mananciais_consolidado)
 #> Rows: 44,529
 #> Columns: 8
-#> $ data                <date> 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01...
-#> $ sistema             <chr> "Cantareira", "Alto Tietê", "Guarapiranga", "Co...
-#> $ volume_porcentagem  <dbl> 47.1, 50.9, 36.0, 18.8, 81.0, 73.2, 47.8, 51.4,...
-#> $ volume_variacao     <dbl> 0.3, 0.1, 0.0, 0.9, 0.4, -0.2, 0.7, 0.5, 0.4, 0...
-#> $ volume_operacional  <dbl> 365.50555, 196.02547, 64.80029, 2.64579, 91.694...
-#> $ pluviometria_dia    <dbl> 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 29.1, 47.3, 9....
-#> $ pluviometria_mensal <dbl> 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 60.0, 73.3, 56...
-#> $ pluviometria_hist   <dbl> 254.8, 238.1, 225.2, 217.8, 235.4, 292.0, 254.8...
+#> $ data                [3m[90m<date>[39m[23m 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, …
+#> $ sistema             [3m[90m<chr>[39m[23m "Cantareira", "Alto Tietê", "Guarapiranga", "Coti…
+#> $ volume_porcentagem  [3m[90m<dbl>[39m[23m 47.1, 50.9, 36.0, 18.8, 81.0, 73.2, 47.8, 51.4, 3…
+#> $ volume_variacao     [3m[90m<dbl>[39m[23m 0.3, 0.1, 0.0, 0.9, 0.4, -0.2, 0.7, 0.5, 0.4, 0.0…
+#> $ volume_operacional  [3m[90m<dbl>[39m[23m 365.50555, 196.02547, 64.80029, 2.64579, 91.69406…
+#> $ pluviometria_dia    [3m[90m<dbl>[39m[23m 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 29.1, 47.3, 9.2,…
+#> $ pluviometria_mensal [3m[90m<dbl>[39m[23m 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 60.0, 73.3, 56.4…
+#> $ pluviometria_hist   [3m[90m<dbl>[39m[23m 254.8, 238.1, 225.2, 217.8, 235.4, 292.0, 254.8, …
 ```
 
 Caso queira saber o significado de cada variável, leia a [documentação
@@ -95,18 +95,18 @@ reinstalar o pacote, recomendo que utilize o seguinte código:
 
 ``` r
 mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv")
-#> i Using ',' as decimal and '.' as grouping mark. Use `read_delim()` for more control.
+#> [36mℹ[39m Using [34m[34m','[34m[39m as decimal and [34m[34m'.'[34m[39m as grouping mark. Use [30m[47m[30m[47m`read_delim()`[47m[30m[49m[39m for more control.
 #> 
-#> -- Column specification ------------------------------------------------------
+#> [36m──[39m [1m[1mColumn specification[1m[22m [36m────────────────────────────────────────────────────────[39m
 #> cols(
-#>   data = col_date(format = ""),
-#>   sistema = col_character(),
-#>   volume_porcentagem = col_double(),
-#>   volume_variacao = col_double(),
-#>   volume_operacional = col_double(),
-#>   pluviometria_dia = col_double(),
-#>   pluviometria_mensal = col_double(),
-#>   pluviometria_hist = col_double()
+#>   data = [34mcol_date(format = "")[39m,
+#>   sistema = [31mcol_character()[39m,
+#>   volume_porcentagem = [32mcol_double()[39m,
+#>   volume_variacao = [32mcol_double()[39m,
+#>   volume_operacional = [32mcol_double()[39m,
+#>   pluviometria_dia = [32mcol_double()[39m,
+#>   pluviometria_mensal = [32mcol_double()[39m,
+#>   pluviometria_hist = [32mcol_double()[39m
 #> )
 ```
 
