@@ -38,7 +38,7 @@ mananciais %>%
   scale_y_continuous(breaks = c(-25, 0, 25, 50, 75, 100)) +
   facet_wrap(~ sistema, ncol = 2) +
   theme_bw() +
-  labs(x = "Ano", y = "Volume armazenado (%)")
+  labs(x = "Ano", y = "Volume armazenado (%)") 
 ```
 
 
@@ -69,6 +69,7 @@ mananciais %>%
   scale_y_continuous(breaks = c(-25, 0, 25, 50, 75, 100)) +
   facet_wrap(~ sistema, ncol = 2) +
   theme_bw() +
-  labs(x = "Meses", y = "Volume armazenado (%)")
+  labs(x = "Anos", y = "Volume armazenado (%)")
 ```
+
 

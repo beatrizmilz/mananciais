@@ -25,9 +25,12 @@ Os dados foram obtidos no [Portal dos Mananciais](http://mananciais.sabesp.com.b
 
 Este pacote foi derivado de um código web scraping desenvolvido pela equipe da [Curso-R](https://www.curso-r.com/), em uma [live](https://youtu.be/jvZIxrMmOcQ), e o código original está disponível [neste link](https://github.com/curso-r/lives/blob/master/drafts/20200730_scraper_sabesp.R).
 
+Este pacote foi criado no âmbito da [pesquisa de doutorado de Beatriz Milz](https://beatrizmilz.github.io/tese/). 
+
+
 ## Instalação
 
-Este pacote pode ser instalada através do  [GitHub](https://github.com/) utilizando:
+Este pacote pode ser instalado através do  [GitHub](https://github.com/) utilizando o seguinte código em `R`:
 
 ``` r
 # install.packages("devtools")
