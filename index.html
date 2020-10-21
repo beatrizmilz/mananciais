@@ -89,10 +89,11 @@
 <p>O objetivo deste pacote é disponibilizar a base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil).</p>
 <p>Os dados foram obtidos no <a href="http://mananciais.sabesp.com.br/Situacao">Portal dos Mananciais</a> da <a href="http://site.sabesp.com.br/site/Default.aspx">SABESP</a>.</p>
 <p>Este pacote foi derivado de um código web scraping desenvolvido pela equipe da <a href="https://www.curso-r.com/">Curso-R</a>, em uma <a href="https://youtu.be/jvZIxrMmOcQ">live</a>, e o código original está disponível <a href="https://github.com/curso-r/lives/blob/master/drafts/20200730_scraper_sabesp.R">neste link</a>.</p>
+<p>Este pacote foi criado no âmbito da <a href="https://beatrizmilz.github.io/tese/">pesquisa de doutorado de Beatriz Milz</a>.</p>
 <div id="instalação" class="section level2">
 <h2 class="hasAnchor">
 <a href="#instala%C3%A7%C3%A3o" class="anchor"></a>Instalação</h2>
-<p>Este pacote pode ser instalada através do <a href="https://github.com/">GitHub</a> utilizando:</p>
+<p>Este pacote pode ser instalado através do <a href="https://github.com/">GitHub</a> utilizando o seguinte código em <code>R</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
 <span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"beatrizmilz/mananciais"</span><span class="op">)</span></pre></div>
@@ -110,46 +111,46 @@
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/beatrizmilz/mananciais">mananciais</a></span><span class="op">)</span>
 
 <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">mananciais</span><span class="op">)</span>
-<span class="co">#&gt; Rows: 46,573</span>
+<span class="co">#&gt; Rows: 46,468</span>
 <span class="co">#&gt; Columns: 8</span>
-<span class="co">#&gt; $ data                [3m[90m&lt;date&gt;[39m[23m 2020-10-18, 2020-10-18, 2020-10-18, 2020-10-18, …</span>
-<span class="co">#&gt; $ sistema             [3m[90m&lt;chr&gt;[39m[23m "Cantareira", "Alto Tietê", "Guarapiranga", "Coti…</span>
-<span class="co">#&gt; $ volume_porcentagem  [3m[90m&lt;dbl&gt;[39m[23m 37.5, 57.2, 45.8, 60.6, 77.0, 54.4, 63.2, 37.7, 5…</span>
-<span class="co">#&gt; $ volume_variacao     [3m[90m&lt;dbl&gt;[39m[23m -0.2, -0.2, -0.2, -0.2, -0.1, -0.5, -0.1, -0.3, -…</span>
-<span class="co">#&gt; $ volume_operacional  [3m[90m&lt;dbl&gt;[39m[23m 368.54617, 320.71700, 78.47484, 10.00515, 86.3812…</span>
-<span class="co">#&gt; $ pluviometria_dia    [3m[90m&lt;dbl&gt;[39m[23m 0.0, 0.0, 0.0, 0.0, 0.2, 0.0, 0.2, 0.2, 1.1, 0.8,…</span>
-<span class="co">#&gt; $ pluviometria_mensal [3m[90m&lt;dbl&gt;[39m[23m 27.6, 34.6, 36.6, 44.8, 49.2, 61.4, 41.0, 27.6, 3…</span>
-<span class="co">#&gt; $ pluviometria_hist   [3m[90m&lt;dbl&gt;[39m[23m 127.8, 113.4, 114.9, 113.5, 133.2, 176.1, 141.2, …</span>
+<span class="co">#&gt; $ data                &lt;date&gt; 2020-01-01, 2020-01-01, 2020-01-01, 2020-01-01...</span>
+<span class="co">#&gt; $ sistema             &lt;chr&gt; "Cantareira", "Alto Tietê", "Guarapiranga", "Co...</span>
+<span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 40.3, 76.6, 64.0, 73.4, 82.6, 97.6, 58.8, 40.4,...</span>
+<span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; -0.1, -0.2, -0.5, -0.4, -0.3, -0.5, -0.1, 0.1, ...</span>
+<span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 395.99619, 429.18570, 109.63346, 12.10735, 92.7...</span>
+<span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 0.2, 0.0, 0.6, 0.0, 0.0, 0.0, 0.0, 16.6, 10.2, ...</span>
+<span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 0.2, 0.0, 0.6, 0.0, 0.0, 0.0, 0.0, 16.8, 10.2, ...</span>
+<span class="co">#&gt; $ pluviometria_hist   &lt;dbl&gt; 262.6, 246.1, 228.9, 224.7, 250.6, 296.6, 272.6...</span>
 
 <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">mananciais_consolidado</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 44,529</span>
 <span class="co">#&gt; Columns: 8</span>
-<span class="co">#&gt; $ data                [3m[90m&lt;date&gt;[39m[23m 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, …</span>
-<span class="co">#&gt; $ sistema             [3m[90m&lt;chr&gt;[39m[23m "Cantareira", "Alto Tietê", "Guarapiranga", "Coti…</span>
-<span class="co">#&gt; $ volume_porcentagem  [3m[90m&lt;dbl&gt;[39m[23m 47.1, 50.9, 36.0, 18.8, 81.0, 73.2, 47.8, 51.4, 3…</span>
-<span class="co">#&gt; $ volume_variacao     [3m[90m&lt;dbl&gt;[39m[23m 0.3, 0.1, 0.0, 0.9, 0.4, -0.2, 0.7, 0.5, 0.4, 0.0…</span>
-<span class="co">#&gt; $ volume_operacional  [3m[90m&lt;dbl&gt;[39m[23m 365.50555, 196.02547, 64.80029, 2.64579, 91.69406…</span>
-<span class="co">#&gt; $ pluviometria_dia    [3m[90m&lt;dbl&gt;[39m[23m 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 29.1, 47.3, 9.2,…</span>
-<span class="co">#&gt; $ pluviometria_mensal [3m[90m&lt;dbl&gt;[39m[23m 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 60.0, 73.3, 56.4…</span>
-<span class="co">#&gt; $ pluviometria_hist   [3m[90m&lt;dbl&gt;[39m[23m 254.8, 238.1, 225.2, 217.8, 235.4, 292.0, 254.8, …</span></pre></div>
+<span class="co">#&gt; $ data                &lt;date&gt; 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01...</span>
+<span class="co">#&gt; $ sistema             &lt;chr&gt; "Cantareira", "Alto Tietê", "Guarapiranga", "Co...</span>
+<span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 47.1, 50.9, 36.0, 18.8, 81.0, 73.2, 47.8, 51.4,...</span>
+<span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; 0.3, 0.1, 0.0, 0.9, 0.4, -0.2, 0.7, 0.5, 0.4, 0...</span>
+<span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 365.50555, 196.02547, 64.80029, 2.64579, 91.694...</span>
+<span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 29.1, 47.3, 9....</span>
+<span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 60.0, 73.3, 56...</span>
+<span class="co">#&gt; $ pluviometria_hist   &lt;dbl&gt; 254.8, 238.1, 225.2, 217.8, 235.4, 292.0, 254.8...</span></pre></div>
 <p>Caso queira saber o significado de cada variável, leia a <a href="https://beatrizmilz.github.io/mananciais/reference/mananciais.html">documentação da base de dados</a> ou utilize a seguinte função:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="op">?</span><span class="fu">mananciais</span><span class="fu">::</span><span class="va"><a href="reference/mananciais.html">mananciais</a></span></pre></div>
 <p>Caso você queira utilizar a base mais atual, sem que seja necessário reinstalar o pacote, recomendo que utilize o seguinte código:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="va">mananciais</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2</a></span><span class="op">(</span><span class="st">"https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv"</span><span class="op">)</span>
-<span class="co">#&gt; [36mℹ[39m Using [34m[34m','[34m[39m as decimal and [34m[34m'.'[34m[39m as grouping mark. Use [30m[47m[30m[47m`read_delim()`[47m[30m[49m[39m for more control.</span>
+<span class="co">#&gt; i Using ',' as decimal and '.' as grouping mark. Use `read_delim()` for more control.</span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; [36m──[39m [1m[1mColumn specification[1m[22m [36m────────────────────────────────────────────────────────[39m</span>
+<span class="co">#&gt; -- Column specification ----------------------------------------------------------------------------------------------------</span>
 <span class="co">#&gt; cols(</span>
-<span class="co">#&gt;   data = [34mcol_date(format = "")[39m,</span>
-<span class="co">#&gt;   sistema = [31mcol_character()[39m,</span>
-<span class="co">#&gt;   volume_porcentagem = [32mcol_double()[39m,</span>
-<span class="co">#&gt;   volume_variacao = [32mcol_double()[39m,</span>
-<span class="co">#&gt;   volume_operacional = [32mcol_double()[39m,</span>
-<span class="co">#&gt;   pluviometria_dia = [32mcol_double()[39m,</span>
-<span class="co">#&gt;   pluviometria_mensal = [32mcol_double()[39m,</span>
-<span class="co">#&gt;   pluviometria_hist = [32mcol_double()[39m</span>
+<span class="co">#&gt;   data = col_date(format = ""),</span>
+<span class="co">#&gt;   sistema = col_character(),</span>
+<span class="co">#&gt;   volume_porcentagem = col_double(),</span>
+<span class="co">#&gt;   volume_variacao = col_double(),</span>
+<span class="co">#&gt;   volume_operacional = col_double(),</span>
+<span class="co">#&gt;   pluviometria_dia = col_double(),</span>
+<span class="co">#&gt;   pluviometria_mensal = col_double(),</span>
+<span class="co">#&gt;   pluviometria_hist = col_double()</span>
 <span class="co">#&gt; )</span></pre></div>
 <div id="exemplo-de-tabela" class="section level3">
 <h3 class="hasAnchor">
@@ -182,73 +183,73 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">2020-10-18</td>
+<td align="left">2020-10-20</td>
 <td align="left">Cantareira</td>
-<td align="right">37.5</td>
+<td align="right">37.1</td>
 <td align="right">-0.2</td>
-<td align="right">368.54617</td>
-<td align="right">0.0</td>
-<td align="right">27.6</td>
+<td align="right">364.83160</td>
+<td align="right">14.9</td>
+<td align="right">42.5</td>
 <td align="right">127.8</td>
 </tr>
 <tr class="even">
-<td align="left">2020-10-18</td>
+<td align="left">2020-10-20</td>
 <td align="left">Alto Tietê</td>
-<td align="right">57.2</td>
+<td align="right">56.9</td>
 <td align="right">-0.2</td>
-<td align="right">320.71700</td>
-<td align="right">0.0</td>
-<td align="right">34.6</td>
+<td align="right">318.53951</td>
+<td align="right">0.1</td>
+<td align="right">34.7</td>
 <td align="right">113.4</td>
 </tr>
 <tr class="odd">
-<td align="left">2020-10-18</td>
+<td align="left">2020-10-20</td>
 <td align="left">Guarapiranga</td>
-<td align="right">45.8</td>
-<td align="right">-0.2</td>
-<td align="right">78.47484</td>
-<td align="right">0.0</td>
-<td align="right">36.6</td>
+<td align="right">46.0</td>
+<td align="right">0.3</td>
+<td align="right">78.69646</td>
+<td align="right">5.0</td>
+<td align="right">41.6</td>
 <td align="right">114.9</td>
 </tr>
 <tr class="even">
-<td align="left">2020-10-18</td>
+<td align="left">2020-10-20</td>
 <td align="left">Cotia</td>
 <td align="right">60.6</td>
-<td align="right">-0.2</td>
+<td align="right">0.1</td>
 <td align="right">10.00515</td>
-<td align="right">0.0</td>
-<td align="right">44.8</td>
+<td align="right">18.0</td>
+<td align="right">62.8</td>
 <td align="right">113.5</td>
 </tr>
 <tr class="odd">
-<td align="left">2020-10-18</td>
+<td align="left">2020-10-20</td>
 <td align="left">Rio Grande</td>
-<td align="right">77.0</td>
-<td align="right">-0.1</td>
-<td align="right">86.38127</td>
-<td align="right">0.2</td>
-<td align="right">49.2</td>
+<td align="right">76.7</td>
+<td align="right">-0.2</td>
+<td align="right">86.05538</td>
+<td align="right">23.8</td>
+<td align="right">73.0</td>
 <td align="right">133.2</td>
 </tr>
 <tr class="even">
-<td align="left">2020-10-18</td>
+<td align="left">2020-10-20</td>
 <td align="left">Rio Claro</td>
-<td align="right">54.4</td>
+<td align="right">53.4</td>
 <td align="right">-0.5</td>
-<td align="right">7.43732</td>
-<td align="right">0.0</td>
-<td align="right">61.4</td>
+<td align="right">7.29980</td>
+<td align="right">0.6</td>
+<td align="right">62.0</td>
 <td align="right">176.1</td>
 </tr>
 <tr class="odd">
-<td align="left">2020-10-18</td>
+<td align="left">2020-10-20</td>
 <td align="left">São Lourenço</td>
-<td align="right">63.2</td>
-<td align="right">-0.1</td>
-<td align="right">56.13508</td>
-<td align="right">0.2</td>
-<td align="right">41.0</td>
+<td align="right">63.1</td>
+<td align="right">0.1</td>
+<td align="right">56.04172</td>
+<td align="right">2.6</td>
+<td align="right">43.6</td>
 <td align="right">141.2</td>
 </tr>
 </tbody>
