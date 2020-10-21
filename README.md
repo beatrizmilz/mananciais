@@ -60,28 +60,28 @@ Abaixo segue um exemplo das bases disponíveis:
 library(mananciais)
 
 dplyr::glimpse(mananciais)
-#> Rows: 46,587
+#> Rows: 46,426
 #> Columns: 8
-#> $ data                [3m[90m<date>[39m[23m 2020-10-20, 2020-10-20, 2020-10-20, 2020-10-20, …
-#> $ sistema             [3m[90m<chr>[39m[23m "Cantareira", "Alto Tietê", "Guarapiranga", "Coti…
-#> $ volume_porcentagem  [3m[90m<dbl>[39m[23m 37.1, 56.9, 46.0, 60.6, 76.7, 53.4, 63.1, 37.3, 5…
-#> $ volume_variacao     [3m[90m<dbl>[39m[23m -0.2, -0.2, 0.3, 0.1, -0.2, -0.5, 0.1, -0.2, -0.1…
-#> $ volume_operacional  [3m[90m<dbl>[39m[23m 364.83160, 318.53951, 78.69646, 10.00515, 86.0553…
-#> $ pluviometria_dia    [3m[90m<dbl>[39m[23m 14.9, 0.1, 5.0, 18.0, 23.8, 0.6, 2.6, 0.0, 0.0, 0…
-#> $ pluviometria_mensal [3m[90m<dbl>[39m[23m 42.5, 34.7, 41.6, 62.8, 73.0, 62.0, 43.6, 27.6, 3…
-#> $ pluviometria_hist   [3m[90m<dbl>[39m[23m 127.8, 113.4, 114.9, 113.5, 133.2, 176.1, 141.2, …
+#> $ data                <date> 2020-09-27, 2020-09-27, 2020-09-27, 2020-09-27...
+#> $ sistema             <chr> "Cantareira", "Alto Tietê", "Guarapiranga", "Co...
+#> $ volume_porcentagem  <dbl> 42.1, 60.9, 46.9, 64.4, 78.0, 63.5, 64.4, 42.3,...
+#> $ volume_variacao     <dbl> -0.2, -0.2, -0.1, -0.4, -0.2, -0.5, -0.5, -0.2,...
+#> $ volume_operacional  <dbl> 413.23628, 341.09546, 80.25369, 10.63207, 87.52...
+#> $ pluviometria_dia    <dbl> 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0....
+#> $ pluviometria_mensal <dbl> 22.2, 19.1, 11.0, 6.6, 25.4, 89.8, 19.0, 22.2, ...
+#> $ pluviometria_hist   <dbl> 83.9, 80.0, 77.8, 82.5, 95.0, 141.6, 115.9, 83....
 
 dplyr::glimpse(mananciais_consolidado)
 #> Rows: 44,529
 #> Columns: 8
-#> $ data                [3m[90m<date>[39m[23m 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01, …
-#> $ sistema             [3m[90m<chr>[39m[23m "Cantareira", "Alto Tietê", "Guarapiranga", "Coti…
-#> $ volume_porcentagem  [3m[90m<dbl>[39m[23m 47.1, 50.9, 36.0, 18.8, 81.0, 73.2, 47.8, 51.4, 3…
-#> $ volume_variacao     [3m[90m<dbl>[39m[23m 0.3, 0.1, 0.0, 0.9, 0.4, -0.2, 0.7, 0.5, 0.4, 0.0…
-#> $ volume_operacional  [3m[90m<dbl>[39m[23m 365.50555, 196.02547, 64.80029, 2.64579, 91.69406…
-#> $ pluviometria_dia    [3m[90m<dbl>[39m[23m 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 29.1, 47.3, 9.2,…
-#> $ pluviometria_mensal [3m[90m<dbl>[39m[23m 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 60.0, 73.3, 56.4…
-#> $ pluviometria_hist   [3m[90m<dbl>[39m[23m 254.8, 238.1, 225.2, 217.8, 235.4, 292.0, 254.8, …
+#> $ data                <date> 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01...
+#> $ sistema             <chr> "Cantareira", "Alto Tietê", "Guarapiranga", "Co...
+#> $ volume_porcentagem  <dbl> 47.1, 50.9, 36.0, 18.8, 81.0, 73.2, 47.8, 51.4,...
+#> $ volume_variacao     <dbl> 0.3, 0.1, 0.0, 0.9, 0.4, -0.2, 0.7, 0.5, 0.4, 0...
+#> $ volume_operacional  <dbl> 365.50555, 196.02547, 64.80029, 2.64579, 91.694...
+#> $ pluviometria_dia    <dbl> 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 29.1, 47.3, 9....
+#> $ pluviometria_mensal <dbl> 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 60.0, 73.3, 56...
+#> $ pluviometria_hist   <dbl> 254.8, 238.1, 225.2, 217.8, 235.4, 292.0, 254.8...
 ```
 
 Caso queira saber o significado de cada variável, leia a [documentação
@@ -98,18 +98,18 @@ reinstalar o pacote, recomendo que utilize o seguinte código:
 
 ``` r
 mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv")
-#> [36mℹ[39m Using [34m[34m','[34m[39m as decimal and [34m[34m'.'[34m[39m as grouping mark. Use [30m[47m[30m[47m`read_delim()`[47m[30m[49m[39m for more control.
+#> i Using ',' as decimal and '.' as grouping mark. Use `read_delim()` for more control.
 #> 
-#> [36m──[39m [1m[1mColumn specification[1m[22m [36m────────────────────────────────────────────────────────[39m
+#> -- Column specification ---------------------------------------------------
 #> cols(
-#>   data = [34mcol_date(format = "")[39m,
-#>   sistema = [31mcol_character()[39m,
-#>   volume_porcentagem = [32mcol_double()[39m,
-#>   volume_variacao = [32mcol_double()[39m,
-#>   volume_operacional = [32mcol_double()[39m,
-#>   pluviometria_dia = [32mcol_double()[39m,
-#>   pluviometria_mensal = [32mcol_double()[39m,
-#>   pluviometria_hist = [32mcol_double()[39m
+#>   data = col_date(format = ""),
+#>   sistema = col_character(),
+#>   volume_porcentagem = col_double(),
+#>   volume_variacao = col_double(),
+#>   volume_operacional = col_double(),
+#>   pluviometria_dia = col_double(),
+#>   pluviometria_mensal = col_double(),
+#>   pluviometria_hist = col_double()
 #> )
 ```
 
@@ -131,3 +131,26 @@ mananciais %>%
 | 2020-10-20 | Rio Grande   |                76.7 |            \-0.2 |            86.05538 |              23.8 |                 73.0 |              133.2 |
 | 2020-10-20 | Rio Claro    |                53.4 |            \-0.5 |             7.29980 |               0.6 |                 62.0 |              176.1 |
 | 2020-10-20 | São Lourenço |                63.1 |              0.1 |            56.04172 |               2.6 |                 43.6 |              141.2 |
+
+## Como citar o pacote
+
+``` r
+citation("ComitesBaciaSP")
+#> 
+#> To cite ComitesBaciaSP in publications use:
+#> 
+#>   Beatriz Milz (2020). ComitesBaciaSP - Pacote com dados sobre os
+#>   Comitês de Bacias Hidrográficas no Estado de São Paulo (SP - Brasil).
+#>   R package version 0.0.0.9000.
+#>   https://beatrizmilz.github.io/ComitesBaciaSP/
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Manual{,
+#>     title = {ComitesBaciaSP - Pacote com dados sobre os Comitês de Bacias Hidrográficas no Estado de São Paulo (SP - Brasil)},
+#>     author = {{Beatriz Milz}},
+#>     year = {2020},
+#>     note = {R package version 0.0.0.9000},
+#>     url = {https://beatrizmilz.github.io/ComitesBaciaSP/},
+#>   }
+```

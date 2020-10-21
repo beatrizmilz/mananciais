@@ -1,0 +1,13 @@
+citHeader("To cite mananciais in publications use:")
+
+citEntry(
+  entry    = "Manual",
+  title    = "mananciais: Base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil)",
+  author   = person("Beatriz Milz"),
+  year     = 2020,
+  note     = "R package version 0.0.0.9000",
+  url      = "https://beatrizmilz.github.io/mananciais/",
+  textVersion = paste(
+"Beatriz Milz (2020).mananciais: Base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil). R package version 0.0.0.9000. https://beatrizmilz.github.io/mananciais/"
+  )
+)
