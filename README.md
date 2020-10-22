@@ -100,7 +100,7 @@ reinstalar o pacote, recomendo que utilize o seguinte código:
 mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv")
 #> i Using ',' as decimal and '.' as grouping mark. Use `read_delim()` for more control.
 #> 
-#> -- Column specification ---------------------------------------------------
+#> -- Column specification --------------------------------------------------------
 #> cols(
 #>   data = col_date(format = ""),
 #>   sistema = col_character(),
@@ -124,33 +124,33 @@ mananciais %>%
 
 | data       | sistema      | volume\_porcentagem | volume\_variacao | volume\_operacional | pluviometria\_dia | pluviometria\_mensal | pluviometria\_hist |
 | :--------- | :----------- | ------------------: | ---------------: | ------------------: | ----------------: | -------------------: | -----------------: |
-| 2020-10-20 | Cantareira   |                37.1 |            \-0.2 |           364.83160 |              14.9 |                 42.5 |              127.8 |
-| 2020-10-20 | Alto Tietê   |                56.9 |            \-0.2 |           318.53951 |               0.1 |                 34.7 |              113.4 |
-| 2020-10-20 | Guarapiranga |                46.0 |              0.3 |            78.69646 |               5.0 |                 41.6 |              114.9 |
-| 2020-10-20 | Cotia        |                60.6 |              0.1 |            10.00515 |              18.0 |                 62.8 |              113.5 |
-| 2020-10-20 | Rio Grande   |                76.7 |            \-0.2 |            86.05538 |              23.8 |                 73.0 |              133.2 |
-| 2020-10-20 | Rio Claro    |                53.4 |            \-0.5 |             7.29980 |               0.6 |                 62.0 |              176.1 |
-| 2020-10-20 | São Lourenço |                63.1 |              0.1 |            56.04172 |               2.6 |                 43.6 |              141.2 |
+| 2020-10-22 | Cantareira   |                36.8 |            \-0.2 |           361.63193 |               0.1 |                 43.8 |              127.8 |
+| 2020-10-22 | Alto Tietê   |                56.5 |            \-0.2 |           316.71637 |               0.2 |                 35.6 |              113.4 |
+| 2020-10-22 | Guarapiranga |                45.8 |            \-0.2 |            78.47484 |               0.8 |                 43.0 |              114.9 |
+| 2020-10-22 | Cotia        |                61.0 |              0.0 |            10.06125 |               0.0 |                 78.6 |              113.5 |
+| 2020-10-22 | Rio Grande   |                76.4 |            \-0.2 |            85.73021 |               6.8 |                 79.8 |              133.2 |
+| 2020-10-22 | Rio Claro    |                52.4 |            \-0.5 |             7.16416 |               3.2 |                 65.6 |              176.1 |
+| 2020-10-22 | São Lourenço |                62.9 |            \-0.1 |            55.85515 |               0.2 |                 43.8 |              141.2 |
 
 ## Como citar o pacote
 
 ``` r
-citation("ComitesBaciaSP")
+citation("mananciais")
 #> 
-#> To cite ComitesBaciaSP in publications use:
+#> To cite mananciais in publications use:
 #> 
-#>   Beatriz Milz (2020). ComitesBaciaSP - Pacote com dados sobre os
-#>   Comitês de Bacias Hidrográficas no Estado de São Paulo (SP - Brasil).
-#>   R package version 0.0.0.9000.
-#>   https://beatrizmilz.github.io/ComitesBaciaSP/
+#>   Beatriz Milz (2020). mananciais: Base de dados sobre volume
+#>   armazenado em mananciais de abastecimento público na Região
+#>   Metropolitana de São Paulo (SP - Brasil). R package version
+#>   0.0.0.9000. https://beatrizmilz.github.io/mananciais/
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
-#>     title = {ComitesBaciaSP - Pacote com dados sobre os Comitês de Bacias Hidrográficas no Estado de São Paulo (SP - Brasil)},
+#>     title = {mananciais: Base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil)},
 #>     author = {{Beatriz Milz}},
 #>     year = {2020},
 #>     note = {R package version 0.0.0.9000},
-#>     url = {https://beatrizmilz.github.io/ComitesBaciaSP/},
+#>     url = {https://beatrizmilz.github.io/mananciais/},
 #>   }
 ```

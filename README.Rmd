@@ -82,7 +82,7 @@ mananciais %>%
 ## Como citar o pacote
 
 ```{r}
-citation("ComitesBaciaSP")
+citation("mananciais")
 ```
 
 
