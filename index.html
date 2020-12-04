@@ -111,15 +111,15 @@
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/beatrizmilz/mananciais">mananciais</a></span><span class="op">)</span>
 
 <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">mananciais</span><span class="op">)</span>
-<span class="co">#&gt; Rows: 46,881</span>
+<span class="co">#&gt; Rows: 46,895</span>
 <span class="co">#&gt; Columns: 8</span>
-<span class="co">#&gt; $ data                [3m[90m&lt;date&gt;[39m[23m 2020-12-01, 2020-12-01, 2020-12-01, 2020-12-01, …</span>
+<span class="co">#&gt; $ data                [3m[90m&lt;date&gt;[39m[23m 2020-12-03, 2020-12-03, 2020-12-03, 2020-12-03, …</span>
 <span class="co">#&gt; $ sistema             [3m[90m&lt;chr&gt;[39m[23m "Cantareira", "Alto Tietê", "Guarapiranga", "Coti…</span>
-<span class="co">#&gt; $ volume_porcentagem  [3m[90m&lt;dbl&gt;[39m[23m 32.0, 53.8, 51.4, 60.0, 78.5, 49.1, 60.6, 32.1, 5…</span>
-<span class="co">#&gt; $ volume_variacao     [3m[90m&lt;dbl&gt;[39m[23m -0.1, 0.1, 0.3, -0.1, 0.3, -0.4, 0.5, -0.1, -0.2,…</span>
-<span class="co">#&gt; $ volume_operacional  [3m[90m&lt;dbl&gt;[39m[23m 313.91984, 301.65186, 87.95883, 9.89349, 88.02153…</span>
-<span class="co">#&gt; $ pluviometria_dia    [3m[90m&lt;dbl&gt;[39m[23m 20.0, 19.0, 11.8, 6.6, 8.4, 2.6, 9.6, 8.4, 3.8, 3…</span>
-<span class="co">#&gt; $ pluviometria_mensal [3m[90m&lt;dbl&gt;[39m[23m 20.0, 19.0, 11.8, 6.6, 8.4, 2.6, 9.6, 104.2, 100.…</span>
+<span class="co">#&gt; $ volume_porcentagem  [3m[90m&lt;dbl&gt;[39m[23m 31.7, 53.6, 50.8, 59.6, 78.2, 48.4, 59.7, 31.9, 5…</span>
+<span class="co">#&gt; $ volume_variacao     [3m[90m&lt;dbl&gt;[39m[23m -0.2, -0.1, -0.3, -0.2, -0.2, -0.4, -0.4, -0.1, -…</span>
+<span class="co">#&gt; $ volume_operacional  [3m[90m&lt;dbl&gt;[39m[23m 311.44410, 300.25488, 87.04045, 9.83793, 87.69203…</span>
+<span class="co">#&gt; $ pluviometria_dia    [3m[90m&lt;dbl&gt;[39m[23m 0.1, 0.1, 0.0, 0.0, 0.0, 0.2, 1.0, 2.1, 1.3, 0.0,…</span>
+<span class="co">#&gt; $ pluviometria_mensal [3m[90m&lt;dbl&gt;[39m[23m 22.2, 20.4, 11.8, 7.2, 9.8, 6.8, 11.8, 22.1, 20.3…</span>
 <span class="co">#&gt; $ pluviometria_hist   [3m[90m&lt;dbl&gt;[39m[23m 215.2, 188.7, 173.5, 167.7, 188.4, 256.8, 211.3, …</span>
 
 <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">mananciais_consolidado</span><span class="op">)</span>
@@ -183,73 +183,73 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">2020-12-01</td>
+<td align="left">2020-12-03</td>
 <td align="left">Cantareira</td>
-<td align="right">32.0</td>
-<td align="right">-0.1</td>
-<td align="right">313.91984</td>
-<td align="right">20.0</td>
-<td align="right">20.0</td>
+<td align="right">31.7</td>
+<td align="right">-0.2</td>
+<td align="right">311.44410</td>
+<td align="right">0.1</td>
+<td align="right">22.2</td>
 <td align="right">215.2</td>
 </tr>
 <tr class="even">
-<td align="left">2020-12-01</td>
+<td align="left">2020-12-03</td>
 <td align="left">Alto Tietê</td>
-<td align="right">53.8</td>
+<td align="right">53.6</td>
+<td align="right">-0.1</td>
+<td align="right">300.25488</td>
 <td align="right">0.1</td>
-<td align="right">301.65186</td>
-<td align="right">19.0</td>
-<td align="right">19.0</td>
+<td align="right">20.4</td>
 <td align="right">188.7</td>
 </tr>
 <tr class="odd">
-<td align="left">2020-12-01</td>
+<td align="left">2020-12-03</td>
 <td align="left">Guarapiranga</td>
-<td align="right">51.4</td>
-<td align="right">0.3</td>
-<td align="right">87.95883</td>
-<td align="right">11.8</td>
+<td align="right">50.8</td>
+<td align="right">-0.3</td>
+<td align="right">87.04045</td>
+<td align="right">0.0</td>
 <td align="right">11.8</td>
 <td align="right">173.5</td>
 </tr>
 <tr class="even">
-<td align="left">2020-12-01</td>
+<td align="left">2020-12-03</td>
 <td align="left">Cotia</td>
-<td align="right">60.0</td>
-<td align="right">-0.1</td>
-<td align="right">9.89349</td>
-<td align="right">6.6</td>
-<td align="right">6.6</td>
+<td align="right">59.6</td>
+<td align="right">-0.2</td>
+<td align="right">9.83793</td>
+<td align="right">0.0</td>
+<td align="right">7.2</td>
 <td align="right">167.7</td>
 </tr>
 <tr class="odd">
-<td align="left">2020-12-01</td>
+<td align="left">2020-12-03</td>
 <td align="left">Rio Grande</td>
-<td align="right">78.5</td>
-<td align="right">0.3</td>
-<td align="right">88.02153</td>
-<td align="right">8.4</td>
-<td align="right">8.4</td>
+<td align="right">78.2</td>
+<td align="right">-0.2</td>
+<td align="right">87.69203</td>
+<td align="right">0.0</td>
+<td align="right">9.8</td>
 <td align="right">188.4</td>
 </tr>
 <tr class="even">
-<td align="left">2020-12-01</td>
+<td align="left">2020-12-03</td>
 <td align="left">Rio Claro</td>
-<td align="right">49.1</td>
+<td align="right">48.4</td>
 <td align="right">-0.4</td>
-<td align="right">6.70991</td>
-<td align="right">2.6</td>
-<td align="right">2.6</td>
+<td align="right">6.61707</td>
+<td align="right">0.2</td>
+<td align="right">6.8</td>
 <td align="right">256.8</td>
 </tr>
 <tr class="odd">
-<td align="left">2020-12-01</td>
+<td align="left">2020-12-03</td>
 <td align="left">São Lourenço</td>
-<td align="right">60.6</td>
-<td align="right">0.5</td>
-<td align="right">53.81628</td>
-<td align="right">9.6</td>
-<td align="right">9.6</td>
+<td align="right">59.7</td>
+<td align="right">-0.4</td>
+<td align="right">52.98915</td>
+<td align="right">1.0</td>
+<td align="right">11.8</td>
 <td align="right">211.3</td>
 </tr>
 </tbody>
