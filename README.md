@@ -27,16 +27,16 @@ link](https://github.com/curso-r/lives/blob/master/drafts/20200730_scraper_sabes
 Este pacote foi criado no âmbito da [pesquisa de doutorado de Beatriz
 Milz](https://beatrizmilz.github.io/tese/).
 
+> **Caso você não utilize R**, é possível **fazer download da base de
+> dados** através [deste
+> link](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv).
+
 Caso você queira utilizar a base mais atual, sem que seja necessário
 instalar o pacote, recomendo que utilize o seguinte código:
 
 ``` r
 mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv")
 ```
-
-**Caso você não utilize R**, também é possível **fazer download da base
-de dados** através [deste
-link](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv).
 
 ## Instalação
 
@@ -46,6 +46,7 @@ utilizando o seguinte código em `R`:
 ``` r
 # install.packages("devtools")
 devtools::install_github("beatrizmilz/mananciais")
+library(mananciais)
 ```
 
 ## Como usar?
@@ -67,31 +68,17 @@ vírgula”, e com encoding “UTF-8”.
 Abaixo segue um exemplo das bases disponíveis:
 
 ``` r
-library(mananciais)
-
 dplyr::glimpse(mananciais)
-#> Rows: 46,426
+#> Rows: 46,965
 #> Columns: 8
-#> $ data                <date> 2020-09-27, 2020-09-27, 2020-09-27, 2020-09-27...
+#> $ data                <date> 2020-12-13, 2020-12-13, 2020-12-13, 2020-12-13...
 #> $ sistema             <chr> "Cantareira", "Alto Tietê", "Guarapiranga", "Co...
-#> $ volume_porcentagem  <dbl> 42.1, 60.9, 46.9, 64.4, 78.0, 63.5, 64.4, 42.3,...
-#> $ volume_variacao     <dbl> -0.2, -0.2, -0.1, -0.4, -0.2, -0.5, -0.5, -0.2,...
-#> $ volume_operacional  <dbl> 413.23628, 341.09546, 80.25369, 10.63207, 87.52...
-#> $ pluviometria_dia    <dbl> 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0....
-#> $ pluviometria_mensal <dbl> 22.2, 19.1, 11.0, 6.6, 25.4, 89.8, 19.0, 22.2, ...
-#> $ pluviometria_hist   <dbl> 83.9, 80.0, 77.8, 82.5, 95.0, 141.6, 115.9, 83....
-
-dplyr::glimpse(mananciais_consolidado)
-#> Rows: 44,529
-#> Columns: 8
-#> $ data                <date> 2000-01-01, 2000-01-01, 2000-01-01, 2000-01-01...
-#> $ sistema             <chr> "Cantareira", "Alto Tietê", "Guarapiranga", "Co...
-#> $ volume_porcentagem  <dbl> 47.1, 50.9, 36.0, 18.8, 81.0, 73.2, 47.8, 51.4,...
-#> $ volume_variacao     <dbl> 0.3, 0.1, 0.0, 0.9, 0.4, -0.2, 0.7, 0.5, 0.4, 0...
-#> $ volume_operacional  <dbl> 365.50555, 196.02547, 64.80029, 2.64579, 91.694...
-#> $ pluviometria_dia    <dbl> 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 29.1, 47.3, 9....
-#> $ pluviometria_mensal <dbl> 30.9, 26.0, 47.2, 0.0, 0.0, 5.2, 60.0, 73.3, 56...
-#> $ pluviometria_hist   <dbl> 254.8, 238.1, 225.2, 217.8, 235.4, 292.0, 254.8...
+#> $ volume_porcentagem  <dbl> 32.7, 53.1, 49.2, 57.5, 77.3, 46.6, 59.5, 32.5,...
+#> $ volume_variacao     <dbl> 0.2, 0.0, -0.3, -0.3, 0.2, -0.2, 0.3, 0.0, 0.0,...
+#> $ volume_operacional  <dbl> 320.96404, 297.34437, 84.30411, 9.48107, 86.707...
+#> $ pluviometria_dia    <dbl> 15.0, 15.8, 0.0, 1.8, 0.8, 11.2, 0.8, 5.1, 6.9,...
+#> $ pluviometria_mensal <dbl> 97.5, 82.5, 21.4, 18.0, 39.6, 109.4, 27.6, 82.5...
+#> $ pluviometria_hist   <dbl> 215.2, 188.7, 173.5, 167.7, 188.4, 256.8, 211.3...
 ```
 
 Caso queira saber o significado de cada variável, leia a [documentação
@@ -106,6 +93,7 @@ ou utilize a seguinte função:
 ### Exemplo de tabela
 
 ``` r
+library(magrittr)
 mananciais %>% 
   dplyr::arrange(desc(data)) %>% 
   head(7) %>%
@@ -114,13 +102,13 @@ mananciais %>%
 
 | data       | sistema      | volume\_porcentagem | volume\_variacao | volume\_operacional | pluviometria\_dia | pluviometria\_mensal | pluviometria\_hist |
 | :--------- | :----------- | ------------------: | ---------------: | ------------------: | ----------------: | -------------------: | -----------------: |
-| 2020-09-27 | Cantareira   |                42.1 |            \-0.2 |           413.23628 |                 0 |                 22.2 |               83.9 |
-| 2020-09-27 | Alto Tietê   |                60.9 |            \-0.2 |           341.09546 |                 0 |                 19.1 |               80.0 |
-| 2020-09-27 | Guarapiranga |                46.9 |            \-0.1 |            80.25369 |                 0 |                 11.0 |               77.8 |
-| 2020-09-27 | Cotia        |                64.4 |            \-0.4 |            10.63207 |                 0 |                  6.6 |               82.5 |
-| 2020-09-27 | Rio Grande   |                78.0 |            \-0.2 |            87.52755 |                 0 |                 25.4 |               95.0 |
-| 2020-09-27 | Rio Claro    |                63.5 |            \-0.5 |             8.67788 |                 0 |                 89.8 |              141.6 |
-| 2020-09-27 | São Lourenço |                64.4 |            \-0.5 |            57.16546 |                 0 |                 19.0 |              115.9 |
+| 2020-12-13 | Cantareira   |                32.7 |              0.2 |           320.96404 |              15.0 |                 97.5 |              215.2 |
+| 2020-12-13 | Alto Tietê   |                53.1 |              0.0 |           297.34437 |              15.8 |                 82.5 |              188.7 |
+| 2020-12-13 | Guarapiranga |                49.2 |            \-0.3 |            84.30411 |               0.0 |                 21.4 |              173.5 |
+| 2020-12-13 | Cotia        |                57.5 |            \-0.3 |             9.48107 |               1.8 |                 18.0 |              167.7 |
+| 2020-12-13 | Rio Grande   |                77.3 |              0.2 |            86.70788 |               0.8 |                 39.6 |              188.4 |
+| 2020-12-13 | Rio Claro    |                46.6 |            \-0.2 |             6.36889 |              11.2 |                109.4 |              256.8 |
+| 2020-12-13 | São Lourenço |                59.5 |              0.3 |            52.80588 |               0.8 |                 27.6 |              211.3 |
 
 ## Como citar o pacote
 

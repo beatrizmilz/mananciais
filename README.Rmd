@@ -27,14 +27,14 @@ Este pacote foi derivado de um código web scraping desenvolvido pela equipe da 
 
 Este pacote foi criado no âmbito da [pesquisa de doutorado de Beatriz Milz](https://beatrizmilz.github.io/tese/). 
 
+
+> __Caso você não utilize R__, é possível __fazer download da base de dados__ através [deste link](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv). 
+
 Caso você queira utilizar a base mais atual, sem que seja necessário instalar o pacote, recomendo que utilize o seguinte código:
 
-```{r eval=FALSE, include=TRUE}
+```{r message=FALSE, warning=FALSE, include=TRUE}
 mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv")
 ```
-
-
-__Caso você não utilize R__, também é possível __fazer download da base de dados__ através [deste link](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv). 
 
 ## Instalação
 
@@ -43,6 +43,7 @@ Este pacote pode ser instalado através do  [GitHub](https://github.com/) utiliz
 ``` r
 # install.packages("devtools")
 devtools::install_github("beatrizmilz/mananciais")
+library(mananciais)
 ```
 ## Como usar?
 
@@ -56,11 +57,7 @@ Existem dois arquivos disponíveis, em que a diferença é o período dos dados.
 Abaixo segue um exemplo das bases disponíveis:
 
 ```{r example}
-library(mananciais)
-
 dplyr::glimpse(mananciais)
-
-dplyr::glimpse(mananciais_consolidado)
 ```
 
 Caso queira saber o significado de cada variável, leia a [documentação da base de dados](https://beatrizmilz.github.io/mananciais/reference/mananciais.html) ou utilize a seguinte função:
@@ -72,6 +69,7 @@ Caso queira saber o significado de cada variável, leia a [documentação da bas
 ### Exemplo de tabela
 
 ```{r eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
+library(magrittr)
 mananciais %>% 
   dplyr::arrange(desc(data)) %>% 
   head(7) %>%
