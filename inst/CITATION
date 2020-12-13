@@ -6,8 +6,9 @@ citEntry(
   author   = person("Beatriz Milz"),
   year     = 2020,
   note     = "R package version 0.0.0.9000",
+  doi      = "10.5281/zenodo.4319745"
   url      = "https://beatrizmilz.github.io/mananciais/",
   textVersion = paste(
-"Beatriz Milz (2020). mananciais: Base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil). R package version 0.0.0.9000. https://beatrizmilz.github.io/mananciais/"
+"Beatriz Milz (2020). mananciais: Base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil). https://doi.org/10.5281/zenodo.4319745"
   )
 )

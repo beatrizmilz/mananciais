@@ -16,7 +16,8 @@ knitr::opts_chunk$set(
 # Mananciais
 
 <!-- badges: start -->
-[![R build status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)   [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![R build status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4319745.svg)](https://doi.org/10.5281/zenodo.4319745)
 <!-- badges: end -->
 
 O objetivo deste pacote é disponibilizar a base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil).
@@ -27,6 +28,14 @@ Este pacote foi derivado de um código web scraping desenvolvido pela equipe da 
 
 Este pacote foi criado no âmbito da [pesquisa de doutorado de Beatriz Milz](https://beatrizmilz.github.io/tese/). 
 
+Caso você queira utilizar a base mais atual, sem que seja necessário instalar o pacote, recomendo que utilize o seguinte código:
+
+```{r eval=FALSE, include=TRUE}
+mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv")
+```
+
+
+__Caso você não utilize R__, também é possível __fazer download da base de dados__ através [deste link](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv). 
 
 ## Instalação
 
@@ -61,14 +70,6 @@ Caso queira saber o significado de cada variável, leia a [documentação da bas
 ?mananciais::mananciais
 ```
 
-
-Caso você queira utilizar a base mais atual, sem que seja necessário reinstalar o pacote, recomendo que utilize o seguinte código:
-
-```{r}
-mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv")
-```
-
-
 ### Exemplo de tabela
 
 ```{r eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
@@ -81,9 +82,8 @@ mananciais %>%
 
 ## Como citar o pacote
 
-```{r}
-citation("mananciais")
-```
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4319745.svg)](https://doi.org/10.5281/zenodo.4319745)
+
 
 
 
