@@ -50,5 +50,7 @@ obter_dia <- function(dia) {
     dplyr::filter(data_valida == TRUE) %>%
     dplyr::select(-data_valida, -dia_busca)
 
+  print(glue::glue("Dia baixado com sucesso: {dia}"))
+
   return(final)
 }

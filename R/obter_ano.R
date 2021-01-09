@@ -29,6 +29,8 @@ obter_ano <-
       ))
     }
 
+    # Colocar uma barra de progresso aqui!
+    # Nessa etapa demora muito também. Paralelização é uma opção?
     tabela <-
       purrr::map_dfr(dias, mananciais:::obter_dia, .id = "dia")
 
