@@ -57,10 +57,10 @@ formato `.csv`, os mesmos podem ser acessados através dos links a
 seguir. Lembrete: o arquivo foi salvo em formato “separado por ponto e
 vírgula”, e com encoding “UTF-8”.
 
-  - `mananciais_consolidado` - 2000 à 2019 - [Baixar versão
+  - `mananciais_consolidado` - 2000 à 2020 - [Baixar versão
     `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais_consolidado.csv)
 
-  - `mananciais` - 2000 à 2020 (parcial) - [Baixar versão
+  - `mananciais` - 2000 à 2021 (parcial) - [Baixar versão
     `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv).
     Esse arquivo é atualizado através de um workflow no [GitHub
     Actions](https://github.com/beatrizmilz/mananciais/actions).
@@ -71,14 +71,14 @@ Abaixo segue um exemplo das bases disponíveis:
 dplyr::glimpse(mananciais)
 #> Rows: 47,091
 #> Columns: 8
-#> $ data                [3m[90m<date>[39m[23m 2020-12-31, 2020-12-31, 2020-12-31, 2020-12-31, …
-#> $ sistema             [3m[90m<chr>[39m[23m "Cantareira", "Alto Tietê", "Guarapiranga", "Coti…
-#> $ volume_porcentagem  [3m[90m<dbl>[39m[23m 36.2, 53.9, 56.7, 63.6, 79.6, 44.1, 60.9, 36.0, 5…
-#> $ volume_variacao     [3m[90m<dbl>[39m[23m 0.2, 0.3, 1.2, 0.5, 0.1, -0.3, 0.1, 0.4, 0.5, 1.8…
-#> $ volume_operacional  [3m[90m<dbl>[39m[23m 355.08684, 301.81769, 97.07097, 10.48768, 89.3467…
-#> $ pluviometria_dia    [3m[90m<dbl>[39m[23m 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.8, 20.7, 28.8, 72…
-#> $ pluviometria_mensal [3m[90m<dbl>[39m[23m 225.3, 201.2, 203.2, 204.6, 138.8, 239.8, 173.8, …
-#> $ pluviometria_hist   [3m[90m<dbl>[39m[23m 215.2, 188.7, 173.5, 167.7, 188.4, 256.8, 211.3, …
+#> $ data                <date> 2020-12-31, 2020-12-31, 2020-12-31, 2020-12-31...
+#> $ sistema             <chr> "Cantareira", "Alto Tietê", "Guarapiranga", "Co...
+#> $ volume_porcentagem  <dbl> 36.2, 53.9, 56.7, 63.6, 79.6, 44.1, 60.9, 36.0,...
+#> $ volume_variacao     <dbl> 0.2, 0.3, 1.2, 0.5, 0.1, -0.3, 0.1, 0.4, 0.5, 1...
+#> $ volume_operacional  <dbl> 355.08684, 301.81769, 97.07097, 10.48768, 89.34...
+#> $ pluviometria_dia    <dbl> 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.8, 20.7, 28.8, ...
+#> $ pluviometria_mensal <dbl> 225.3, 201.2, 203.2, 204.6, 138.8, 239.8, 173.8...
+#> $ pluviometria_hist   <dbl> 215.2, 188.7, 173.5, 167.7, 188.4, 256.8, 211.3...
 ```
 
 Caso queira saber o significado de cada variável, leia a [documentação
