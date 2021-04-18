@@ -19,7 +19,7 @@ Uma tibble, contendo:
 
 }
 
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 44529 rows and 8 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 47091 rows and 8 columns.
 }
 \source{
 SABESP - \url{http://mananciais.sabesp.com.br/Situacao}
