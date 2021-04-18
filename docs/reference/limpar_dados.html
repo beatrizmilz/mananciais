@@ -46,6 +46,8 @@ A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o ti
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -57,9 +59,18 @@ A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o ti
 
 
 
+<!-- dependencies from examples -->
+
+
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -80,19 +91,25 @@ A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o ti
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/graficos.html">Criando gráficos com os dados do pacote {mananciais}</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/beatrizmilz/mananciais/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -119,14 +136,14 @@ A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o ti
 A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o tipo de algumas variáveis.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>limpar_dados</span>(
-  <span class='kw'>ano</span>,
-  <span class='kw'>df</span>,
-  usar_baixados = <span class='fl'>TRUE</span>,
-  diretorio_download = <span class='st'>"data-raw/"</span>,
-  salvar_local = <span class='fl'>FALSE</span>,
-  diretorio_salvar = <span class='st'>"data-raw/data-clean/"</span>
-)</pre>
+    <pre class="usage"><span class='fu'>limpar_dados</span><span class='op'>(</span>
+  <span class='va'>ano</span>,
+  <span class='va'>df</span>,
+  usar_baixados <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  diretorio_download <span class='op'>=</span> <span class='st'>"data-raw/"</span>,
+  salvar_local <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  diretorio_salvar <span class='op'>=</span> <span class='st'>"data-raw/data-clean/"</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -162,21 +179,10 @@ A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o ti
     <p>Retorna um tibble com os dados limpos.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'> <span class='kw'>mananciais</span>:::<span class='fu'><a href='obter_dia.html'>obter_dia</a></span>(<span class='st'>"2020-09-26"</span>) <span class='op'>%&gt;%</span> <span class='kw'>mananciais</span>:::<span class='fu'>limpar_dados</span>(df = <span class='kw'>.</span>, usar_baixados = <span class='fl'>FALSE</span>)
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 7 x 8</span><span>
-#&gt;   data       sistema volume_porcenta~ volume_variacao volume_operacio~
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>           </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> 2020-09-26 Cantar~             42.3            -</span><span style='color: #BB0000;'>0.2</span><span>           415.  
-#&gt; </span><span style='color: #555555;'>2</span><span> 2020-09-26 Alto T~             61.1            -</span><span style='color: #BB0000;'>0.2</span><span>           342.  
-#&gt; </span><span style='color: #555555;'>3</span><span> 2020-09-26 Guarap~             47               0              80.5 
-#&gt; </span><span style='color: #555555;'>4</span><span> 2020-09-26 Cotia               64.8            -</span><span style='color: #BB0000;'>0.5</span><span>            10.7 
-#&gt; </span><span style='color: #555555;'>5</span><span> 2020-09-26 Rio Gr~             78.2             0              87.7 
-#&gt; </span><span style='color: #555555;'>6</span><span> 2020-09-26 Rio Cl~             64              -</span><span style='color: #BB0000;'>0.5</span><span>             8.75
-#&gt; </span><span style='color: #555555;'>7</span><span> 2020-09-26 São Lo~             64.9             0              57.6 
-#&gt; </span><span style='color: #555555;'># ... with 3 more variables: pluviometria_dia </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, pluviometria_mensal </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   pluviometria_hist </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span></div><div class='input'>
+    <pre class="examples"><div class='input'> <span class='co'># mananciais:::obter_dia("2020-09-26") %&gt;% mananciais:::limpar_dados(df = ., usar_baixados = FALSE)</span>
 
-</div></span></pre>
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -188,11 +194,11 @@ A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o ti
 
       <footer>
       <div class="copyright">
-  <p>Developed by Beatriz Milz.</p>
+  <p><p>Developed by Beatriz Milz.</p></p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
 </div>
 
       </footer>
@@ -200,6 +206,8 @@ A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o ti
 
   
 
+
+  
 
   </body>
 </html>
