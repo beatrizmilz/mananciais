@@ -30,7 +30,7 @@ jobs:
         shell: Rscript {0}
       - name: Execute Script
         run: |
-          Rscript -e 'mananciais <- mananciais:::obter_ano(ano = 2021, download_local = FALSE,  ano_atual = TRUE) %>%  mananciais:::limpar_dados(df = ., usar_baixados = FALSE, salvar_local = FALSE) %>% rbind(mananciais::mananciais_consolidado) %>% dplyr::arrange(desc(data))  ; usethis::use_data(mananciais, overwrite = T) ; readr::write_csv2(mananciais, "inst/extdata/mananciais.csv"); rmarkdown::render("README.Rmd")'
+          Rscript -e 'library(magrittr, include.only = "%>%"); mananciais <- mananciais:::obter_ano(ano = 2021, download_local = FALSE,  ano_atual = TRUE) %>%  mananciais:::limpar_dados(df = ., usar_baixados = FALSE, salvar_local = FALSE) %>% rbind(mananciais::mananciais_consolidado) %>% dplyr::arrange(desc(data))  ; usethis::use_data(mananciais, overwrite = T) ; readr::write_csv2(mananciais, "inst/extdata/mananciais.csv"); rmarkdown::render("README.Rmd")'
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
