@@ -16,10 +16,12 @@ knitr::opts_chunk$set(
 # Pacote Mananciais
 
 <!-- badges: start -->
-[![R build status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4319745.svg)](https://doi.org/10.5281/zenodo.4319745)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4319745.svg)](https://doi.org/10.5281/zenodo.4319745)
+[![R build status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)  
+[![update-data](https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml/badge.svg)](https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml)
 <!-- badges: end -->
 
-O objetivo deste pacote é disponibilizar a base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil).
+O objetivo deste pacote é disponibilizar a base de dados sobre o volume operacional em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil). O pacote é atualizado diariamente através de um workflow com [GitHub Actions](https://github.com/beatrizmilz/mananciais/actions).
 
 Os dados foram obtidos no [Portal dos Mananciais](http://mananciais.sabesp.com.br/Situacao) da [SABESP](http://site.sabesp.com.br/site/Default.aspx).
 
@@ -28,13 +30,12 @@ Este pacote foi derivado de um código web scraping desenvolvido pela equipe da 
 Este pacote foi criado no âmbito da [pesquisa de doutorado de Beatriz Milz](https://beatrizmilz.github.io/tese/). 
 
 
-> __Caso você não utilize R__, é possível __fazer download da base de dados__ através [deste link](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv). 
+__Caso você não utilize R__, é possível __fazer download da base de dados__ através dos seguintes links:
 
-Caso você queira utilizar a base mais atual, sem que seja necessário instalar o pacote, recomendo que utilize o seguinte código:
-
-```{r message=FALSE, warning=FALSE, include=TRUE}
-mananciais <- readr::read_csv2("https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv")
-```
+  - [Arquivo `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv) 
+  - Arquivo xlsx - em breve!
+  
+Os arquivos foram salvos com encoding UTF-8, e separados por ponto-e-vírgula.  
 
 ## Instalação
 
@@ -47,11 +48,17 @@ library(mananciais)
 ```
 ## Como usar?
 
-Existem dois arquivos disponíveis, em que a diferença é o período dos dados. Caso você não utilize `R` e queira ter acesso aos dados em formato `.csv`, os mesmos podem ser acessados através dos links a seguir. Lembrete: o arquivo foi salvo em formato "separado por ponto e vírgula", e com encoding "UTF-8".
+Caso você tenha conexão à internet, é possível buscar a base atualizada usando a função `dados_mananciais()`:
 
-- `mananciais_consolidado` - 2000 à 2020 - [Baixar versão `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais_consolidado.csv)
+```{r}
+mananciais <- mananciais::dados_mananciais() 
+```
 
-- `mananciais` - 2000 à 2021 (parcial) - [Baixar versão `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv). Esse arquivo é atualizado através de um workflow no [GitHub Actions](https://github.com/beatrizmilz/mananciais/actions).
+Caso você não tenha conexão à internet, você pode utilizar as bases disponíveis no pacote. Porém as mesmas estarão atualizadas até a data em que você instalou (ou atualizou) o pacote. Existem duas bases disponíveis, em que a diferença é o período dos dados. 
+
+- `mananciais_consolidado` - 2000 à 2020
+
+- `mananciais` - 2000 à 2021 (parcial). 
 
 
 Abaixo segue um exemplo das bases disponíveis:

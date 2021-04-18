@@ -82,21 +82,21 @@
 <a href="#pacote-mananciais" class="anchor"></a>Pacote Mananciais</h1></div>
 <!-- badges: start -->
 
-<p>O objetivo deste pacote é disponibilizar a base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil).</p>
+<p>O objetivo deste pacote é disponibilizar a base de dados sobre o volume operacional em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil). O pacote é atualizado diariamente através de um workflow com <a href="https://github.com/beatrizmilz/mananciais/actions" class="external-link">GitHub Actions</a>.</p>
 <p>Os dados foram obtidos no <a href="http://mananciais.sabesp.com.br/Situacao" class="external-link">Portal dos Mananciais</a> da <a href="http://site.sabesp.com.br/site/Default.aspx" class="external-link">SABESP</a>.</p>
 <p>Este pacote foi derivado de um código web scraping desenvolvido pela equipe da <a href="https://www.curso-r.com/" class="external-link">Curso-R</a>, em uma <a href="https://youtu.be/jvZIxrMmOcQ" class="external-link">live</a>, e o código original está disponível <a href="https://github.com/curso-r/lives/blob/master/drafts/20200730_scraper_sabesp.R" class="external-link">neste link</a>.</p>
 <p>Este pacote foi criado no âmbito da <a href="https://beatrizmilz.github.io/tese/" class="external-link">pesquisa de doutorado de Beatriz Milz</a>.</p>
-<blockquote>
-<p><strong>Caso você não utilize R</strong>, é possível <strong>fazer download da base de dados</strong> através <a href="https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv" class="external-link">deste link</a>.</p>
-</blockquote>
-<p>Caso você queira utilizar a base mais atual, sem que seja necessário instalar o pacote, recomendo que utilize o seguinte código:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mananciais</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv2</a></span><span class="op">(</span><span class="st">"https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv"</span><span class="op">)</span></code></pre></div>
+<p><strong>Caso você não utilize R</strong>, é possível <strong>fazer download da base de dados</strong> através dos seguintes links:</p>
+<ul>
+<li><a href="https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv" class="external-link">Arquivo <code>.csv</code></a></li>
+<li>Arquivo xlsx - em breve!</li>
+</ul>
+<p>Os arquivos foram salvos com encoding UTF-8, e separados por ponto-e-vírgula.</p>
 <div id="instalação" class="section level2">
 <h2 class="hasAnchor">
 <a href="#instala%C3%A7%C3%A3o" class="anchor"></a>Instalação</h2>
 <p>Este pacote pode ser instalado através do <a href="https://github.com/" class="external-link">GitHub</a> utilizando o seguinte código em <code>R</code>:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"beatrizmilz/mananciais"</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/beatrizmilz/mananciais" class="external-link">mananciais</a></span><span class="op">)</span></code></pre></div>
@@ -104,10 +104,13 @@
 <div id="como-usar" class="section level2">
 <h2 class="hasAnchor">
 <a href="#como-usar" class="anchor"></a>Como usar?</h2>
-<p>Existem dois arquivos disponíveis, em que a diferença é o período dos dados. Caso você não utilize <code>R</code> e queira ter acesso aos dados em formato <code>.csv</code>, os mesmos podem ser acessados através dos links a seguir. Lembrete: o arquivo foi salvo em formato “separado por ponto e vírgula”, e com encoding “UTF-8”.</p>
+<p>Caso você tenha conexão à internet, é possível buscar a base atualizada usando a função <code><a href="reference/dados_mananciais.html">dados_mananciais()</a></code>:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">mananciais</span> <span class="op">&lt;-</span> <span class="fu">mananciais</span><span class="fu">::</span><span class="fu"><a href="reference/dados_mananciais.html">dados_mananciais</a></span><span class="op">(</span><span class="op">)</span> </code></pre></div>
+<p>Caso você não tenha conexão à internet, você pode utilizar as bases disponíveis no pacote. Porém as mesmas estarão atualizadas até a data em que você instalou (ou atualizou) o pacote. Existem duas bases disponíveis, em que a diferença é o período dos dados.</p>
 <ul>
-<li><p><code>mananciais_consolidado</code> - 2000 à 2020 - <a href="https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais_consolidado.csv" class="external-link">Baixar versão <code>.csv</code></a></p></li>
-<li><p><code>mananciais</code> - 2000 à 2021 (parcial) - <a href="https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv" class="external-link">Baixar versão <code>.csv</code></a>. Esse arquivo é atualizado através de um workflow no <a href="https://github.com/beatrizmilz/mananciais/actions" class="external-link">GitHub Actions</a>.</p></li>
+<li><p><code>mananciais_consolidado</code> - 2000 à 2020</p></li>
+<li><p><code>mananciais</code> - 2000 à 2021 (parcial).</p></li>
 </ul>
 <p>Abaixo segue um exemplo das bases disponíveis:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -136,13 +139,13 @@
   <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <table class="table">
 <colgroup>
-<col width="7%">
+<col width="8%">
 <col width="9%">
 <col width="14%">
 <col width="12%">
 <col width="14%">
 <col width="12%">
-<col width="15%">
+<col width="14%">
 <col width="13%">
 </colgroup>
 <thead><tr class="header">
@@ -275,8 +278,9 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/beatrizmilz/mananciais/actions" class="external-link"><img src="https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 <li><a href="https://doi.org/10.5281/zenodo.4319745" class="external-link"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4319745.svg" alt="DOI"></a></li>
+<li><a href="https://github.com/beatrizmilz/mananciais/actions" class="external-link"><img src="https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml" class="external-link"><img src="https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml/badge.svg" alt="update-data"></a></li>
 </ul>
 </div>
 

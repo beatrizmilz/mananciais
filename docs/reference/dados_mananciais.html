@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • mananciais</title>
+<title>Mananciais — dados_mananciais • mananciais</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Mananciais — dados_mananciais" />
+<meta property="og:description" content="Obter dados atualizados sobre os mananciais" />
 
 
 
@@ -57,6 +58,8 @@
 
 
 
+<!-- dependencies from examples -->
+
 
   
 
@@ -67,7 +70,7 @@
   <body data-spy="scroll" data-target="#toc">
     
 
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -120,72 +123,42 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Mananciais</h1>
+    <small class="dont-index">Source: <a href='https://github.com/beatrizmilz/mananciais/blob/master/R/mananciais.R'><code>R/mananciais.R</code></a></small>
+    <div class="hidden name"><code>dados_mananciais.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Obter dados atualizados sobre os mananciais</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>dados_mananciais</span><span class='op'>(</span><span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="dados_mananciais.html">dados_mananciais()</a></code> </p>
-        </td>
-        <td><p>Mananciais</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="limpar_dados.html">limpar_dados()</a></code> </p>
-        </td>
-        <td><p>Limpar dados.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="mananciais.html">mananciais</a></code> <code><a href="mananciais.html">mananciais_consolidado</a></code> </p>
-        </td>
-        <td><p>Dados sobre os Mananciais</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="obter_ano.html">obter_ano()</a></code> </p>
-        </td>
-        <td><p>Obtém dados de um ano.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="obter_dia.html">obter_dia()</a></code> </p>
-        </td>
-        <td><p>Obtém dados de um único dia.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="unir_anos.html">unir_anos()</a></code> </p>
-        </td>
-        <td><p>Unir bases de anos</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>tibble</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>dados_mananciais</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 47,847 x 8</span><span>
+#&gt;    data       sistema      volume_porcentagem volume_variacao volume_operacional
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;date&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>           </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> 2021-04-18 Cantareira                 51.5            -</span><span style='color: #BB0000;'>0.2</span><span>             506.  
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> 2021-04-18 Alto Tietê                 59.2            -</span><span style='color: #BB0000;'>0.2</span><span>             332.  
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> 2021-04-18 Guarapiranga               69.6             0.8             119.  
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> 2021-04-18 Cotia                      78.8             0.4              13.0 
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> 2021-04-18 Rio Grande                 86.2             1                96.7 
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> 2021-04-18 Rio Claro                  54.6             0.1               7.46
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> 2021-04-18 São Lourenço               66.7             0.5              59.2 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> 2021-04-17 Cantareira                 51.7            -</span><span style='color: #BB0000;'>0.1</span><span>             507.  
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> 2021-04-17 Alto Tietê                 59.4            -</span><span style='color: #BB0000;'>0.2</span><span>             333.  
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> 2021-04-17 Guarapiranga               68.8            -</span><span style='color: #BB0000;'>0.2</span><span>             118.  
+#&gt; </span><span style='color: #949494;'># … with 47,837 more rows, and 3 more variables: pluviometria_dia &lt;dbl&gt;,</span><span>
+#&gt; </span><span style='color: #949494;'>#   pluviometria_mensal &lt;dbl&gt;, pluviometria_hist &lt;dbl&gt;</span><span></div></span></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
