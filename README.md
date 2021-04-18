@@ -33,9 +33,9 @@ Milz](https://beatrizmilz.github.io/tese/).
 **Caso você não utilize R**, é possível **fazer download da base de
 dados** através dos seguintes links:
 
--   [Arquivo
+  - [Arquivo
     `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv)
--   Arquivo xlsx - em breve!
+  - Arquivo xlsx - em breve\!
 
 Os arquivos foram salvos com encoding UTF-8, e separados por
 ponto-e-vírgula.
@@ -65,9 +65,9 @@ disponíveis no pacote. Porém as mesmas estarão atualizadas até a data em
 que você instalou (ou atualizou) o pacote. Existem duas bases
 disponíveis, em que a diferença é o período dos dados.
 
--   `mananciais_consolidado` - 2000 à 2020
+  - `mananciais_consolidado` - 2000 à 2020
 
--   `mananciais` - 2000 à 2021 (parcial).
+  - `mananciais` - 2000 à 2021 (parcial).
 
 Abaixo segue um exemplo das bases disponíveis:
 
@@ -105,9 +105,9 @@ mananciais %>%
 ```
 
 | data       | sistema      | volume\_porcentagem | volume\_variacao | volume\_operacional | pluviometria\_dia | pluviometria\_mensal | pluviometria\_hist |
-|:-----------|:-------------|--------------------:|-----------------:|--------------------:|------------------:|---------------------:|-------------------:|
-| 2021-04-18 | Cantareira   |                51.5 |             -0.2 |           506.25196 |               1.4 |                  5.6 |               83.1 |
-| 2021-04-18 | Alto Tietê   |                59.2 |             -0.2 |           331.70320 |               0.9 |                 18.8 |               95.0 |
+| :--------- | :----------- | ------------------: | ---------------: | ------------------: | ----------------: | -------------------: | -----------------: |
+| 2021-04-18 | Cantareira   |                51.5 |            \-0.2 |           506.25196 |               1.4 |                  5.6 |               83.1 |
+| 2021-04-18 | Alto Tietê   |                59.2 |            \-0.2 |           331.70320 |               0.9 |                 18.8 |               95.0 |
 | 2021-04-18 | Guarapiranga |                69.6 |              0.8 |           119.07770 |              21.2 |                 37.0 |               72.5 |
 | 2021-04-18 | Cotia        |                78.8 |              0.4 |            13.00033 |              25.6 |                 40.8 |               77.6 |
 | 2021-04-18 | Rio Grande   |                86.2 |              1.0 |            96.67139 |              26.2 |                 41.8 |              103.7 |
