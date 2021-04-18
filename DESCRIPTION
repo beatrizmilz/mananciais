@@ -1,5 +1,5 @@
 Package: mananciais
-Title: Base de dados sobre volume armazenado em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil)
+Title: Base de dados sobre volume operacional em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil)
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Beatriz",
