@@ -107,12 +107,8 @@
 <p>Caso você tenha conexão à internet, é possível buscar a base atualizada usando a função <code><a href="reference/dados_mananciais.html">dados_mananciais()</a></code>:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mananciais</span> <span class="op">&lt;-</span> <span class="fu">mananciais</span><span class="fu">::</span><span class="fu"><a href="reference/dados_mananciais.html">dados_mananciais</a></span><span class="op">(</span><span class="op">)</span> </code></pre></div>
-<p>Caso você não tenha conexão à internet, você pode utilizar as bases disponíveis no pacote. Porém as mesmas estarão atualizadas até a data em que você instalou (ou atualizou) o pacote. Existem duas bases disponíveis, em que a diferença é o período dos dados.</p>
-<ul>
-<li><p><code>mananciais_consolidado</code> - 2000 à 2020</p></li>
-<li><p><code>mananciais</code> - 2000 à 2021 (parcial).</p></li>
-</ul>
-<p>Abaixo segue um exemplo das bases disponíveis:</p>
+<p>Caso você não tenha conexão à internet, você pode utilizar a base disponível no pacote. Porém as mesmas estarão atualizadas até a data em que você instalou (ou atualizou) o pacote.</p>
+<p>Abaixo segue um exemplo da base disponível:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">mananciais</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 47,938</span>

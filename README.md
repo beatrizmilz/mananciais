@@ -63,16 +63,11 @@ usando a função `dados_mananciais()`:
 mananciais <- mananciais::dados_mananciais() 
 ```
 
-Caso você não tenha conexão à internet, você pode utilizar as bases
-disponíveis no pacote. Porém as mesmas estarão atualizadas até a data em
-que você instalou (ou atualizou) o pacote. Existem duas bases
-disponíveis, em que a diferença é o período dos dados.
+Caso você não tenha conexão à internet, você pode utilizar a base
+disponível no pacote. Porém as mesmas estarão atualizadas até a data em
+que você instalou (ou atualizou) o pacote. 
 
-  - `mananciais_consolidado` - 2000 à 2020
-
-  - `mananciais` - 2000 à 2021 (parcial).
-
-Abaixo segue um exemplo das bases disponíveis:
+Abaixo segue um exemplo da base disponível:
 
 ``` r
 dplyr::glimpse(mananciais)

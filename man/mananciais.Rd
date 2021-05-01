@@ -3,7 +3,6 @@
 \docType{data}
 \name{mananciais}
 \alias{mananciais}
-\alias{mananciais_consolidado}
 \title{Dados sobre os Mananciais}
 \format{
 Uma tibble, contendo:
@@ -18,16 +17,12 @@ sistema}
 \item{pluviometria_mensal}{Pluviometria acumulada do mês (mm)}
 \item{pluviometria_hist}{Pluviometria média histórica mensal (mm)}
 }
-
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 47091 rows and 8 columns.
 }
 \source{
 SABESP - \url{http://mananciais.sabesp.com.br/Situacao}
 }
 \usage{
 mananciais
-
-mananciais_consolidado
 }
 \description{
 Base de dados contendo informações sobre os Sistemas

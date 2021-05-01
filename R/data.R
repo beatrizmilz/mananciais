@@ -20,5 +20,3 @@
 #' @examples head(mananciais)
 "mananciais"
 
-#' @rdname mananciais
-"mananciais_consolidado"
