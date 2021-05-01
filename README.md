@@ -65,7 +65,7 @@ mananciais <- mananciais::dados_mananciais()
 
 Caso você não tenha conexão à internet, você pode utilizar a base
 disponível no pacote. Porém as mesmas estarão atualizadas até a data em
-que você instalou (ou atualizou) o pacote. 
+que você instalou (ou atualizou) o pacote.
 
 Abaixo segue um exemplo da base disponível:
 
