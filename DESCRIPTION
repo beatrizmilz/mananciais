@@ -37,5 +37,6 @@ Depends:
 VignetteBuilder: knitr
 Suggests: 
     testthat (>= 3.0.0),
-    rmarkdown
+    rmarkdown,
+    covr
 Config/testthat/edition: 3

@@ -9,6 +9,8 @@
 [![R build
 status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)  
 [![update-data](https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml/badge.svg)](https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/beatrizmilz/mananciais/branch/master/graph/badge.svg)](https://codecov.io/gh/beatrizmilz/mananciais?branch=master)
 <!-- badges: end -->
 
 O objetivo deste pacote é disponibilizar a base de dados sobre o volume
@@ -33,9 +35,9 @@ Milz](https://beatrizmilz.github.io/tese/).
 **Caso você não utilize R**, é possível **fazer download da base de
 dados** através dos seguintes links:
 
-  - [Arquivo
+-   [Arquivo
     `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv)
-  - Arquivo xlsx - em breve\!
+-   Arquivo xlsx - em breve!
 
 Os arquivos foram salvos com encoding UTF-8, e separados por
 ponto-e-vírgula.
@@ -65,24 +67,24 @@ disponíveis no pacote. Porém as mesmas estarão atualizadas até a data em
 que você instalou (ou atualizou) o pacote. Existem duas bases
 disponíveis, em que a diferença é o período dos dados.
 
-  - `mananciais_consolidado` - 2000 à 2020
+-   `mananciais_consolidado` - 2000 à 2020
 
-  - `mananciais` - 2000 à 2021 (parcial).
+-   `mananciais` - 2000 à 2021 (parcial).
 
 Abaixo segue um exemplo das bases disponíveis:
 
 ``` r
 dplyr::glimpse(mananciais)
-#> Rows: 47,931
+#> Rows: 47,938
 #> Columns: 8
-#> $ data                <date> 2021-04-30, 2021-04-30, 2021-04-30, 2021-04-30, 2…
+#> $ data                <date> 2021-05-01, 2021-05-01, 2021-05-01, 2021-05-01, 2…
 #> $ sistema             <chr> "Cantareira", "Alto Tietê", "Guarapiranga", "Cotia…
-#> $ volume_porcentagem  <dbl> 50.8, 59.6, 71.0, 79.6, 90.9, 67.1, 79.9, 50.9, 59…
-#> $ volume_variacao     <dbl> -0.1, -0.1, -0.2, -0.4, -0.2, 0.2, 0.1, -0.1, -0.1…
-#> $ volume_operacional  <dbl> 499.02131, 334.19754, 121.59604, 13.13092, 101.986…
-#> $ pluviometria_dia    <dbl> 0.0, 0.2, 0.2, 0.4, 3.4, 0.6, 0.8, 0.2, 2.0, 0.0, …
-#> $ pluviometria_mensal <dbl> 9.0, 43.6, 48.0, 56.8, 66.2, 244.8, 78.2, 9.0, 43.…
-#> $ pluviometria_hist   <dbl> 83.1, 95.0, 72.5, 77.6, 103.7, 191.1, 111.3, 83.1,…
+#> $ volume_porcentagem  <dbl> 50.7, 59.5, 70.9, 79.4, 90.6, 67.2, 79.7, 50.8, 59…
+#> $ volume_variacao     <dbl> -0.1, -0.1, -0.1, -0.2, -0.3, 0.1, -0.2, -0.1, -0.…
+#> $ volume_operacional  <dbl> 498.22596, 333.32517, 121.34363, 13.09820, 101.626…
+#> $ pluviometria_dia    <dbl> 0.0, 0.0, 0.0, 0.0, 0.0, 0.2, 0.0, 0.0, 0.2, 0.2, …
+#> $ pluviometria_mensal <dbl> 0.0, 0.0, 0.0, 0.0, 0.0, 0.2, 0.0, 9.0, 43.6, 48.0…
+#> $ pluviometria_hist   <dbl> 77.4, 75.4, 58.6, 64.6, 80.4, 133.3, 89.3, 83.1, 9…
 ```
 
 Caso queira saber o significado de cada variável, leia a [documentação
@@ -105,14 +107,14 @@ mananciais %>%
 ```
 
 | data       | sistema      | volume\_porcentagem | volume\_variacao | volume\_operacional | pluviometria\_dia | pluviometria\_mensal | pluviometria\_hist |
-| :--------- | :----------- | ------------------: | ---------------: | ------------------: | ----------------: | -------------------: | -----------------: |
-| 2021-04-30 | Cantareira   |                50.8 |            \-0.1 |           499.02131 |               0.0 |                  9.0 |               83.1 |
-| 2021-04-30 | Alto Tietê   |                59.6 |            \-0.1 |           334.19754 |               0.2 |                 43.6 |               95.0 |
-| 2021-04-30 | Guarapiranga |                71.0 |            \-0.2 |           121.59604 |               0.2 |                 48.0 |               72.5 |
-| 2021-04-30 | Cotia        |                79.6 |            \-0.4 |            13.13092 |               0.4 |                 56.8 |               77.6 |
-| 2021-04-30 | Rio Grande   |                90.9 |            \-0.2 |           101.98659 |               3.4 |                 66.2 |              103.7 |
-| 2021-04-30 | Rio Claro    |                67.1 |              0.2 |             9.16738 |               0.6 |                244.8 |              191.1 |
-| 2021-04-30 | São Lourenço |                79.9 |              0.1 |            70.96614 |               0.8 |                 78.2 |              111.3 |
+|:-----------|:-------------|--------------------:|-----------------:|--------------------:|------------------:|---------------------:|-------------------:|
+| 2021-05-01 | Cantareira   |                50.7 |             -0.1 |           498.22596 |               0.0 |                  0.0 |               77.4 |
+| 2021-05-01 | Alto Tietê   |                59.5 |             -0.1 |           333.32517 |               0.0 |                  0.0 |               75.4 |
+| 2021-05-01 | Guarapiranga |                70.9 |             -0.1 |           121.34363 |               0.0 |                  0.0 |               58.6 |
+| 2021-05-01 | Cotia        |                79.4 |             -0.2 |            13.09820 |               0.0 |                  0.0 |               64.6 |
+| 2021-05-01 | Rio Grande   |                90.6 |             -0.3 |           101.62691 |               0.0 |                  0.0 |               80.4 |
+| 2021-05-01 | Rio Claro    |                67.2 |              0.1 |             9.18208 |               0.2 |                  0.2 |              133.3 |
+| 2021-05-01 | São Lourenço |                79.7 |             -0.2 |            70.76219 |               0.0 |                  0.0 |               89.3 |
 
 ## Como citar o pacote
 
