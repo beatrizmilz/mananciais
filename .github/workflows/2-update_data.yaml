@@ -41,5 +41,6 @@ jobs:
           git add README.md
           git add README.Rmd
           git add docs/index.html
+          git add inst/extdata/mananciais.xlsx
           git commit -m 'Update data' || echo "Update data"
           git push origin || echo "Update data"
