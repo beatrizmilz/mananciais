@@ -138,47 +138,15 @@ A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o
 tipo de algumas variáveis.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>limpar_dados</span><span class='op'>(</span>
-  <span class='va'>ano</span>,
-  <span class='va'>df</span>,
-  usar_baixados <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  diretorio_download <span class='op'>=</span> <span class='st'>"data-raw/"</span>,
-  salvar_local <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  diretorio_salvar <span class='op'>=</span> <span class='st'>"data-raw/data-clean/"</span>
-<span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>limpar_dados</span><span class='op'>(</span><span class='va'>df</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>ano</th>
-      <td><p>Numérico. OPCIONAL. Utilizado caso queira limpar dados baixados
-anteriormente.</p></td>
-    </tr>
-    <tr>
       <th>df</th>
       <td><p>Tibble a ser limpa. OPCIONAL. Caso for limpar dados que já foram
 baixados localmente, este argumento não é necessário.</p></td>
-    </tr>
-    <tr>
-      <th>usar_baixados</th>
-      <td><p>Lógico.  Caso <code>usar_baixados = TRUE</code>, utilizará os dados
-baixados anteriormente.</p></td>
-    </tr>
-    <tr>
-      <th>diretorio_download</th>
-      <td><p>Texto. OPCIONAL. Local onde os arquivos brutos
-estão salvos, caso <code>usar_baixados = TRUE</code>. Ex: <code>"data-raw/"</code></p></td>
-    </tr>
-    <tr>
-      <th>salvar_local</th>
-      <td><p>Lógico.  Caso <code>salvar_local = TRUE</code>, irá salvar o
-resultado localmente, como um arquivo <code>.rds</code>.</p></td>
-    </tr>
-    <tr>
-      <th>diretorio_salvar</th>
-      <td><p>Texto. OPCIONAL. Local onde salvar os arquivos
-limpos, caso <code>salvar_local = TRUE</code>. Ex: <code>"data-raw/data-clean/"</code></p></td>
     </tr>
     </table>
 
@@ -187,7 +155,7 @@ limpos, caso <code>salvar_local = TRUE</code>. Ex: <code>"data-raw/data-clean/"<
     <p>Retorna um tibble com os dados limpos.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># mananciais:::obter_dia("2020-09-26") %&gt;% mananciais:::limpar_dados(df = ., usar_baixados = FALSE)</span>
+    <pre class="examples"><div class='input'><span class='co'># mananciais:::obter_dia("2020-09-26") %&gt;% mananciais:::limpar_dados()</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
