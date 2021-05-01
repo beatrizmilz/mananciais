@@ -1,4 +1,4 @@
-#"mananciais"
+# "mananciais"
 
 # Dados consolidados (anos terminados) --------
 
@@ -17,7 +17,7 @@ mananciais_consolidado <- load("data/mananciais_consolidado.rda")
 
 
 mananciais <-
-  #readr::read_rds("inst/extdata/mananciais_2021.rds") %>%
+  # readr::read_rds("inst/extdata/mananciais_2021.rds") %>%
   rbind(mananciais_consolidado) %>%
   dplyr::arrange(desc(data))
 
@@ -30,5 +30,3 @@ usethis::use_data(mananciais_consolidado, mananciais, overwrite = T)
 
 # readr::write_csv2(mananciais, "inst/extdata/mananciais.csv")
 # readr::write_csv2(mananciais_consolidado, "inst/extdata/mananciais_consolidado.csv")
-
-

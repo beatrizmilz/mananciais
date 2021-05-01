@@ -8,7 +8,8 @@
 #' @examples dados_mananciais()
 dados_mananciais <- function() {
   readr::read_delim(
-    file = "https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv",
+    file =
+      "https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv",
     locale = readr::locale(
       encoding = "UTF-8",
       decimal_mark = ",",
@@ -18,6 +19,5 @@ dados_mananciais <- function() {
     delim = ";",
     escape_double = FALSE,
     trim_ws = TRUE
-
   )
 }

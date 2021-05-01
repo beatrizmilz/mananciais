@@ -12,6 +12,4 @@ test_that("Funcao dados_mananciais esta funcionando corretamente", {
   # Testar numero de linhas
   expect_gt(nrow(mananciais), 47000)
   expect_false(ncol(mananciais) == 9)
-
-
 })
