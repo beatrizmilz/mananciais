@@ -7,7 +7,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4319745.svg)](https://doi.org/10.5281/zenodo.4319745)
 [![R build
-status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)  
+status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions)
 [![update-data](https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml/badge.svg)](https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/beatrizmilz/mananciais/branch/master/graph/badge.svg)](https://codecov.io/gh/beatrizmilz/mananciais?branch=master)
@@ -35,9 +35,10 @@ Milz](https://beatrizmilz.github.io/tese/).
 **Caso você não utilize R**, é possível **fazer download da base de
 dados** através dos seguintes links:
 
-  - [Arquivo
+-   [Arquivo
     `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv)
-  - Arquivo xlsx - em breve\!
+-   [Arquivo
+    `.xlsx`](https://github.com/beatrizmilz/mananciais/blob/master/inst/extdata/mananciais.xlsx?raw=true)
 
 Os arquivos foram salvos com encoding UTF-8, e separados por
 ponto-e-vírgula.
@@ -67,9 +68,9 @@ disponíveis no pacote. Porém as mesmas estarão atualizadas até a data em
 que você instalou (ou atualizou) o pacote. Existem duas bases
 disponíveis, em que a diferença é o período dos dados.
 
-  - `mananciais_consolidado` - 2000 à 2020
+-   `mananciais_consolidado` - 2000 à 2020
 
-  - `mananciais` - 2000 à 2021 (parcial).
+-   `mananciais` - 2000 à 2021 (parcial).
 
 Abaixo segue um exemplo das bases disponíveis:
 
@@ -107,14 +108,14 @@ mananciais %>%
 ```
 
 | data       | sistema      | volume\_porcentagem | volume\_variacao | volume\_operacional | pluviometria\_dia | pluviometria\_mensal | pluviometria\_hist |
-| :--------- | :----------- | ------------------: | ---------------: | ------------------: | ----------------: | -------------------: | -----------------: |
-| 2021-05-01 | Cantareira   |                50.7 |            \-0.1 |           498.22596 |               0.0 |                  0.0 |               77.4 |
-| 2021-05-01 | Alto Tietê   |                59.5 |            \-0.1 |           333.32517 |               0.0 |                  0.0 |               75.4 |
-| 2021-05-01 | Guarapiranga |                70.9 |            \-0.1 |           121.34363 |               0.0 |                  0.0 |               58.6 |
-| 2021-05-01 | Cotia        |                79.4 |            \-0.2 |            13.09820 |               0.0 |                  0.0 |               64.6 |
-| 2021-05-01 | Rio Grande   |                90.6 |            \-0.3 |           101.62691 |               0.0 |                  0.0 |               80.4 |
+|:-----------|:-------------|--------------------:|-----------------:|--------------------:|------------------:|---------------------:|-------------------:|
+| 2021-05-01 | Cantareira   |                50.7 |             -0.1 |           498.22596 |               0.0 |                  0.0 |               77.4 |
+| 2021-05-01 | Alto Tietê   |                59.5 |             -0.1 |           333.32517 |               0.0 |                  0.0 |               75.4 |
+| 2021-05-01 | Guarapiranga |                70.9 |             -0.1 |           121.34363 |               0.0 |                  0.0 |               58.6 |
+| 2021-05-01 | Cotia        |                79.4 |             -0.2 |            13.09820 |               0.0 |                  0.0 |               64.6 |
+| 2021-05-01 | Rio Grande   |                90.6 |             -0.3 |           101.62691 |               0.0 |                  0.0 |               80.4 |
 | 2021-05-01 | Rio Claro    |                67.2 |              0.1 |             9.18208 |               0.2 |                  0.2 |              133.3 |
-| 2021-05-01 | São Lourenço |                79.7 |            \-0.2 |            70.76219 |               0.0 |                  0.0 |               89.3 |
+| 2021-05-01 | São Lourenço |                79.7 |             -0.2 |            70.76219 |               0.0 |                  0.0 |               89.3 |
 
 ## Como citar o pacote
 
