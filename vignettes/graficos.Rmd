@@ -2,7 +2,7 @@
 title: "Criando gráficos com os dados do pacote {mananciais}"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{graficos}
+  %\VignetteIndexEntry{Criando gráficos com os dados do pacote {mananciais}}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

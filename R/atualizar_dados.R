@@ -27,11 +27,7 @@ atualizar_dados <- function() {
     dados_mananciais
   } else {
     mananciais <- purrr::map_dfr(dados_para_obter, obter_dia) %>%
-      mananciais:::limpar_dados(
-        df = .,
-        usar_baixados = FALSE,
-        salvar_local = FALSE
-      ) %>%
+      mananciais:::limpar_dados() %>%
       rbind(dados_mananciais) %>%
       dplyr::arrange(desc(data))
 

@@ -2,7 +2,7 @@ test_that("funcao limpar dados funciona", {
 
   # Executar a funcao uma vez
   dados_limpos <- mananciais:::obter_dia("2020-09-26") %>%
-    mananciais:::limpar_dados(df = ., usar_baixados = FALSE)
+    mananciais:::limpar_dados()
 
   # Testar a classe
   expect_s3_class(dados_limpos, "tbl_df")

@@ -4,33 +4,11 @@
 \alias{limpar_dados}
 \title{Limpar dados.}
 \usage{
-limpar_dados(
-  ano,
-  df,
-  usar_baixados = TRUE,
-  diretorio_download = "data-raw/",
-  salvar_local = FALSE,
-  diretorio_salvar = "data-raw/data-clean/"
-)
+limpar_dados(df)
 }
 \arguments{
-\item{ano}{Numérico. OPCIONAL. Utilizado caso queira limpar dados baixados
-anteriormente.}
-
 \item{df}{Tibble a ser limpa. OPCIONAL. Caso for limpar dados que já foram
 baixados localmente, este argumento não é necessário.}
-
-\item{usar_baixados}{Lógico.  Caso \code{usar_baixados = TRUE}, utilizará os dados
-baixados anteriormente.}
-
-\item{diretorio_download}{Texto. OPCIONAL. Local onde os arquivos brutos
-estão salvos, caso \code{usar_baixados = TRUE}. Ex: \code{"data-raw/"}}
-
-\item{salvar_local}{Lógico.  Caso \code{salvar_local = TRUE}, irá salvar o
-resultado localmente, como um arquivo \code{.rds}.}
-
-\item{diretorio_salvar}{Texto. OPCIONAL. Local onde salvar os arquivos
-limpos, caso \code{salvar_local = TRUE}. Ex: \code{"data-raw/data-clean/"}}
 }
 \value{
 Retorna um tibble com os dados limpos.
@@ -41,5 +19,5 @@ A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o
 tipo de algumas variáveis.
 }
 \examples{
-# mananciais:::obter_dia("2020-09-26") \%>\% mananciais:::limpar_dados(df = ., usar_baixados = FALSE)
+# mananciais:::obter_dia("2020-09-26") \%>\% mananciais:::limpar_dados()
 }
