@@ -27,5 +27,8 @@ globalVariables(c(
   "pluviometria_hist",
   "data_original",
   "data_valida",
-  "dia_busca"
+  "dia_busca",
+  ".",
+  "value",
+  "desc"
 ))

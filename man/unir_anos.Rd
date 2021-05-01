@@ -15,21 +15,26 @@ unir_anos(
 \arguments{
 \item{anos}{Quais anos deseja unir. Ex: \code{2000:2019}}
 
-\item{usar_baixados}{Lógico. Caso \code{usar_baixados = TRUE}, utilizará os dados baixados anteriormente.}
+\item{usar_baixados}{Lógico. Caso \code{usar_baixados = TRUE}, utilizará os
+dados baixados anteriormente.}
 
-\item{diretorio_dados}{Caso \code{usar_baixados = TRUE}, utilizará os dados baixados anteriormente. Informar em qual diretório os arquivos estão salvos.  Ex: \code{"data-raw/data-clean/"}}
+\item{diretorio_dados}{Caso \code{usar_baixados = TRUE}, utilizará os dados
+baixados anteriormente. Informar em qual diretório os arquivos estão salvos.
+Ex: \code{"data-raw/data-clean/"}}
 
-\item{salvar_local}{Lógico. Caso \code{salvar_local = TRUE}, irá salvar o resultado no diretório informado no argumento \code{diretorio_salvar}}
+\item{salvar_local}{Lógico. Caso \code{salvar_local = TRUE}, irá salvar o
+resultado no diretório informado no argumento \code{diretorio_salvar}}
 
-\item{diretorio_salvar}{Texto. OPCIONAL. Local onde salvar os arquivos limpos, caso \code{salvar_local = TRUE}. Ex: \code{"data/"}}
+\item{diretorio_salvar}{Texto. OPCIONAL. Local onde salvar os arquivos
+limpos, caso \code{salvar_local = TRUE}. Ex: \code{"data/"}}
 }
 \value{
 Retorna um tibble com os dados unidos.
 }
 \description{
-Usa os dados salvos localmente. A função não está adaptada para usar com pipe ( \%>\% ).
+Usa os dados salvos localmente. A função não está adaptada para usar com
+pipe ( \%>\% ).
 }
 \examples{
 # mananciais:::unir_anos(2000:2019)
-
 }

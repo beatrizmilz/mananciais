@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Obtém dados de um único dia. — obter_dia • mananciais</title>
+<title>Funcao para atualizar dados de mananciais — atualizar_dados • mananciais</title>
 
 
 <!-- jquery -->
@@ -39,15 +39,9 @@
 
 
 
-<meta property="og:title" content="Obtém dados de um único dia. — obter_dia" />
-<meta property="og:description" content="Dados disponíveis a partir do dia 01 de janeiro de 2000.
-A tibble que retorna é a versão original obtida na API, ou seja, não foi
-limpa.
-A fonte dos dados é atualizada todos os dias, às 09h00 (Horário de Brasília).
-Portanto, caso utilize essa função com a data atual e antes deste horário,
-a tibble retornada não terá nenhuma linha.
-O mesmo acontecerá se utilizar uma data futura, ou data anterior ao início
-dos dados disponíveis." />
+<meta property="og:title" content="Funcao para atualizar dados de mananciais — atualizar_dados" />
+<meta property="og:description" content="Usando os dados disponíveis no dados_mananciais(),
+confere quais são os dias faltantes e busca os mesmos" />
 
 
 
@@ -132,41 +126,40 @@ dos dados disponíveis." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Obtém dados de um único dia.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/beatrizmilz/mananciais/blob/master/R/obter_dia.R'><code>R/obter_dia.R</code></a></small>
-    <div class="hidden name"><code>obter_dia.Rd</code></div>
+    <h1>Funcao para atualizar dados de mananciais</h1>
+    <small class="dont-index">Source: <a href='https://github.com/beatrizmilz/mananciais/blob/master/R/atualizar_dados.R'><code>R/atualizar_dados.R</code></a></small>
+    <div class="hidden name"><code>atualizar_dados.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Dados disponíveis a partir do dia 01 de janeiro de 2000.
-A tibble que retorna é a versão original obtida na API, ou seja, não foi
-limpa.
-A fonte dos dados é atualizada todos os dias, às 09h00 (Horário de Brasília).
-Portanto, caso utilize essa função com a data atual e antes deste horário,
-a tibble retornada não terá nenhuma linha.
-O mesmo acontecerá se utilizar uma data futura, ou data anterior ao início
-dos dados disponíveis.</p>
+    <p>Usando os dados disponíveis no dados_mananciais(),
+confere quais são os dias faltantes e busca os mesmos</p>
     </div>
 
-    <pre class="usage"><span class='fu'>obter_dia</span><span class='op'>(</span><span class='va'>dia</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>atualizar_dados</span><span class='op'>(</span><span class='op'>)</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>dia</th>
-      <td><p>Uma string com data, no formato ano-mês-dia. Ex: <code>"2020-09-27"</code></p></td>
-    </tr>
-    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Retorna uma tibble com dados dos mananciais para o dia informado</p>
+    <p>Uma tibble</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># mananciais:::obter_dia("2020-09-26")</span>
-<span class='co'># mananciais:::obter_dia("2020-09-26")</span>
-</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>atualizar_dados</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "Os dados ja estao atualizados, nao foi necessario atualizar"</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 47,938 x 8</span><span>
+#&gt;    data       sistema      volume_porcentagem volume_variacao volume_operacional
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;date&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>           </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> 2021-05-01 Cantareira                 50.7            -</span><span style='color: #BB0000;'>0.1</span><span>             498.  
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> 2021-05-01 Alto Tietê                 59.5            -</span><span style='color: #BB0000;'>0.1</span><span>             333.  
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> 2021-05-01 Guarapiranga               70.9            -</span><span style='color: #BB0000;'>0.1</span><span>             121.  
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> 2021-05-01 Cotia                      79.4            -</span><span style='color: #BB0000;'>0.2</span><span>              13.1 
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> 2021-05-01 Rio Grande                 90.6            -</span><span style='color: #BB0000;'>0.3</span><span>             102.  
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> 2021-05-01 Rio Claro                  67.2             0.1               9.18
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> 2021-05-01 São Lourenço               79.7            -</span><span style='color: #BB0000;'>0.2</span><span>              70.8 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> 2021-04-30 Cantareira                 50.8            -</span><span style='color: #BB0000;'>0.1</span><span>             499.  
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> 2021-04-30 Alto Tietê                 59.6            -</span><span style='color: #BB0000;'>0.1</span><span>             334.  
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> 2021-04-30 Guarapiranga               71              -</span><span style='color: #BB0000;'>0.2</span><span>             122.  
+#&gt; </span><span style='color: #949494;'># … with 47,928 more rows, and 3 more variables: pluviometria_dia &lt;dbl&gt;,</span><span>
+#&gt; </span><span style='color: #949494;'>#   pluviometria_mensal &lt;dbl&gt;, pluviometria_hist &lt;dbl&gt;</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -2,13 +2,7 @@
 library(magrittr, include.only = "%>%")
 
 # buscar os dados
-mananciais <-
-  mananciais:::obter_ano(ano = 2021,
-                         download_local = FALSE,
-                         ano_atual = TRUE) %>%
-  mananciais:::limpar_dados(df = ., usar_baixados = FALSE, salvar_local = FALSE) %>%
-  rbind(mananciais::mananciais_consolidado) %>%
-  dplyr::arrange(desc(data))
+mananciais <- mananciais:::atualizar_dados()
 
 # adicionar os dados atualizados no pacote
 usethis::use_data(mananciais, overwrite = T)

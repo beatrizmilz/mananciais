@@ -11,12 +11,12 @@ Uma tibble, contendo:
 \item{data}{Data no formato ano-mês-dia (yyyy-mm-dd)}
 \item{sistema}{Nome do sistema de abastecimento público}
 \item{volume_porcentagem}{Volume operacional do sistema em porcentagem (\%)}
-\item{volume_variacao}{Variação em porcentagem (\%) do volume operacional do sistema}
+\item{volume_variacao}{Variação em porcentagem (\%) do volume operacional do
+sistema}
 \item{volume_operacional}{Volume operacional do sistema em hm³}
 \item{pluviometria_dia}{Pluviometria do dia (mm)}
 \item{pluviometria_mensal}{Pluviometria acumulada do mês (mm)}
 \item{pluviometria_hist}{Pluviometria média histórica mensal (mm)}
-
 }
 
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 47091 rows and 8 columns.
@@ -35,6 +35,5 @@ que abastecem a Região Metropolitana de São Paulo
 }
 \examples{
 head(mananciais)
-
 }
 \keyword{datasets}

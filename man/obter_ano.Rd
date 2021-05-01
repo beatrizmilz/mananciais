@@ -14,20 +14,25 @@ obter_ano(
 \arguments{
 \item{ano}{Numérico. Qual é o ano que deve ser feito o download. Ex: 2019.}
 
-\item{ano_atual}{Lógico. Se quiser obter dados de anos anteriores, usar \code{ano_atual = FALSE}. Se quiser obter dados do ano atual, deve ser \code{ano_atual = TRUE}.}
+\item{ano_atual}{Lógico. Se quiser obter dados de anos anteriores,
+usar \code{ano_atual = FALSE}. Se quiser obter dados do ano atual, deve
+ser \code{ano_atual = TRUE}.}
 
-\item{download_local}{Lógico. Caso \code{download_local = TRUE}, uma cópia dos dados baixados será salvo localmente.}
+\item{download_local}{Lógico. Caso \code{download_local = TRUE}, uma cópia dos
+dados baixados será salvo localmente.}
 
-\item{diretorio_download}{Diretório onde o arquivo final deve ser salvo. Ex: \code{"data-raw/"}}
+\item{diretorio_download}{Diretório onde o arquivo final deve ser salvo.
+Ex: \code{"data-raw/"}}
 }
 \value{
 Retorna um tibble com os dados do ano.
 }
 \description{
-A tibble que retorna é a versão original obtida na API, ou seja, não foi limpa.
+A tibble que retorna é a versão original obtida na API, ou seja, não foi
+limpa.
 Essa função demora alguns minutos para executar.
 }
 \examples{
- # mananciais:::obter_ano(2019, download_local = FALSE)
- # mananciais:::obter_ano(2020, ano_atual = TRUE, download_local = FALSE)
+# mananciais:::obter_ano(2019, download_local = FALSE)
+# mananciais:::obter_ano(2020, ano_atual = TRUE, download_local = FALSE)
 }
