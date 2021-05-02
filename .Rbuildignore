@@ -1,3 +1,5 @@
+^renv$
+^renv\.lock$
 ^mananciais\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
