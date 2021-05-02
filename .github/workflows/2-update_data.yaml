@@ -13,6 +13,8 @@ jobs:
   render:
     name: update-data
     runs-on: macOS-latest
+    env:
+      RENV_PATHS_ROOT: ~/.local/share/renv
     steps:
       - uses: actions/checkout@v2
         with:
@@ -23,12 +25,19 @@ jobs:
         run: |
           install.packages("remotes")
           remotes::install_local(".")
-          remotes::install_cran("dplyr")
-          remotes::install_cran("usethis")
-          remotes::install_cran("readr")
-          remotes::install_cran("rmarkdown")
-          remotes::install_cran("pkgdown")
         shell: Rscript {0}
+      - name: Cache packages
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.RENV_PATHS_ROOT }}
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+      - name: Restore packages
+        shell: Rscript {0}
+        run: |
+          if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
+          renv::restore()
       - name: Execute Script
         run: |
           Rscript data-raw/actions-update-data.R
