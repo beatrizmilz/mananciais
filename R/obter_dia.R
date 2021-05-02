@@ -12,8 +12,8 @@
 #' @param dia Uma string com data, no formato ano-mês-dia. Ex: `"2020-09-27"`
 #'
 #' @return Retorna uma tibble com dados dos mananciais para o dia informado
-#' @examples # mananciais:::obter_dia("2020-09-26")
-#' @examples # mananciais:::obter_dia("2020-09-26")
+#' @examples mananciais:::obter_dia("2020-09-26")
+
 obter_dia <- function(dia) {
   url <-
     paste0(

@@ -4,12 +4,11 @@
 #' A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o
 #' tipo de algumas variáveis.
 #'
-#' @param df Tibble a ser limpa. OPCIONAL. Caso for limpar dados que já foram
-#' baixados localmente, este argumento não é necessário.
+#' @param df Tibble a ser limpa.
 #'
 #' @return Retorna um tibble com os dados limpos.
 #'
-#' @examples # mananciais:::obter_dia("2020-09-26") %>% mananciais:::limpar_dados()
+#' @examples mananciais:::obter_dia("2020-09-26") %>% mananciais:::limpar_dados()
 limpar_dados <- function(df) {
 
   dados_limpos <-

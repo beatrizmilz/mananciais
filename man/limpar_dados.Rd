@@ -7,8 +7,7 @@
 limpar_dados(df)
 }
 \arguments{
-\item{df}{Tibble a ser limpa. OPCIONAL. Caso for limpar dados que já foram
-baixados localmente, este argumento não é necessário.}
+\item{df}{Tibble a ser limpa.}
 }
 \value{
 Retorna um tibble com os dados limpos.
@@ -19,5 +18,5 @@ A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o
 tipo de algumas variáveis.
 }
 \examples{
-# mananciais:::obter_dia("2020-09-26") \%>\% mananciais:::limpar_dados()
+mananciais:::obter_dia("2020-09-26") \%>\% mananciais:::limpar_dados()
 }

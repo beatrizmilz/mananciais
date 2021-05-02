@@ -145,8 +145,7 @@ tipo de algumas variáveis.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>df</th>
-      <td><p>Tibble a ser limpa. OPCIONAL. Caso for limpar dados que já foram
-baixados localmente, este argumento não é necessário.</p></td>
+      <td><p>Tibble a ser limpa.</p></td>
     </tr>
     </table>
 
@@ -155,8 +154,19 @@ baixados localmente, este argumento não é necessário.</p></td>
     <p>Retorna um tibble com os dados limpos.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># mananciais:::obter_dia("2020-09-26") %&gt;% mananciais:::limpar_dados()</span>
-</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>mananciais</span><span class='fu'>:::</span><span class='fu'><a href='obter_dia.html'>obter_dia</a></span><span class='op'>(</span><span class='st'>"2020-09-26"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>mananciais</span><span class='fu'>:::</span><span class='fu'>limpar_dados</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Dia baixado com sucesso: 2020-09-26</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 7 x 8</span><span>
+#&gt;   data       sistema      volume_porcentagem volume_variacao volume_operacional
+#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;date&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>           </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span> 2020-09-26 Cantareira                 42.3            -</span><span style='color: #BB0000;'>0.2</span><span>             415.  
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span> 2020-09-26 Alto Tietê                 61.1            -</span><span style='color: #BB0000;'>0.2</span><span>             342.  
+#&gt; </span><span style='color: #BCBCBC;'>3</span><span> 2020-09-26 Guarapiranga               47               0                80.5 
+#&gt; </span><span style='color: #BCBCBC;'>4</span><span> 2020-09-26 Cotia                      64.8            -</span><span style='color: #BB0000;'>0.5</span><span>              10.7 
+#&gt; </span><span style='color: #BCBCBC;'>5</span><span> 2020-09-26 Rio Grande                 78.2             0                87.7 
+#&gt; </span><span style='color: #BCBCBC;'>6</span><span> 2020-09-26 Rio Claro                  64              -</span><span style='color: #BB0000;'>0.5</span><span>               8.75
+#&gt; </span><span style='color: #BCBCBC;'>7</span><span> 2020-09-26 São Lourenço               64.9             0                57.6 
+#&gt; </span><span style='color: #949494;'># … with 3 more variables: pluviometria_dia &lt;dbl&gt;, pluviometria_mensal &lt;dbl&gt;,</span><span>
+#&gt; </span><span style='color: #949494;'>#   pluviometria_hist &lt;dbl&gt;</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
