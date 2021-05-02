@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # Pacote Mananciais <img src="man/figures/hexlogo.png" align="right" width = "120px"/>
 
 <!-- badges: start -->
-![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4733056.svg)](https://doi.org/10.5281/zenodo.4733056) [![R build status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions) [![update-data](https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml/badge.svg)](https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml) [![Codecov test coverage](https://codecov.io/gh/beatrizmilz/mananciais/branch/master/graph/badge.svg)](https://codecov.io/gh/beatrizmilz/mananciais?branch=master)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4733056.svg)](https://doi.org/10.5281/zenodo.4733056) [![R build status](https://github.com/beatrizmilz/mananciais/workflows/R-CMD-check/badge.svg)](https://github.com/beatrizmilz/mananciais/actions) [![update-data](https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml/badge.svg)](https://github.com/beatrizmilz/mananciais/actions/workflows/2-update_data.yaml) [![Codecov test coverage](https://codecov.io/gh/beatrizmilz/mananciais/branch/master/graph/badge.svg)](https://codecov.io/gh/beatrizmilz/mananciais?branch=master)
 <!-- badges: end -->
 
 O objetivo deste pacote é disponibilizar a base de dados sobre o volume operacional em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil). O pacote é atualizado diariamente através de um workflow com [GitHub Actions](https://github.com/beatrizmilz/mananciais/actions).
@@ -82,8 +82,7 @@ mananciais %>%
 
 ## Como citar o pacote
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4319745.svg)](https://doi.org/10.5281/zenodo.4319745)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4733056.svg)](https://doi.org/10.5281/zenodo.4733056)
 
 
 
