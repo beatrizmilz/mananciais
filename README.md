@@ -35,9 +35,9 @@ Milz](https://beatrizmilz.github.io/tese/).
 **Caso você não utilize R**, é possível **fazer download da base de
 dados** através dos seguintes links:
 
--   [Arquivo
+  - [Arquivo
     `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv)
--   [Arquivo
+  - [Arquivo
     `.xlsx`](https://github.com/beatrizmilz/mananciais/blob/master/inst/extdata/mananciais.xlsx?raw=true)
 
 Os arquivos foram salvos com encoding UTF-8, e separados por
@@ -103,14 +103,14 @@ mananciais %>%
 ```
 
 | data       | sistema      | volume\_porcentagem | volume\_variacao | volume\_operacional | pluviometria\_dia | pluviometria\_mensal | pluviometria\_hist |
-|:-----------|:-------------|--------------------:|-----------------:|--------------------:|------------------:|---------------------:|-------------------:|
-| 2021-05-02 | Cantareira   |                50.6 |             -0.1 |           497.00932 |               0.0 |                  0.0 |               77.4 |
-| 2021-05-02 | Alto Tietê   |                59.4 |             -0.1 |           332.56937 |               0.1 |                  0.1 |               75.4 |
-| 2021-05-02 | Guarapiranga |                70.7 |             -0.2 |           121.09134 |               0.0 |                  0.0 |               58.6 |
-| 2021-05-02 | Cotia        |                79.2 |             -0.2 |            13.06553 |               0.0 |                  0.0 |               64.6 |
-| 2021-05-02 | Rio Grande   |                90.3 |             -0.3 |           101.26800 |               0.0 |                  0.0 |               80.4 |
+| :--------- | :----------- | ------------------: | ---------------: | ------------------: | ----------------: | -------------------: | -----------------: |
+| 2021-05-02 | Cantareira   |                50.6 |            \-0.1 |           497.00932 |               0.0 |                  0.0 |               77.4 |
+| 2021-05-02 | Alto Tietê   |                59.4 |            \-0.1 |           332.56937 |               0.1 |                  0.1 |               75.4 |
+| 2021-05-02 | Guarapiranga |                70.7 |            \-0.2 |           121.09134 |               0.0 |                  0.0 |               58.6 |
+| 2021-05-02 | Cotia        |                79.2 |            \-0.2 |            13.06553 |               0.0 |                  0.0 |               64.6 |
+| 2021-05-02 | Rio Grande   |                90.3 |            \-0.3 |           101.26800 |               0.0 |                  0.0 |               80.4 |
 | 2021-05-02 | Rio Claro    |                67.2 |              0.0 |             9.18208 |               0.2 |                  0.4 |              133.3 |
-| 2021-05-02 | São Lourenço |                79.4 |             -0.3 |            70.55848 |               0.0 |                  0.0 |               89.3 |
+| 2021-05-02 | São Lourenço |                79.4 |            \-0.3 |            70.55848 |               0.0 |                  0.0 |               89.3 |
 
 ## Como citar o pacote
 
