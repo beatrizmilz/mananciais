@@ -21,13 +21,8 @@ jobs:
           fetch-depth: 0
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
-      - name: Install rmarkdown, remotes, and the local package
-        run: |
-          install.packages("remotes")
-          remotes::install_local(".")
-        shell: Rscript {0}
       - name: Cache packages
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ${{ env.RENV_PATHS_ROOT }}
           key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
@@ -38,7 +33,7 @@ jobs:
         run: |
           if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
           renv::restore()
-
+          remotes::install_local(dependencies = TRUE)
       - name: Execute Script
         run: |
           Rscript data-raw/actions-update-data.R
