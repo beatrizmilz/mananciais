@@ -33,6 +33,7 @@ jobs:
         run: |
           if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
           renv::restore()
+          install.packages("remotes")
           remotes::install_local(dependencies = TRUE)
       - name: Execute Script
         run: |
