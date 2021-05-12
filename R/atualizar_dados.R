@@ -34,3 +34,33 @@ atualizar_dados <- function() {
     mananciais
   }
 }
+
+#' Funcao para checar se é necessário atualizar dados de mananciais
+#'
+#' Usando os dados disponíveis no dados_mananciais(),
+#' confere é necessário atualizar a base
+#'
+#' @return Uma tibble
+#' @export
+#'
+#' @examples checar_se_necessario_atualizar()
+checar_se_necessario_atualizar <- function() {
+  data_inicial <- lubridate::as_date("2000-01-01")
+  data_final <- Sys.Date()
+
+  intervalo <- lubridate::as_date(data_inicial:data_final) %>%
+    tibble::as_tibble()
+
+  dados_mananciais <- dados_mananciais()
+
+  dados_para_obter <- intervalo %>%
+    dplyr::filter(!value %in% dados_mananciais$data) %>%
+    dplyr::pull()
+
+
+  if (length(dados_para_obter) == 0) {
+    return(FALSE)
+  } else {
+    return(TRUE)
+  }
+}
