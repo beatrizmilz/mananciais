@@ -27,17 +27,17 @@ Imports:
     jsonlite,
     httr,
     readr,
-    usethis,
-    knitr,
-    ggplot2,
     lubridate,
-    glue,
-    writexl
+    glue
 Depends: 
     R (>= 3.5.0)
 VignetteBuilder: knitr
 Suggests: 
     testthat (>= 3.0.0),
+    ggplot2,
     rmarkdown,
-    covr
+    usethis,
+    knitr,
+    covr,
+    writexl
 Config/testthat/edition: 3
