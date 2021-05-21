@@ -1,0 +1,13 @@
+home:
+  title: mananciais
+description: Base de dados sobre volume operacional em mananciais de abastecimento público na Região Metropolitana de São Paulo (SP - Brasil)
+
+template:
+  params:
+  bootswatch: united
+# ganalytics:
+
+authors:
+  Beatriz Milz:
+  href: https://beatrizmilz.com/
+
