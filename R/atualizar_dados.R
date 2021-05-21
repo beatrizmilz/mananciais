@@ -43,6 +43,8 @@ atualizar_dados <- function() {
 #' @return Uma tibble
 #' @export
 #'
+#' @keywords internal
+#'
 #' @examples checar_se_necessario_atualizar()
 checar_se_necessario_atualizar <- function() {
   data_inicial <- lubridate::as_date("2000-01-01")

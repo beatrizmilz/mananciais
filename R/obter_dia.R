@@ -13,6 +13,7 @@
 #'
 #' @return Retorna uma tibble com dados dos mananciais para o dia informado
 #' @examples mananciais:::obter_dia("2020-09-26")
+#' @keywords internal
 
 obter_dia <- function(dia) {
   url <-

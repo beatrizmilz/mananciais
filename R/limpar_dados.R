@@ -4,6 +4,7 @@
 #' A limpeza consiste em: retirar colunas desnecessárias ou repetidas, altera o
 #' tipo de algumas variáveis.
 #'
+#' @keywords internal
 #' @param df Tibble a ser limpa.
 #'
 #' @return Retorna um tibble com os dados limpos.

@@ -3,6 +3,7 @@
 #' Obter dados atualizados sobre os mananciais
 #'
 #' @return tibble
+#' @keywords internal
 #' @export
 #'
 #' @examples dados_mananciais()
