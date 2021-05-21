@@ -38,12 +38,12 @@
 
 
 
+  <link href="../extra.css" rel="stylesheet">
+  
 
 <meta property="og:title" content="Funcao para atualizar dados de mananciais — atualizar_dados" />
 <meta property="og:description" content="Usando os dados disponíveis no dados_mananciais(),
 confere quais são os dias faltantes e busca os mesmos" />
-
-
 
 
 
@@ -59,18 +59,9 @@ confere quais são os dias faltantes e busca os mesmos" />
 
 
 
-<!-- dependencies from examples -->
-
-
-  
-
-  
-
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    
-
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -91,6 +82,12 @@ confere quais são os dias faltantes e busca os mesmos" />
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="../index.html">
+    <span class="fas fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
@@ -145,20 +142,20 @@ confere quais são os dias faltantes e busca os mesmos</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>atualizar_dados</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "Os dados ja estao atualizados, nao foi necessario atualizar"</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 47,945 x 8</span><span>
+</div><div class='output co'>#&gt; [1] "Os dados ja estao atualizados, nao foi necessario atualizar"</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 48,078 x 8</span><span>
 #&gt;    data       sistema      volume_porcentagem volume_variacao volume_operacional
 #&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;date&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>           </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> 2021-05-02 Cantareira                 50.6            -</span><span style='color: #BB0000;'>0.1</span><span>             497.  
-#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> 2021-05-02 Alto Tietê                 59.4            -</span><span style='color: #BB0000;'>0.1</span><span>             333.  
-#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> 2021-05-02 Guarapiranga               70.7            -</span><span style='color: #BB0000;'>0.2</span><span>             121.  
-#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> 2021-05-02 Cotia                      79.2            -</span><span style='color: #BB0000;'>0.2</span><span>              13.1 
-#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> 2021-05-02 Rio Grande                 90.3            -</span><span style='color: #BB0000;'>0.3</span><span>             101.  
-#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> 2021-05-02 Rio Claro                  67.2             0                 9.18
-#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> 2021-05-02 São Lourenço               79.4            -</span><span style='color: #BB0000;'>0.3</span><span>              70.6 
-#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> 2021-05-01 Cantareira                 50.7            -</span><span style='color: #BB0000;'>0.1</span><span>             498.  
-#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> 2021-05-01 Alto Tietê                 59.5            -</span><span style='color: #BB0000;'>0.1</span><span>             333.  
-#&gt; </span><span style='color: #BCBCBC;'>10</span><span> 2021-05-01 Guarapiranga               70.9            -</span><span style='color: #BB0000;'>0.1</span><span>             121.  
-#&gt; </span><span style='color: #949494;'># … with 47,935 more rows, and 3 more variables: pluviometria_dia &lt;dbl&gt;,</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> 2021-05-21 Cantareira                 48.7            -</span><span style='color: #BB0000;'>0.1</span><span>             479.  
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> 2021-05-21 Alto Tietê                 58.5            -</span><span style='color: #BB0000;'>0.1</span><span>             328.  
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> 2021-05-21 Guarapiranga               69              -</span><span style='color: #BB0000;'>0.3</span><span>             118.  
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> 2021-05-21 Cotia                      77.6            -</span><span style='color: #BB0000;'>0.2</span><span>              12.8 
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> 2021-05-21 Rio Grande                 87.1            -</span><span style='color: #BB0000;'>0.3</span><span>              97.7 
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> 2021-05-21 Rio Claro                  64              -</span><span style='color: #BB0000;'>2</span><span>                 8.75
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> 2021-05-21 São Lourenço               78.8            -</span><span style='color: #BB0000;'>0.4</span><span>              69.9 
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> 2021-05-20 Cantareira                 48.8            -</span><span style='color: #BB0000;'>0.1</span><span>             480.  
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> 2021-05-20 Alto Tietê                 58.6             0               328.  
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span> 2021-05-20 Guarapiranga               69.3            -</span><span style='color: #BB0000;'>0.3</span><span>             119.  
+#&gt; </span><span style='color: #949494;'># … with 48,068 more rows, and 3 more variables: pluviometria_dia &lt;dbl&gt;,</span><span>
 #&gt; </span><span style='color: #949494;'>#   pluviometria_mensal &lt;dbl&gt;, pluviometria_hist &lt;dbl&gt;</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -171,11 +168,11 @@ confere quais são os dias faltantes e busca os mesmos</p>
 
       <footer>
       <div class="copyright">
-  <p><p>Developed by Beatriz Milz.</p></p>
+  <p>Developed by Beatriz Milz.</p>
 </div>
 
 <div class="pkgdown">
-  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
@@ -183,8 +180,6 @@ confere quais são os dias faltantes e busca os mesmos</p>
 
   
 
-
-  
 
   </body>
 </html>

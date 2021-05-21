@@ -15,3 +15,4 @@ Obter dados atualizados sobre os mananciais
 \examples{
 dados_mananciais()
 }
+\keyword{internal}

@@ -2,5 +2,6 @@
 
 export("%>%")
 export(atualizar_dados)
+export(checar_se_necessario_atualizar)
 export(dados_mananciais)
 importFrom(magrittr,"%>%")

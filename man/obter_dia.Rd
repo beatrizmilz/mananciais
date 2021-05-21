@@ -25,3 +25,4 @@ dos dados disponíveis.
 \examples{
 mananciais:::obter_dia("2020-09-26")
 }
+\keyword{internal}

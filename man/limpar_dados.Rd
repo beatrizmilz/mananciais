@@ -20,3 +20,4 @@ tipo de algumas variáveis.
 \examples{
 mananciais:::obter_dia("2020-09-26") \%>\% mananciais:::limpar_dados()
 }
+\keyword{internal}
