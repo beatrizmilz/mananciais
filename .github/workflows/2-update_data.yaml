@@ -13,28 +13,22 @@ jobs:
   render:
     name: update-data
     runs-on: macOS-latest
-    env:
-      RENV_PATHS_ROOT: ~/.local/share/renv
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
-      - name: Cache packages
-        uses: actions/cache@v2
-        with:
-          path: ${{ env.RENV_PATHS_ROOT }}
-          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-renv-
-      - name: Restore packages
-        shell: Rscript {0}
+      - name: Install rmarkdown, remotes, and the local package
         run: |
-          if (!requireNamespace("renv", quietly = TRUE)) install.packages("renv")
-          renv::restore()
           install.packages("remotes")
-          remotes::install_local(dependencies = TRUE)
+          remotes::install_local(".")
+          remotes::install_cran("dplyr")
+          remotes::install_cran("usethis")
+          remotes::install_cran("readr")
+          remotes::install_cran("rmarkdown")
+          remotes::install_cran("pkgdown")
+        shell: Rscript {0}
       - name: Execute Script
         run: |
           Rscript data-raw/actions-update-data.R
