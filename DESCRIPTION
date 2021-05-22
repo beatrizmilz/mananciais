@@ -39,5 +39,6 @@ Suggests:
     usethis,
     knitr,
     covr,
-    writexl
+    writexl,
+    cachem
 Config/testthat/edition: 3
