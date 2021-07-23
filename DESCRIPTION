@@ -28,7 +28,8 @@ Imports:
     httr,
     readr,
     lubridate,
-    glue
+    glue,
+    vroom
 Depends: 
     R (>= 3.5.0)
 VignetteBuilder: knitr
