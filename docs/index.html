@@ -117,15 +117,15 @@
 <p>Abaixo segue um exemplo da base disponível:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">mananciais</span><span class="op">)</span>
-<span class="co">#&gt; Rows: 49,345</span>
+<span class="co">#&gt; Rows: 49,352</span>
 <span class="co">#&gt; Columns: 8</span>
-<span class="co">#&gt; $ data                &lt;date&gt; 2021-11-18, 2021-11-18, 2021-11-18, 2021-11-18, 2…</span>
+<span class="co">#&gt; $ data                &lt;date&gt; 2021-11-19, 2021-11-19, 2021-11-19, 2021-11-19, 2…</span>
 <span class="co">#&gt; $ sistema             &lt;chr&gt; "Cantareira", "Alto Tietê", "Guarapiranga", "Cotia…</span>
-<span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 26.2, 37.9, 49.0, 40.5, 80.8, 45.0, 67.2, 26.4, 38…</span>
-<span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; -0.2, -0.2, -0.2, -0.4, -0.2, 0.1, 0.0, -0.2, -0.1…</span>
-<span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 257.07446, 212.59565, 83.85083, 6.68518, 90.68368,…</span>
-<span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, …</span>
-<span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 32.5, 19.2, 12.4, 13.8, 20.8, 38.4, 8.8, 32.5, 19.…</span>
+<span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 26.3, 38.0, 50.7, 41.3, 82.5, 45.1, 67.2, 26.2, 37…</span>
+<span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; 0.1, 0.1, 1.7, 0.8, 1.7, 0.1, 0.0, -0.2, -0.2, -0.…</span>
+<span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 257.85540, 212.96569, 86.81134, 6.82021, 92.54109,…</span>
+<span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 30.4, 23.7, 75.2, 53.0, 37.2, 17.0, 15.4, 0.0, 0.1…</span>
+<span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 62.9, 42.9, 87.6, 66.8, 58.0, 55.4, 24.2, 32.5, 19…</span>
 <span class="co">#&gt; $ pluviometria_hist   &lt;dbl&gt; 149.0, 130.1, 124.0, 126.1, 140.2, 195.5, 154.6, 1…</span></code></pre></div>
 <p>Caso queira saber o significado de cada variável, leia a <a href="https://beatrizmilz.github.io/mananciais/reference/mananciais.html">documentação da base de dados</a> ou utilize a seguinte função:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
@@ -162,73 +162,73 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">2021-11-18</td>
+<td align="left">2021-11-19</td>
 <td align="left">Cantareira</td>
-<td align="right">26.2</td>
-<td align="right">-0.2</td>
-<td align="right">257.07446</td>
-<td align="right">0.0</td>
-<td align="right">32.5</td>
+<td align="right">26.3</td>
+<td align="right">0.1</td>
+<td align="right">257.85540</td>
+<td align="right">30.4</td>
+<td align="right">62.9</td>
 <td align="right">149.0</td>
 </tr>
 <tr class="even">
-<td align="left">2021-11-18</td>
+<td align="left">2021-11-19</td>
 <td align="left">Alto Tietê</td>
-<td align="right">37.9</td>
-<td align="right">-0.2</td>
-<td align="right">212.59565</td>
+<td align="right">38.0</td>
 <td align="right">0.1</td>
-<td align="right">19.2</td>
+<td align="right">212.96569</td>
+<td align="right">23.7</td>
+<td align="right">42.9</td>
 <td align="right">130.1</td>
 </tr>
 <tr class="odd">
-<td align="left">2021-11-18</td>
+<td align="left">2021-11-19</td>
 <td align="left">Guarapiranga</td>
-<td align="right">49.0</td>
-<td align="right">-0.2</td>
-<td align="right">83.85083</td>
-<td align="right">0.0</td>
-<td align="right">12.4</td>
+<td align="right">50.7</td>
+<td align="right">1.7</td>
+<td align="right">86.81134</td>
+<td align="right">75.2</td>
+<td align="right">87.6</td>
 <td align="right">124.0</td>
 </tr>
 <tr class="even">
-<td align="left">2021-11-18</td>
+<td align="left">2021-11-19</td>
 <td align="left">Cotia</td>
-<td align="right">40.5</td>
-<td align="right">-0.4</td>
-<td align="right">6.68518</td>
-<td align="right">0.0</td>
-<td align="right">13.8</td>
+<td align="right">41.3</td>
+<td align="right">0.8</td>
+<td align="right">6.82021</td>
+<td align="right">53.0</td>
+<td align="right">66.8</td>
 <td align="right">126.1</td>
 </tr>
 <tr class="odd">
-<td align="left">2021-11-18</td>
+<td align="left">2021-11-19</td>
 <td align="left">Rio Grande</td>
-<td align="right">80.8</td>
-<td align="right">-0.2</td>
-<td align="right">90.68368</td>
-<td align="right">0.0</td>
-<td align="right">20.8</td>
+<td align="right">82.5</td>
+<td align="right">1.7</td>
+<td align="right">92.54109</td>
+<td align="right">37.2</td>
+<td align="right">58.0</td>
 <td align="right">140.2</td>
 </tr>
 <tr class="even">
-<td align="left">2021-11-18</td>
+<td align="left">2021-11-19</td>
 <td align="left">Rio Claro</td>
-<td align="right">45.0</td>
+<td align="right">45.1</td>
 <td align="right">0.1</td>
-<td align="right">6.14515</td>
-<td align="right">0.0</td>
-<td align="right">38.4</td>
+<td align="right">6.16704</td>
+<td align="right">17.0</td>
+<td align="right">55.4</td>
 <td align="right">195.5</td>
 </tr>
 <tr class="odd">
-<td align="left">2021-11-18</td>
+<td align="left">2021-11-19</td>
 <td align="left">São Lourenço</td>
 <td align="right">67.2</td>
 <td align="right">0.0</td>
 <td align="right">59.72155</td>
-<td align="right">0.0</td>
-<td align="right">8.8</td>
+<td align="right">15.4</td>
+<td align="right">24.2</td>
 <td align="right">154.6</td>
 </tr>
 </tbody>
