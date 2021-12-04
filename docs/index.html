@@ -99,7 +99,7 @@
 <p>Este pacote pode ser instalado através do <a href="https://github.com/" class="external-link">GitHub</a> utilizando o seguinte código em <code>R</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"beatrizmilz/mananciais"</span><span class="op">)</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"beatrizmilz/mananciais"</span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/beatrizmilz/mananciais" class="external-link">mananciais</a></span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
@@ -112,15 +112,15 @@
 <p>Abaixo segue um exemplo da base disponível:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">mananciais</span><span class="op">)</span>
-<span class="co">#&gt; Rows: 49,443</span>
+<span class="co">#&gt; Rows: 49,450</span>
 <span class="co">#&gt; Columns: 8</span>
-<span class="co">#&gt; $ data                &lt;date&gt; 2021-12-02, 2021-12-02, 2021-12-02, 2021-12-02, 2…</span>
+<span class="co">#&gt; $ data                &lt;date&gt; 2021-12-03, 2021-12-03, 2021-12-03, 2021-12-03, 2…</span>
 <span class="co">#&gt; $ sistema             &lt;chr&gt; "Cantareira", "Alto Tietê", "Guarapiranga", "Cotia…</span>
-<span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 25.9, 37.1, 51.9, 38.6, 80.7, 47.2, 65.8, 26.0, 37…</span>
-<span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; -0.1, -0.1, 0.0, -0.4, -0.3, -0.2, -0.4, 0.0, -0.2…</span>
-<span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 254.06387, 207.86717, 88.88030, 6.37580, 90.51593,…</span>
-<span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 0.0, 0.1, 0.2, 0.0, 1.4, 0.0, 0.0, 0.4, 5.8, 15.6,…</span>
-<span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 0.4, 5.9, 15.8, 20.2, 7.2, 3.6, 3.4, 0.4, 5.8, 15.…</span>
+<span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 25.8, 36.9, 51.6, 38.4, 80.4, 47.0, 65.5, 25.9, 37…</span>
+<span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; -0.1, -0.2, -0.3, -0.2, -0.3, -0.2, -0.3, -0.1, -0…</span>
+<span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 253.35988, 206.90814, 88.41918, 6.33225, 90.18097,…</span>
+<span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 5.9, 0.4, 0.0, 0.2, 1.0, 1.6, 0.0, 0.0, 0.1, 0.2, …</span>
+<span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 6.3, 6.3, 15.8, 20.4, 8.2, 5.2, 3.4, 0.4, 5.9, 15.…</span>
 <span class="co">#&gt; $ pluviometria_hist   &lt;dbl&gt; 207.6, 190.9, 174.0, 168.4, 187.6, 256.5, 210.6, 2…</span></code></pre></div>
 <p>Caso queira saber o significado de cada variável, leia a <a href="https://beatrizmilz.github.io/mananciais/reference/mananciais.html" class="external-link">documentação da base de dados</a> ou utilize a seguinte função:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
@@ -157,71 +157,71 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">2021-12-02</td>
+<td align="left">2021-12-03</td>
 <td align="left">Cantareira</td>
-<td align="right">25.9</td>
+<td align="right">25.8</td>
 <td align="right">-0.1</td>
-<td align="right">254.06387</td>
-<td align="right">0.0</td>
-<td align="right">0.4</td>
+<td align="right">253.35988</td>
+<td align="right">5.9</td>
+<td align="right">6.3</td>
 <td align="right">207.6</td>
 </tr>
 <tr class="even">
-<td align="left">2021-12-02</td>
+<td align="left">2021-12-03</td>
 <td align="left">Alto Tietê</td>
-<td align="right">37.1</td>
-<td align="right">-0.1</td>
-<td align="right">207.86717</td>
-<td align="right">0.1</td>
-<td align="right">5.9</td>
+<td align="right">36.9</td>
+<td align="right">-0.2</td>
+<td align="right">206.90814</td>
+<td align="right">0.4</td>
+<td align="right">6.3</td>
 <td align="right">190.9</td>
 </tr>
 <tr class="odd">
-<td align="left">2021-12-02</td>
+<td align="left">2021-12-03</td>
 <td align="left">Guarapiranga</td>
-<td align="right">51.9</td>
+<td align="right">51.6</td>
+<td align="right">-0.3</td>
+<td align="right">88.41918</td>
 <td align="right">0.0</td>
-<td align="right">88.88030</td>
-<td align="right">0.2</td>
 <td align="right">15.8</td>
 <td align="right">174.0</td>
 </tr>
 <tr class="even">
-<td align="left">2021-12-02</td>
+<td align="left">2021-12-03</td>
 <td align="left">Cotia</td>
-<td align="right">38.6</td>
-<td align="right">-0.4</td>
-<td align="right">6.37580</td>
-<td align="right">0.0</td>
-<td align="right">20.2</td>
+<td align="right">38.4</td>
+<td align="right">-0.2</td>
+<td align="right">6.33225</td>
+<td align="right">0.2</td>
+<td align="right">20.4</td>
 <td align="right">168.4</td>
 </tr>
 <tr class="odd">
-<td align="left">2021-12-02</td>
+<td align="left">2021-12-03</td>
 <td align="left">Rio Grande</td>
-<td align="right">80.7</td>
+<td align="right">80.4</td>
 <td align="right">-0.3</td>
-<td align="right">90.51593</td>
-<td align="right">1.4</td>
-<td align="right">7.2</td>
+<td align="right">90.18097</td>
+<td align="right">1.0</td>
+<td align="right">8.2</td>
 <td align="right">187.6</td>
 </tr>
 <tr class="even">
-<td align="left">2021-12-02</td>
+<td align="left">2021-12-03</td>
 <td align="left">Rio Claro</td>
-<td align="right">47.2</td>
+<td align="right">47.0</td>
 <td align="right">-0.2</td>
-<td align="right">6.44555</td>
-<td align="right">0.0</td>
-<td align="right">3.6</td>
+<td align="right">6.42293</td>
+<td align="right">1.6</td>
+<td align="right">5.2</td>
 <td align="right">256.5</td>
 </tr>
 <tr class="odd">
-<td align="left">2021-12-02</td>
+<td align="left">2021-12-03</td>
 <td align="left">São Lourenço</td>
-<td align="right">65.8</td>
-<td align="right">-0.4</td>
-<td align="right">58.48600</td>
+<td align="right">65.5</td>
+<td align="right">-0.3</td>
+<td align="right">58.20216</td>
 <td align="right">0.0</td>
 <td align="right">3.4</td>
 <td align="right">210.6</td>
