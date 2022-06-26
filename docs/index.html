@@ -97,42 +97,42 @@
 </h2>
 <p>Este pacote pode ser instalado através do <a href="https://github.com/" class="external-link">GitHub</a> utilizando o seguinte código em <code>R</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"beatrizmilz/mananciais"</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/beatrizmilz/mananciais" class="external-link">mananciais</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"beatrizmilz/mananciais"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/beatrizmilz/mananciais" class="external-link">mananciais</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="como-usar">Como usar?<a class="anchor" aria-label="anchor" href="#como-usar"></a>
 </h2>
 <p>Caso você tenha conexão à internet, é possível buscar a base atualizada usando a função <code><a href="reference/dados_mananciais.html">dados_mananciais()</a></code>:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mananciais</span> <span class="op">&lt;-</span> <span class="fu">mananciais</span><span class="fu">::</span><span class="fu"><a href="reference/dados_mananciais.html">dados_mananciais</a></span><span class="op">(</span><span class="op">)</span> </code></pre></div>
+<code class="sourceCode R"><span><span class="va">mananciais</span> <span class="op">&lt;-</span> <span class="fu">mananciais</span><span class="fu">::</span><span class="fu"><a href="reference/dados_mananciais.html">dados_mananciais</a></span><span class="op">(</span><span class="op">)</span> </span></code></pre></div>
 <p>Caso você não tenha conexão à internet, você pode utilizar a base disponível no pacote. Porém as mesmas estarão atualizadas até a data em que você instalou (ou atualizou) o pacote.</p>
 <p>Abaixo segue um exemplo da base disponível:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">mananciais</span><span class="op">)</span>
-<span class="co">#&gt; Rows: 50,864</span>
-<span class="co">#&gt; Columns: 8</span>
-<span class="co">#&gt; $ data                &lt;date&gt; 2022-06-23, 2022-06-23, 2022-06-23, 2022-06-23, 2…</span>
-<span class="co">#&gt; $ sistema             &lt;chr&gt; "Cantareira", "Alto Tietê", "Guarapiranga", "Cotia…</span>
-<span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 40.5, 60.9, 77.1, 84.0, 98.8, 44.0, 92.2, 40.6, 61…</span>
-<span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; -0.1, -0.1, -0.2, -0.2, -0.2, -0.1, -0.5, -0.1, -0…</span>
-<span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 397.87667, 341.20533, 132.04840, 13.86277, 110.851…</span>
-<span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 0.1, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.1, 0.2, …</span>
-<span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 29.7, 18.6, 16.8, 31.2, 33.2, 47.2, 61.6, 29.6, 18…</span>
-<span class="co">#&gt; $ pluviometria_hist   &lt;dbl&gt; 59.1, 55.9, 54.0, 59.0, 61.6, 98.5, 76.3, 59.1, 55…</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">mananciais</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rows: 50,871</span></span>
+<span><span class="co">#&gt; Columns: 8</span></span>
+<span><span class="co">#&gt; $ data                &lt;date&gt; 2022-06-24, 2022-06-24, 2022-06-24, 2022-06-24, 2…</span></span>
+<span><span class="co">#&gt; $ sistema             &lt;chr&gt; "Cantareira", "Alto Tietê", "Guarapiranga", "Cotia…</span></span>
+<span><span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 40.4, 60.8, 76.8, 83.8, 98.5, 43.9, 91.6, 40.5, 60…</span></span>
+<span><span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; -0.1, -0.1, -0.3, -0.2, -0.3, -0.1, -0.6, -0.1, -0…</span></span>
+<span><span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 396.52450, 340.45387, 131.53414, 13.82900, 110.473…</span></span>
+<span><span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 0.0, 0.2, 0.0, 0.0, 0.0, 0.2, 0.0, 0.1, 0.2, 0.0, …</span></span>
+<span><span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 29.7, 18.8, 16.8, 31.2, 33.2, 47.4, 61.6, 29.7, 18…</span></span>
+<span><span class="co">#&gt; $ pluviometria_hist   &lt;dbl&gt; 59.1, 55.9, 54.0, 59.0, 61.6, 98.5, 76.3, 59.1, 55…</span></span></code></pre></div>
 <p>Caso queira saber o significado de cada variável, leia a <a href="https://beatrizmilz.github.io/mananciais/reference/mananciais.html" class="external-link">documentação da base de dados</a> ou utilize a seguinte função:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="op">?</span><span class="fu">mananciais</span><span class="fu">::</span><span class="va"><a href="reference/mananciais.html">mananciais</a></span></code></pre></div>
+<code class="sourceCode R"><span><span class="op">?</span><span class="fu">mananciais</span><span class="fu">::</span><span class="va"><a href="reference/mananciais.html">mananciais</a></span></span></code></pre></div>
 <div class="section level3">
 <h3 id="exemplo-de-tabela">Exemplo de tabela<a class="anchor" aria-label="anchor" href="#exemplo-de-tabela"></a>
 </h3>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org" class="external-link">magrittr</a></span><span class="op">)</span>
-<span class="va">mananciais</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
-  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">7</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org" class="external-link">magrittr</a></span><span class="op">)</span></span>
+<span><span class="va">mananciais</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fl">7</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <table class="table">
 <colgroup>
 <col width="7%">
@@ -156,71 +156,71 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">2022-06-23</td>
+<td align="left">2022-06-24</td>
 <td align="left">Cantareira</td>
-<td align="right">40.5</td>
+<td align="right">40.4</td>
 <td align="right">-0.1</td>
-<td align="right">397.87667</td>
-<td align="right">0.1</td>
+<td align="right">396.52450</td>
+<td align="right">0.0</td>
 <td align="right">29.7</td>
 <td align="right">59.1</td>
 </tr>
 <tr class="even">
-<td align="left">2022-06-23</td>
+<td align="left">2022-06-24</td>
 <td align="left">Alto Tietê</td>
-<td align="right">60.9</td>
+<td align="right">60.8</td>
 <td align="right">-0.1</td>
-<td align="right">341.20533</td>
+<td align="right">340.45387</td>
 <td align="right">0.2</td>
-<td align="right">18.6</td>
+<td align="right">18.8</td>
 <td align="right">55.9</td>
 </tr>
 <tr class="odd">
-<td align="left">2022-06-23</td>
+<td align="left">2022-06-24</td>
 <td align="left">Guarapiranga</td>
-<td align="right">77.1</td>
-<td align="right">-0.2</td>
-<td align="right">132.04840</td>
+<td align="right">76.8</td>
+<td align="right">-0.3</td>
+<td align="right">131.53414</td>
 <td align="right">0.0</td>
 <td align="right">16.8</td>
 <td align="right">54.0</td>
 </tr>
 <tr class="even">
-<td align="left">2022-06-23</td>
+<td align="left">2022-06-24</td>
 <td align="left">Cotia</td>
-<td align="right">84.0</td>
+<td align="right">83.8</td>
 <td align="right">-0.2</td>
-<td align="right">13.86277</td>
+<td align="right">13.82900</td>
 <td align="right">0.0</td>
 <td align="right">31.2</td>
 <td align="right">59.0</td>
 </tr>
 <tr class="odd">
-<td align="left">2022-06-23</td>
+<td align="left">2022-06-24</td>
 <td align="left">Rio Grande</td>
-<td align="right">98.8</td>
-<td align="right">-0.2</td>
-<td align="right">110.85163</td>
+<td align="right">98.5</td>
+<td align="right">-0.3</td>
+<td align="right">110.47323</td>
 <td align="right">0.0</td>
 <td align="right">33.2</td>
 <td align="right">61.6</td>
 </tr>
 <tr class="even">
-<td align="left">2022-06-23</td>
+<td align="left">2022-06-24</td>
 <td align="left">Rio Claro</td>
-<td align="right">44.0</td>
+<td align="right">43.9</td>
 <td align="right">-0.1</td>
-<td align="right">6.01502</td>
-<td align="right">0.0</td>
-<td align="right">47.2</td>
+<td align="right">6.00427</td>
+<td align="right">0.2</td>
+<td align="right">47.4</td>
 <td align="right">98.5</td>
 </tr>
 <tr class="odd">
-<td align="left">2022-06-23</td>
+<td align="left">2022-06-24</td>
 <td align="left">São Lourenço</td>
-<td align="right">92.2</td>
-<td align="right">-0.5</td>
-<td align="right">81.92981</td>
+<td align="right">91.6</td>
+<td align="right">-0.6</td>
+<td align="right">81.38602</td>
 <td align="right">0.0</td>
 <td align="right">61.6</td>
 <td align="right">76.3</td>
