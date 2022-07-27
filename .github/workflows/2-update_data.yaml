@@ -27,9 +27,9 @@ jobs:
             any::pkgload      
       - uses: r-lib/actions/setup-pandoc@v2    
    
-#     - name: Execute Script
-#        run: |
-#          Rscript data-raw/actions-update-data.R
+      - name: Execute Script
+        run: |
+          Rscript data-raw/actions-update-data.R
           
       - name: Commit results
         run: |
