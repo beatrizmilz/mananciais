@@ -1,4 +1,4 @@
-install.packages(".")
+# install.packages(".")
 # Carregar o pipe
 library(magrittr, include.only = "%>%")
 
