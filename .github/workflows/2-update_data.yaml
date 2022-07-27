@@ -1,9 +1,7 @@
 on:
   schedule:
   - cron: "15 12 * * *"
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 
 
@@ -12,26 +10,27 @@ name: update-data
 jobs:
   render:
     name: update-data
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-r@v2
         with:
-          fetch-depth: 0
-      - uses: r-lib/actions/setup-r@v1
-      - uses: r-lib/actions/setup-pandoc@v1
-      - name: Install rmarkdown, remotes, and the local package
-        run: |
-          install.packages("remotes")
-          remotes::install_local(".", dependencies = "Suggests")
-          remotes::install_cran("dplyr")
-          remotes::install_cran("usethis")
-          remotes::install_cran("readr")
-          remotes::install_cran("rmarkdown")
-          remotes::install_cran("pkgdown")
-        shell: Rscript {0}
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache-version: 2
+          extra-packages: |
+            any::pkgload      
+      - uses: r-lib/actions/setup-pandoc@v2    
+   
       - name: Execute Script
         run: |
           Rscript data-raw/actions-update-data.R
+          
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
