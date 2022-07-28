@@ -41,5 +41,6 @@ Suggests:
     knitr,
     covr,
     writexl,
+    devtools,
     cachem
 Config/testthat/edition: 3
