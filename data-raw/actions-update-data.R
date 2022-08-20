@@ -1,5 +1,7 @@
 devtools::load_all()
 
+httr::set_config(httr::config(ssl_verifypeer = FALSE))
+
 # Carregar o pipe
 library(magrittr, include.only = "%>%")
 
