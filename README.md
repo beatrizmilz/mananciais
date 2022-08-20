@@ -35,9 +35,9 @@ Milz](https://beatrizmilz.github.io/tese/).
 **Caso você não utilize R**, é possível **fazer download da base de
 dados** através dos seguintes links:
 
-  - [Arquivo
+-   [Arquivo
     `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv)
-  - [Arquivo
+-   [Arquivo
     `.xlsx`](https://github.com/beatrizmilz/mananciais/blob/master/inst/extdata/mananciais.xlsx?raw=true)
 
 Os arquivos foram salvos com encoding UTF-8, e separados por
@@ -71,15 +71,15 @@ Abaixo segue um exemplo da base disponível:
 
 ``` r
 dplyr::glimpse(mananciais)
-#> Rows: 51,060
+#> Rows: 51,067
 #> Columns: 8
-#> $ data                <date> 2022-07-21, 2022-07-21, 2022-07-21, 2022-07-21, 2…
+#> $ data                <date> 2022-07-22, 2022-07-22, 2022-07-22, 2022-07-22, 2…
 #> $ sistema             <chr> "Cantareira", "Alto Tietê", "Guarapiranga", "Cotia…
-#> $ volume_porcentagem  <dbl> 37.4, 56.4, 69.7, 75.5, 93.7, 41.5, 81.1, 37.5, 56…
-#> $ volume_variacao     <dbl> -0.1, -0.2, -0.3, -0.4, -0.1, 0.0, -0.4, -0.1, -0.…
-#> $ volume_operacional  <dbl> 367.15393, 316.14964, 119.32894, 12.45378, 105.074…
-#> $ pluviometria_dia    <dbl> 0.0, 0.2, 0.0, 0.0, 0.0, 0.8, 0.0, 0.0, 0.4, 0.0, …
-#> $ pluviometria_mensal <dbl> 0.6, 3.0, 0.2, 3.2, 2.8, 18.6, 7.6, 0.6, 2.8, 0.2,…
+#> $ volume_porcentagem  <dbl> 37.3, 56.2, 69.4, 75.1, 93.5, 41.5, 80.6, 37.4, 56…
+#> $ volume_variacao     <dbl> -0.1, -0.2, -0.3, -0.4, -0.2, 0.0, -0.5, -0.1, -0.…
+#> $ volume_operacional  <dbl> 366.10875, 315.11158, 118.82658, 12.39037, 104.891…
+#> $ pluviometria_dia    <dbl> 0.1, 0.2, 0.0, 0.2, 0.2, 0.4, 0.0, 0.0, 0.2, 0.0, …
+#> $ pluviometria_mensal <dbl> 0.7, 3.2, 0.2, 3.4, 3.0, 19.0, 7.6, 0.6, 3.0, 0.2,…
 #> $ pluviometria_hist   <dbl> 46.5, 46.9, 41.5, 51.3, 54.2, 91.3, 77.7, 46.5, 46…
 ```
 
@@ -102,15 +102,15 @@ mananciais %>%
   knitr::kable()
 ```
 
-| data       | sistema      | volume\_porcentagem | volume\_variacao | volume\_operacional | pluviometria\_dia | pluviometria\_mensal | pluviometria\_hist |
-| :--------- | :----------- | ------------------: | ---------------: | ------------------: | ----------------: | -------------------: | -----------------: |
-| 2022-07-21 | Cantareira   |                37.4 |            \-0.1 |           367.15393 |               0.0 |                  0.6 |               46.5 |
-| 2022-07-21 | Alto Tietê   |                56.4 |            \-0.2 |           316.14964 |               0.2 |                  3.0 |               46.9 |
-| 2022-07-21 | Guarapiranga |                69.7 |            \-0.3 |           119.32894 |               0.0 |                  0.2 |               41.5 |
-| 2022-07-21 | Cotia        |                75.5 |            \-0.4 |            12.45378 |               0.0 |                  3.2 |               51.3 |
-| 2022-07-21 | Rio Grande   |                93.7 |            \-0.1 |           105.07494 |               0.0 |                  2.8 |               54.2 |
-| 2022-07-21 | Rio Claro    |                41.5 |              0.0 |             5.67800 |               0.8 |                 18.6 |               91.3 |
-| 2022-07-21 | São Lourenço |                81.1 |            \-0.4 |            71.98967 |               0.0 |                  7.6 |               77.7 |
+| data       | sistema      | volume_porcentagem | volume_variacao | volume_operacional | pluviometria_dia | pluviometria_mensal | pluviometria_hist |
+|:-----------|:-------------|-------------------:|----------------:|-------------------:|-----------------:|--------------------:|------------------:|
+| 2022-07-22 | Cantareira   |               37.3 |            -0.1 |          366.10875 |              0.1 |                 0.7 |              46.5 |
+| 2022-07-22 | Alto Tietê   |               56.2 |            -0.2 |          315.11158 |              0.2 |                 3.2 |              46.9 |
+| 2022-07-22 | Guarapiranga |               69.4 |            -0.3 |          118.82658 |              0.0 |                 0.2 |              41.5 |
+| 2022-07-22 | Cotia        |               75.1 |            -0.4 |           12.39037 |              0.2 |                 3.4 |              51.3 |
+| 2022-07-22 | Rio Grande   |               93.5 |            -0.2 |          104.89173 |              0.2 |                 3.0 |              54.2 |
+| 2022-07-22 | Rio Claro    |               41.5 |             0.0 |            5.67800 |              0.4 |                19.0 |              91.3 |
+| 2022-07-22 | São Lourenço |               80.6 |            -0.5 |           71.57950 |              0.0 |                 7.6 |              77.7 |
 
 ## Como citar o pacote
 
