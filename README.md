@@ -35,10 +35,10 @@ Milz](https://beatrizmilz.github.io/tese/).
 **Caso você não utilize R**, é possível **fazer download da base de
 dados** através dos seguintes links:
 
--   [Arquivo
-    `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv)
--   [Arquivo
-    `.xlsx`](https://github.com/beatrizmilz/mananciais/blob/master/inst/extdata/mananciais.xlsx?raw=true)
+- [Arquivo
+  `.csv`](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv)
+- [Arquivo
+  `.xlsx`](https://github.com/beatrizmilz/mananciais/blob/master/inst/extdata/mananciais.xlsx?raw=true)
 
 Os arquivos foram salvos com encoding UTF-8, e separados por
 ponto-e-vírgula.
@@ -71,15 +71,15 @@ Abaixo segue um exemplo da base disponível:
 
 ``` r
 dplyr::glimpse(mananciais)
-#> Rows: 51,725
+#> Rows: 51,732
 #> Columns: 8
-#> $ data                <date> 2022-10-24, 2022-10-24, 2022-10-24, 2022-10-24, 2…
+#> $ data                <date> 2022-10-25, 2022-10-25, 2022-10-25, 2022-10-25, 2…
 #> $ sistema             <chr> "Cantareira", "Alto Tietê", "Guarapiranga", "Cotia…
-#> $ volume_porcentagem  <dbl> 32.3, 46.0, 60.2, 48.4, 96.5, 40.9, 62.9, 32.4, 46…
-#> $ volume_variacao     <dbl> -0.1, -0.1, -0.3, -0.4, -0.3, -0.2, -0.2, 0.0, -0.…
-#> $ volume_operacional  <dbl> 317.31257, 257.51805, 103.05498, 7.97854, 108.2567…
-#> $ pluviometria_dia    <dbl> 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.2, 0.0, 0.0, 0.0, …
-#> $ pluviometria_mensal <dbl> 77.5, 43.8, 53.0, 30.2, 101.8, 65.2, 54.6, 77.5, 4…
+#> $ volume_porcentagem  <dbl> 32.2, 45.8, 59.9, 47.8, 96.3, 40.9, 62.8, 32.3, 46…
+#> $ volume_variacao     <dbl> -0.1, -0.2, -0.3, -0.6, -0.2, 0.0, -0.1, -0.1, -0.…
+#> $ volume_operacional  <dbl> 316.20661, 256.68507, 102.57237, 7.89002, 108.0328…
+#> $ pluviometria_dia    <dbl> 0.0, 0.1, 0.0, 0.0, 0.4, 2.6, 0.0, 0.0, 0.0, 0.0, …
+#> $ pluviometria_mensal <dbl> 77.5, 43.9, 53.0, 30.2, 102.2, 67.8, 54.6, 77.5, 4…
 #> $ pluviometria_hist   <dbl> 126.3, 106.0, 114.5, 120.2, 132.7, 173.7, 141.2, 1…
 ```
 
@@ -104,13 +104,13 @@ mananciais %>%
 
 | data       | sistema      | volume_porcentagem | volume_variacao | volume_operacional | pluviometria_dia | pluviometria_mensal | pluviometria_hist |
 |:-----------|:-------------|-------------------:|----------------:|-------------------:|-----------------:|--------------------:|------------------:|
-| 2022-10-24 | Cantareira   |               32.3 |            -0.1 |          317.31257 |              0.0 |                77.5 |             126.3 |
-| 2022-10-24 | Alto Tietê   |               46.0 |            -0.1 |          257.51805 |              0.0 |                43.8 |             106.0 |
-| 2022-10-24 | Guarapiranga |               60.2 |            -0.3 |          103.05498 |              0.0 |                53.0 |             114.5 |
-| 2022-10-24 | Cotia        |               48.4 |            -0.4 |            7.97854 |              0.0 |                30.2 |             120.2 |
-| 2022-10-24 | Rio Grande   |               96.5 |            -0.3 |          108.25675 |              0.0 |               101.8 |             132.7 |
-| 2022-10-24 | Rio Claro    |               40.9 |            -0.2 |            5.59190 |              0.0 |                65.2 |             173.7 |
-| 2022-10-24 | São Lourenço |               62.9 |            -0.2 |           55.85515 |              0.2 |                54.6 |             141.2 |
+| 2022-10-25 | Cantareira   |               32.2 |            -0.1 |          316.20661 |              0.0 |                77.5 |             126.3 |
+| 2022-10-25 | Alto Tietê   |               45.8 |            -0.2 |          256.68507 |              0.1 |                43.9 |             106.0 |
+| 2022-10-25 | Guarapiranga |               59.9 |            -0.3 |          102.57237 |              0.0 |                53.0 |             114.5 |
+| 2022-10-25 | Cotia        |               47.8 |            -0.6 |            7.89002 |              0.0 |                30.2 |             120.2 |
+| 2022-10-25 | Rio Grande   |               96.3 |            -0.2 |          108.03289 |              0.4 |               102.2 |             132.7 |
+| 2022-10-25 | Rio Claro    |               40.9 |             0.0 |            5.58579 |              2.6 |                67.8 |             173.7 |
+| 2022-10-25 | São Lourenço |               62.8 |            -0.1 |           55.76194 |              0.0 |                54.6 |             141.2 |
 
 ## Como citar o pacote
 
