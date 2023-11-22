@@ -112,15 +112,15 @@
 <p>Abaixo segue um exemplo da base disponível:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">mananciais</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 54,469</span></span>
+<span><span class="co">#&gt; Rows: 54,476</span></span>
 <span><span class="co">#&gt; Columns: 8</span></span>
-<span><span class="co">#&gt; $ data                &lt;date&gt; 2023-11-20, 2023-11-20, 2023-11-20, 2023-11-20, 2…</span></span>
+<span><span class="co">#&gt; $ data                &lt;date&gt; 2023-11-21, 2023-11-21, 2023-11-21, 2023-11-21, 2…</span></span>
 <span><span class="co">#&gt; $ sistema             &lt;chr&gt; "Cantareira", "Alto Tietê", "Guarapiranga", "Cotia…</span></span>
-<span><span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 72.8, 63.0, 59.5, 87.6, 100.7, 39.0, 59.0, 72.7, 6…</span></span>
-<span><span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; 0.1, 0.0, 0.0, 0.3, 0.2, 0.3, 0.3, -0.1, -0.2, 0.1…</span></span>
-<span><span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 714.78128, 352.82346, 101.84969, 14.44422, 112.947…</span></span>
-<span><span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 17.5, 10.4, 10.2, 5.6, 4.0, 18.4, 7.8, 10.0, 9.5, …</span></span>
-<span><span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 87.2, 54.0, 84.8, 59.0, 46.0, 98.6, 80.0, 69.7, 43…</span></span>
+<span><span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 72.7, 62.8, 59.5, 87.3, 100.7, 38.9, 59.6, 72.8, 6…</span></span>
+<span><span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; -0.1, -0.2, 0.0, -0.3, 0.0, -0.1, 0.6, 0.1, 0.0, 0…</span></span>
+<span><span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 714.40093, 351.92355, 101.84969, 14.40963, 112.947…</span></span>
+<span><span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 0.0, 0.0, 0.0, 0.0, 0.4, 0.0, 0.6, 17.5, 10.4, 10.…</span></span>
+<span><span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 87.2, 54.0, 84.8, 59.0, 46.4, 98.6, 80.6, 87.2, 54…</span></span>
 <span><span class="co">#&gt; $ pluviometria_hist   &lt;dbl&gt; 149.8, 122.4, 124.0, 123.9, 138.0, 194.3, 150.4, 1…</span></span></code></pre></div>
 <p>Caso queira saber o significado de cada variável, leia a <a href="https://beatrizmilz.github.io/mananciais/reference/mananciais.html" class="external-link">documentação da base de dados</a> ou utilize a seguinte função:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
@@ -157,73 +157,73 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">2023-11-20</td>
+<td align="left">2023-11-21</td>
 <td align="left">Cantareira</td>
-<td align="right">72.8</td>
-<td align="right">0.1</td>
-<td align="right">714.78128</td>
-<td align="right">17.5</td>
+<td align="right">72.7</td>
+<td align="right">-0.1</td>
+<td align="right">714.40093</td>
+<td align="right">0.0</td>
 <td align="right">87.2</td>
 <td align="right">149.8</td>
 </tr>
 <tr class="even">
-<td align="left">2023-11-20</td>
+<td align="left">2023-11-21</td>
 <td align="left">Alto Tietê</td>
-<td align="right">63.0</td>
+<td align="right">62.8</td>
+<td align="right">-0.2</td>
+<td align="right">351.92355</td>
 <td align="right">0.0</td>
-<td align="right">352.82346</td>
-<td align="right">10.4</td>
 <td align="right">54.0</td>
 <td align="right">122.4</td>
 </tr>
 <tr class="odd">
-<td align="left">2023-11-20</td>
+<td align="left">2023-11-21</td>
 <td align="left">Guarapiranga</td>
 <td align="right">59.5</td>
 <td align="right">0.0</td>
 <td align="right">101.84969</td>
-<td align="right">10.2</td>
+<td align="right">0.0</td>
 <td align="right">84.8</td>
 <td align="right">124.0</td>
 </tr>
 <tr class="even">
-<td align="left">2023-11-20</td>
+<td align="left">2023-11-21</td>
 <td align="left">Cotia</td>
-<td align="right">87.6</td>
-<td align="right">0.3</td>
-<td align="right">14.44422</td>
-<td align="right">5.6</td>
+<td align="right">87.3</td>
+<td align="right">-0.3</td>
+<td align="right">14.40963</td>
+<td align="right">0.0</td>
 <td align="right">59.0</td>
 <td align="right">123.9</td>
 </tr>
 <tr class="odd">
-<td align="left">2023-11-20</td>
+<td align="left">2023-11-21</td>
 <td align="left">Rio Grande</td>
 <td align="right">100.7</td>
-<td align="right">0.2</td>
+<td align="right">0.0</td>
 <td align="right">112.94709</td>
-<td align="right">4.0</td>
-<td align="right">46.0</td>
+<td align="right">0.4</td>
+<td align="right">46.4</td>
 <td align="right">138.0</td>
 </tr>
 <tr class="even">
-<td align="left">2023-11-20</td>
+<td align="left">2023-11-21</td>
 <td align="left">Rio Claro</td>
-<td align="right">39.0</td>
-<td align="right">0.3</td>
-<td align="right">5.33545</td>
-<td align="right">18.4</td>
+<td align="right">38.9</td>
+<td align="right">-0.1</td>
+<td align="right">5.31579</td>
+<td align="right">0.0</td>
 <td align="right">98.6</td>
 <td align="right">194.3</td>
 </tr>
 <tr class="odd">
-<td align="left">2023-11-20</td>
+<td align="left">2023-11-21</td>
 <td align="left">São Lourenço</td>
-<td align="right">59.0</td>
-<td align="right">0.3</td>
-<td align="right">52.43994</td>
-<td align="right">7.8</td>
-<td align="right">80.0</td>
+<td align="right">59.6</td>
+<td align="right">0.6</td>
+<td align="right">52.89749</td>
+<td align="right">0.6</td>
+<td align="right">80.6</td>
 <td align="right">150.4</td>
 </tr>
 </tbody>
