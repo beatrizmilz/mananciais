@@ -20,7 +20,7 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
-    
+
 
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -46,7 +46,7 @@
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
-     
+
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -60,7 +60,7 @@
 <li>
   <a href="https://github.com/beatrizmilz/mananciais/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
-     
+
   </a>
 </li>
       </ul>
@@ -71,7 +71,7 @@
 </div>
 <!--/.navbar -->
 
-      
+
 
       </header><div class="row">
   <div class="contents col-md-9">
@@ -109,15 +109,15 @@
 <p>Abaixo segue um exemplo da base disponível:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">mananciais</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 56,065</span></span>
+<span><span class="co">#&gt; Rows: 56,072</span></span>
 <span><span class="co">#&gt; Columns: 8</span></span>
-<span><span class="co">#&gt; $ data                &lt;date&gt; 2024-07-05, 2024-07-05, 2024-07-05, 2024-07-05, 2…</span></span>
+<span><span class="co">#&gt; $ data                &lt;date&gt; 2024-07-06, 2024-07-06, 2024-07-06, 2024-07-06, 2…</span></span>
 <span><span class="co">#&gt; $ sistema             &lt;chr&gt; "Cantareira", "Alto Tietê", "Guarapiranga", "Cotia…</span></span>
-<span><span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 65.6, 63.3, 59.4, 62.2, 75.8, 35.1, 85.7, 65.8, 63…</span></span>
-<span><span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; -0.2, -0.2, -0.2, -0.3, -0.3, -0.4, -0.6, -0.2, -0…</span></span>
-<span><span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 644.54389, 354.47476, 101.60913, 10.25900, 85.0820…</span></span>
-<span><span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 0.0, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, …</span></span>
-<span><span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 0.7, 0.7, 0.2, 0.4, 0.0, 0.6, 0.2, 0.7, 0.4, 0.2, …</span></span>
+<span><span class="co">#&gt; $ volume_porcentagem  &lt;dbl&gt; 65.5, 63.1, 58.9, 61.7, 75.7, 34.8, 85.3, 65.6, 63…</span></span>
+<span><span class="co">#&gt; $ volume_variacao     &lt;dbl&gt; -0.1, -0.2, -0.5, -0.5, -0.1, -0.3, -0.4, -0.2, -0…</span></span>
+<span><span class="co">#&gt; $ volume_operacional  &lt;dbl&gt; 643.29045, 353.38564, 100.88847, 10.17398, 84.9204…</span></span>
+<span><span class="co">#&gt; $ pluviometria_dia    &lt;dbl&gt; 0.0, 0.1, 0.0, 0.0, 0.0, 0.6, 0.2, 0.0, 0.3, 0.0, …</span></span>
+<span><span class="co">#&gt; $ pluviometria_mensal &lt;dbl&gt; 0.7, 0.8, 0.2, 0.4, 0.0, 1.2, 0.4, 0.7, 0.7, 0.2, …</span></span>
 <span><span class="co">#&gt; $ pluviometria_hist   &lt;dbl&gt; 43.0, 47.6, 40.9, 47.1, 52.8, 88.8, 75.5, 43.0, 47…</span></span></code></pre></div>
 <p>Caso queira saber o significado de cada variável, leia a <a href="https://beatrizmilz.github.io/mananciais/reference/mananciais.html" class="external-link">documentação da base de dados</a> ou utilize a seguinte função:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
@@ -154,73 +154,73 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">2024-07-05</td>
+<td align="left">2024-07-06</td>
 <td align="left">Cantareira</td>
-<td align="right">65.6</td>
-<td align="right">-0.2</td>
-<td align="right">644.54389</td>
+<td align="right">65.5</td>
+<td align="right">-0.1</td>
+<td align="right">643.29045</td>
 <td align="right">0.0</td>
 <td align="right">0.7</td>
 <td align="right">43.0</td>
 </tr>
 <tr class="even">
-<td align="left">2024-07-05</td>
+<td align="left">2024-07-06</td>
 <td align="left">Alto Tietê</td>
-<td align="right">63.3</td>
+<td align="right">63.1</td>
 <td align="right">-0.2</td>
-<td align="right">354.47476</td>
-<td align="right">0.3</td>
-<td align="right">0.7</td>
+<td align="right">353.38564</td>
+<td align="right">0.1</td>
+<td align="right">0.8</td>
 <td align="right">47.6</td>
 </tr>
 <tr class="odd">
-<td align="left">2024-07-05</td>
+<td align="left">2024-07-06</td>
 <td align="left">Guarapiranga</td>
-<td align="right">59.4</td>
-<td align="right">-0.2</td>
-<td align="right">101.60913</td>
+<td align="right">58.9</td>
+<td align="right">-0.5</td>
+<td align="right">100.88847</td>
 <td align="right">0.0</td>
 <td align="right">0.2</td>
 <td align="right">40.9</td>
 </tr>
 <tr class="even">
-<td align="left">2024-07-05</td>
+<td align="left">2024-07-06</td>
 <td align="left">Cotia</td>
-<td align="right">62.2</td>
-<td align="right">-0.3</td>
-<td align="right">10.25900</td>
+<td align="right">61.7</td>
+<td align="right">-0.5</td>
+<td align="right">10.17398</td>
 <td align="right">0.0</td>
 <td align="right">0.4</td>
 <td align="right">47.1</td>
 </tr>
 <tr class="odd">
-<td align="left">2024-07-05</td>
+<td align="left">2024-07-06</td>
 <td align="left">Rio Grande</td>
-<td align="right">75.8</td>
-<td align="right">-0.3</td>
-<td align="right">85.08202</td>
+<td align="right">75.7</td>
+<td align="right">-0.1</td>
+<td align="right">84.92042</td>
 <td align="right">0.0</td>
 <td align="right">0.0</td>
 <td align="right">52.8</td>
 </tr>
 <tr class="even">
-<td align="left">2024-07-05</td>
+<td align="left">2024-07-06</td>
 <td align="left">Rio Claro</td>
-<td align="right">35.1</td>
-<td align="right">-0.4</td>
-<td align="right">4.79854</td>
-<td align="right">0.0</td>
+<td align="right">34.8</td>
+<td align="right">-0.3</td>
+<td align="right">4.75048</td>
 <td align="right">0.6</td>
+<td align="right">1.2</td>
 <td align="right">88.8</td>
 </tr>
 <tr class="odd">
-<td align="left">2024-07-05</td>
+<td align="left">2024-07-06</td>
 <td align="left">São Lourenço</td>
-<td align="right">85.7</td>
-<td align="right">-0.6</td>
-<td align="right">76.14772</td>
-<td align="right">0.0</td>
+<td align="right">85.3</td>
+<td align="right">-0.4</td>
+<td align="right">75.72723</td>
 <td align="right">0.2</td>
+<td align="right">0.4</td>
 <td align="right">75.5</td>
 </tr>
 </tbody>
@@ -288,16 +288,16 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
       </footer>
 </div>
 
-  
 
 
-  
+
+
 
   </body>
 </html>
